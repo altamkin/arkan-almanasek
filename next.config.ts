@@ -14,7 +14,8 @@ const withPWA = withPWAInit({
 const withNextIntl = createNextIntlPlugin();
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  // Required for small production Docker images (copies traced deps into .next/standalone)
+  output: "standalone",
   images: {
     // Allow optimized loading of remote ActiveStorage blob redirects
     remotePatterns: [

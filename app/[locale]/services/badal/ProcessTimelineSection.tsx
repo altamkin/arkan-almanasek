@@ -1,15 +1,25 @@
-import { steps } from "./badalContent";
+import { getTranslations } from "next-intl/server";
 
-export default function ProcessTimelineSection() {
+const stepKeys = ["submit", "payment", "assign", "perform", "document"] as const;
+
+export default async function ProcessTimelineSection() {
+  const t = await getTranslations("badal.process");
+
+  const steps = stepKeys.map((key, index) => ({
+    number: index + 1,
+    title: t(`steps.${key}.title`),
+    description: t(`steps.${key}.description`),
+  }));
+
   return (
     <section className="py-20 overflow-hidden" id="process">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <span className="text-primary font-bold tracking-wider uppercase text-sm">
-            كيف نعمل
+            {t("eyebrow")}
           </span>
           <h2 className="text-3xl font-bold text-gray-900 dark:text-white mt-2">
-            رحلة الخدمة خطوة بخطوة
+            {t("title")}
           </h2>
         </div>
 

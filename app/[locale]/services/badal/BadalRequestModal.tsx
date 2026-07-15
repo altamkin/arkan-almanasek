@@ -2,7 +2,12 @@
 
 import React, { useEffect, useId, useMemo, useRef, useState } from "react";
 import { z } from "zod";
+import {
+  createPaymentSchema,
+  isValidISODate,
+} from "@/lib/validation/modalSchemas";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { useTranslations } from "next-intl";
 import { useForm } from "react-hook-form";
 import { AnimatePresence, motion } from "framer-motion";
 
@@ -34,12 +39,12 @@ type CountryOption = {
   label: string;
 };
 
-const COUNTRY_OPTIONS: readonly CountryOption[] = [
-  { value: "sa", dial: "+966", flag: "sa", label: "السعودية" },
-  { value: "id", dial: "+62", flag: "id", label: "إندونيسيا" },
-  { value: "ms", dial: "+60", flag: "my", label: "ماليزيا" },
-  { value: "tr", dial: "+90", flag: "tr", label: "تركيا" },
-  { value: "lk", dial: "+94", flag: "lk", label: "سريلانكا" },
+const COUNTRY_OPTIONS: readonly Omit<CountryOption, "label">[] = [
+  { value: "sa", dial: "+966", flag: "sa" },
+  { value: "id", dial: "+62", flag: "id" },
+  { value: "ms", dial: "+60", flag: "my" },
+  { value: "tr", dial: "+90", flag: "tr" },
+  { value: "lk", dial: "+94", flag: "lk" },
 ] as const;
 
 type CountryDropdownMode = "dial" | "country";
@@ -184,101 +189,55 @@ function CountryDropdown({
   );
 }
 
-function isValidISODate(value: string) {
-  if (!/^\d{4}-\d{2}-\d{2}$/.test(value)) return false;
-  const dt = new Date(`${value}T00:00:00Z`);
-  if (Number.isNaN(dt.getTime())) return false;
-  const [y, m, d] = value.split("-").map(Number);
-  return (
-    dt.getUTCFullYear() === y &&
-    dt.getUTCMonth() + 1 === m &&
-    dt.getUTCDate() === d
-  );
+function createCustomerSchema(t: (key: string) => string) {
+  const allowed = COUNTRY_OPTIONS.map((c) => c.value) as string[];
+  return z.object({
+    fullName: z.string().trim().min(1, t("validation.fullNameRequired")),
+    phoneCountry: z
+      .string()
+      .trim()
+      .min(1, t("validation.phoneCountryRequired"))
+      .refine(
+        (v) => allowed.includes(v),
+        t("validation.phoneCountryRequired"),
+      ),
+    phone: z
+      .string()
+      .trim()
+      .min(1, t("validation.phoneRequired"))
+      .transform((value) => value.replace(/\s+/g, ""))
+      .refine((value) => /^\d{8,12}$/.test(value), t("validation.phoneInvalid")),
+    country: z
+      .string()
+      .trim()
+      .min(1, t("validation.countryRequired"))
+      .refine((v) => allowed.includes(v), t("validation.countryRequired")),
+    email: z
+      .string()
+      .trim()
+      .optional()
+      .or(z.literal(""))
+      .refine(
+        (v) => v == null || v === "" || /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v),
+        t("validation.emailInvalid"),
+      ),
+    birthDate: z
+      .string()
+      .trim()
+      .min(1, t("validation.birthDateRequired"))
+      .refine((v) => isValidISODate(v), t("validation.birthDateInvalid")),
+    performedHajjOrUmrahBefore: z
+      .string()
+      .trim()
+      .min(1, t("validation.performedHajjOrUmrahBeforeRequired"))
+      .refine(
+        (v) => v === "yes" || v === "no",
+        t("validation.performedHajjOrUmrahBeforeRequired"),
+      ),
+  });
 }
 
-function luhnCheck(inputDigits: string) {
-  let sum = 0;
-  let shouldDouble = false;
-
-  for (let i = inputDigits.length - 1; i >= 0; i -= 1) {
-    const code = inputDigits.charCodeAt(i) - 48;
-    if (code < 0 || code > 9) return false;
-
-    let digit = code;
-    if (shouldDouble) {
-      digit *= 2;
-      if (digit > 9) digit -= 9;
-    }
-
-    sum += digit;
-    shouldDouble = !shouldDouble;
-  }
-
-  return sum % 10 === 0;
-}
-
-function isValidExpiryMMYY(value: string) {
-  const match = /^(0[1-9]|1[0-2])\/(\d{2})$/.exec(value);
-  if (!match) return false;
-
-  const mm = Number(match[1]);
-  const yy = Number(match[2]);
-
-  const now = new Date();
-  const currentYear = now.getFullYear() % 100;
-  const currentMonth = now.getMonth() + 1;
-
-  if (yy < currentYear) return false;
-  if (yy === currentYear && mm < currentMonth) return false;
-  return true;
-}
-
-const customerSchema = z.object({
-  fullName: z.string().trim().min(1, "الاسم الكامل مطلوب"),
-  phoneCountry: z
-    .string()
-    .trim()
-    .min(1, "رمز الدولة مطلوب")
-    .refine(
-      (v) => COUNTRY_OPTIONS.some((c) => c.value === v),
-      "رمز الدولة غير صالح",
-    ),
-  phone: z
-    .string()
-    .trim()
-    .min(1, "رقم الجوال مطلوب")
-    .transform((value) => value.replace(/\s+/g, ""))
-    .refine((value) => /^\d{8,12}$/.test(value), "رقم الجوال غير صحيح"),
-  country: z
-    .string()
-    .trim()
-    .min(1, "الدولة مطلوبة")
-    .refine(
-      (v) => COUNTRY_OPTIONS.some((c) => c.value === v),
-      "الدولة غير صالحة",
-    ),
-  email: z
-    .string()
-    .trim()
-    .optional()
-    .or(z.literal(""))
-    .refine(
-      (v) => v == null || v === "" || /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v),
-      "البريد الإلكتروني غير صحيح",
-    ),
-  birthDate: z
-    .string()
-    .trim()
-    .min(1, "تاريخ الميلاد مطلوب")
-    .refine((v) => isValidISODate(v), "تاريخ الميلاد غير صحيح"),
-  performedHajjOrUmrahBefore: z
-    .string()
-    .trim()
-    .min(1, "هذا الحقل مطلوب")
-    .refine((v) => v === "yes" || v === "no", "هذا الحقل مطلوب"),
-});
-
-type CustomerFormValues = z.input<typeof customerSchema>;
+type CustomerFormValues = z.infer<ReturnType<typeof createCustomerSchema>>;
 
 export type BadalPrefillCustomer = Partial<
   Pick<
@@ -303,47 +262,7 @@ type PaymentErrors = Partial<
   >
 >;
 
-const cardSchema = z.object({
-  method: z.literal("card"),
-  cardholder: z.string().trim().min(2, "اسم حامل البطاقة مطلوب"),
-  cardNumber: z
-    .string()
-    .trim()
-    .min(12, "رقم البطاقة غير صحيح")
-    .transform((v) => v.replace(/\s+/g, ""))
-    .refine((digits) => /^\d{12,19}$/.test(digits), "رقم البطاقة غير صحيح")
-    .refine((digits) => luhnCheck(digits), "رقم البطاقة غير صحيح"),
-  expiry: z
-    .string()
-    .trim()
-    .min(1, "تاريخ الانتهاء مطلوب")
-    .refine((v) => isValidExpiryMMYY(v), "تاريخ الانتهاء غير صحيح"),
-  cvc: z
-    .string()
-    .trim()
-    .min(3, "رمز الأمان غير صحيح")
-    .refine((v) => /^\d{3,4}$/.test(v), "رمز الأمان غير صحيح"),
-});
-
-const receiptSchema = z
-  .instanceof(File, { message: "إيصال التحويل مطلوب" })
-  .refine(
-    (f) =>
-      f.type === "application/pdf" ||
-      f.type.startsWith("image/") ||
-      f.type === "",
-    "صيغة الإيصال غير مدعومة",
-  )
-  .refine((f) => f.size <= 10 * 1024 * 1024, "حجم الملف كبير جداً");
-
-const bankSchema = z.object({
-  method: z.literal("bank"),
-  receipt: receiptSchema,
-});
-
-const paymentSchema = z.discriminatedUnion("method", [cardSchema, bankSchema]);
-
-type PaymentValues = z.infer<typeof paymentSchema>;
+type PaymentValues = z.infer<ReturnType<typeof createPaymentSchema>>;
 
 export type BadalRequestPayload = {
   serviceType: BadalServiceType;
@@ -374,8 +293,19 @@ export type BadalRequestModalProps = {
   >;
 };
 
-function getServiceTitle(serviceType: BadalServiceType) {
-  return serviceType === "umrah" ? "طلب عمرة بدل" : "طلب حج بدل";
+function getCountryLabel(
+  t: (key: string) => string,
+  value: CountryValue,
+): string {
+  if (value === "sa") return t("options.phoneCountries.sa");
+  return t(`options.countries.${value}`);
+}
+
+function getServiceTitle(
+  t: (key: string) => string,
+  serviceType: BadalServiceType,
+) {
+  return serviceType === "umrah" ? t("requestUmrah") : t("requestHajj");
 }
 
 function joinClassNames(...values: Array<string | undefined | false | null>) {
@@ -446,13 +376,32 @@ export default function BadalRequestModal({
   onComplete,
   modalProps,
 }: BadalRequestModalProps) {
+  const t = useTranslations("badal.modal");
+  const tStep2 = useTranslations("cart.step2");
+  const tStep3 = useTranslations("cart.step3");
   const formId = useId();
   const [step, setStep] = useState<1 | 2>(1);
   const [hasExistingRequest, setHasExistingRequest] = useState(
     () => Boolean(prefillCustomer),
   );
 
-  const countryOptions = useMemo(() => COUNTRY_OPTIONS, []);
+  const customerSchema = useMemo(
+    () => createCustomerSchema(tStep2),
+    [tStep2],
+  );
+  const paymentSchema = useMemo(
+    () => createPaymentSchema(tStep3),
+    [tStep3],
+  );
+
+  const countryOptions = useMemo<CountryOption[]>(
+    () =>
+      COUNTRY_OPTIONS.map((opt) => ({
+        ...opt,
+        label: getCountryLabel(tStep2, opt.value),
+      })),
+    [tStep2],
+  );
 
   const {
     register,
@@ -534,7 +483,7 @@ export default function BadalRequestModal({
   const inputBorderErr =
     "border-red-400 dark:border-red-500 focus:ring-red-500/30 focus:border-red-500";
 
-  const stepTitle = step === 1 ? "بيانات المستفيد" : "الدفع";
+  const stepTitle = step === 1 ? t("beneficiaryData") : t("payment");
 
   const canClose = !(isSubmitting || isSending);
 
@@ -651,7 +600,7 @@ export default function BadalRequestModal({
       <div className="flex items-center justify-between gap-4 mb-6">
         <div className="min-w-0">
           <p className="text-sm text-gray-500 dark:text-gray-400">
-            الخطوة {step} من 2
+            {t("stepOf", { step, total: 2 })}
           </p>
           <h3 className="text-xl font-extrabold text-gray-900 dark:text-white">
             {stepTitle}
@@ -696,7 +645,7 @@ export default function BadalRequestModal({
               <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                 <label className="md:col-span-2 space-y-2">
                   <span className="text-sm font-bold text-gray-900 dark:text-white">
-                    الاسم الكامل
+                    {t("fullName")}
                   </span>
                   <input
                     {...register("fullName")}
@@ -716,7 +665,7 @@ export default function BadalRequestModal({
 
                 <div className="space-y-2">
                   <span className="text-sm font-bold text-gray-900 dark:text-white">
-                    رقم الجوال (مع رمز الدولة)
+                    {t("phoneLabel")}
                   </span>
 
                   <div className="flex w-full min-w-0" dir="ltr">
@@ -760,7 +709,7 @@ export default function BadalRequestModal({
                       className="text-xs text-gray-500 dark:text-gray-400"
                       dir="ltr"
                     >
-                      سيتم الحفظ بصيغة: {selectedPhoneDial}
+                      {t("phoneFormat", { dial: selectedPhoneDial })}
                       {watch("phone").replace(/\s+/g, "")}
                     </p>
                   ) : null}
@@ -768,7 +717,7 @@ export default function BadalRequestModal({
 
                 <label className="space-y-2">
                   <span className="text-sm font-bold text-gray-900 dark:text-white">
-                    الدولة
+                    {t("countryLabel")}
                   </span>
                   <CountryDropdown
                     value={watch("country") as CountryValue | ""}
@@ -779,7 +728,7 @@ export default function BadalRequestModal({
                     }
                     options={countryOptions}
                     mode="country"
-                    placeholder="اختر الدولة"
+                    placeholder={t("countryPlaceholder")}
                     invalid={Boolean(errors.country)}
                     buttonClassName={joinClassNames(
                       inputBase,
@@ -796,7 +745,7 @@ export default function BadalRequestModal({
 
                 <label className="space-y-2">
                   <span className="text-sm font-bold text-gray-900 dark:text-white">
-                    البريد الإلكتروني (اختياري)
+                    {t("emailOptional")}
                   </span>
                   <input
                     {...register("email")}
@@ -817,7 +766,7 @@ export default function BadalRequestModal({
 
                 <label className="space-y-2">
                   <span className="text-sm font-bold text-gray-900 dark:text-white">
-                    العمر - تاريخ الميلاد
+                    {t("birthDateLabel")}
                   </span>
                   <input
                     {...register("birthDate")}
@@ -837,7 +786,7 @@ export default function BadalRequestModal({
 
                 <div className="md:col-span-2 space-y-2">
                   <span className="text-sm font-bold text-gray-900 dark:text-white">
-                    هل تم الحج أو اعتمر من قبل؟
+                    {t("performedBefore")}
                   </span>
 
                   <div className="flex flex-wrap gap-3">
@@ -849,7 +798,7 @@ export default function BadalRequestModal({
                         className="size-4 text-primary focus:ring-primary"
                       />
                       <span className="text-sm text-gray-900 dark:text-white">
-                        نعم
+                        {t("yes")}
                       </span>
                     </label>
 
@@ -861,7 +810,7 @@ export default function BadalRequestModal({
                         className="size-4 text-primary focus:ring-primary"
                       />
                       <span className="text-sm text-gray-900 dark:text-white">
-                        لا
+                        {t("no")}
                       </span>
                     </label>
                   </div>
@@ -881,7 +830,7 @@ export default function BadalRequestModal({
                   disabled={!canClose}
                   className="px-5 py-3 rounded-xl border border-gray-200 dark:border-[#332e25] text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-[#221d14] transition-colors"
                 >
-                  إلغاء
+                  {t("cancel")}
                 </button>
 
                 <button
@@ -889,7 +838,7 @@ export default function BadalRequestModal({
                   disabled={isSubmitting || isSending}
                   className="px-6 py-3 rounded-xl bg-primary text-white font-bold hover:bg-primary/90 transition-colors"
                 >
-                  {isSending ? "جارٍ حفظ الطلب..." : "التالي"}
+                  {isSending ? t("saving") : t("next")}
                 </button>
               </div>
 
@@ -932,7 +881,7 @@ export default function BadalRequestModal({
                     className="size-4 text-primary focus:ring-primary"
                   />
                   <span className="font-bold text-gray-900 dark:text-white">
-                    بطاقة
+                    {tStep3("methods.card.title")}
                   </span>
                 </label>
 
@@ -961,7 +910,7 @@ export default function BadalRequestModal({
                     className="size-4 text-primary focus:ring-primary"
                   />
                   <span className="font-bold text-gray-900 dark:text-white">
-                    تحويل بنكي
+                    {tStep3("methods.bank.title")}
                   </span>
                 </label>
               </div>
@@ -975,7 +924,7 @@ export default function BadalRequestModal({
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <label className="sm:col-span-2 space-y-2">
                       <span className="text-sm font-bold text-gray-900 dark:text-white">
-                        اسم حامل البطاقة
+                        {tStep3("card.fields.cardholder.label")}
                       </span>
                       <input
                         value={cardData.cardholder}
@@ -1005,7 +954,7 @@ export default function BadalRequestModal({
 
                     <label className="sm:col-span-2 space-y-2">
                       <span className="text-sm font-bold text-gray-900 dark:text-white">
-                        رقم البطاقة
+                        {tStep3("card.fields.cardNumber.label")}
                       </span>
                       <input
                         dir="ltr"
@@ -1038,7 +987,7 @@ export default function BadalRequestModal({
 
                     <label className="space-y-2">
                       <span className="text-sm font-bold text-gray-900 dark:text-white">
-                        تاريخ الانتهاء
+                        {tStep3("card.fields.expiry.label")}
                       </span>
                       <input
                         dir="ltr"
@@ -1069,7 +1018,7 @@ export default function BadalRequestModal({
 
                     <label className="space-y-2">
                       <span className="text-sm font-bold text-gray-900 dark:text-white">
-                        رمز الأمان (CVC)
+                        {tStep3("card.fields.cvc.label")}
                       </span>
                       <input
                         dir="ltr"
@@ -1102,7 +1051,7 @@ export default function BadalRequestModal({
                 <div className="rounded-2xl border border-gray-100 dark:border-[#332e25] bg-background-light/60 dark:bg-background-dark/40 p-5">
                   <label className="space-y-2 block">
                     <span className="text-sm font-bold text-gray-900 dark:text-white">
-                      رفع إيصال التحويل
+                      {tStep3("bank.receipt.upload")}
                     </span>
                     <input
                       type="file"
@@ -1146,7 +1095,7 @@ export default function BadalRequestModal({
                   disabled={isSending}
                   className="px-5 py-3 rounded-xl border border-gray-200 dark:border-[#332e25] text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-[#221d14] transition-colors"
                 >
-                  السابق
+                  {t("back")}
                 </button>
 
                 <button
@@ -1156,10 +1105,10 @@ export default function BadalRequestModal({
                   className="px-6 py-3 rounded-xl bg-primary text-white font-bold hover:bg-primary/90 transition-colors"
                 >
                   {isSending
-                    ? "جارٍ إرسال الطلب..."
+                    ? t("submitting")
                     : serviceType === "umrah"
-                      ? "تأكيد طلب عمرة بدل"
-                      : "تأكيد طلب حج بدل"}
+                      ? t("confirmUmrah")
+                      : t("confirmHajj")}
                 </button>
               </div>
 
@@ -1182,8 +1131,8 @@ export default function BadalRequestModal({
         if (!nextOpen && !canClose) return;
         onOpenChange(nextOpen, reason);
       }}
-      title={getServiceTitle(serviceType)}
-      description="أكمل بياناتك ثم انتقل للدفع"
+      title={getServiceTitle(t, serviceType)}
+      description={t("description")}
       size="lg"
       closeOnBackdropClick={canClose}
       closeOnEscape={canClose}

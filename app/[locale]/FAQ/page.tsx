@@ -1,3 +1,4 @@
+import { getTranslations } from "next-intl/server";
 import {
   RiArrowDownSLine,
   RiBookOpenLine,
@@ -10,7 +11,9 @@ import {
   RiStarLine,
 } from "react-icons/ri";
 
-export default function FAQPage() {
+export default async function FAQPage() {
+  const t = await getTranslations("faq");
+
   return (
     <main className="flex-1 bg-background">
       <section className="relative overflow-hidden py-32 md:py-40">
@@ -28,13 +31,14 @@ export default function FAQPage() {
             </div>
 
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-black leading-tight tracking-tight text-secondary dark:text-primary drop-shadow-sm bg-clip-text">
-              الأسئلة{" "}
-              <span className="text-primary dark:text-white">الشائعة</span>
+              {t("titlePrefix")}{" "}
+              <span className="text-primary dark:text-white">
+                {t("titleHighlight")}
+              </span>
             </h1>
 
             <p className="text-lg md:text-2xl text-text-muted dark:text-gray-300 font-medium max-w-2xl bg-white/40 dark:bg-black/40 backdrop-blur-sm rounded-lg p-2 shadow-sm border border-white/20">
-              نحن هنا للإجابة على جميع استفساراتكم المتعلقة بمناسك الحج والخدمات
-              المتاحة لتيسير رحلتكم الإيمانية
+              {t("description")}
             </p>
 
             <div className="w-full max-w-xl mt-8">
@@ -44,15 +48,15 @@ export default function FAQPage() {
                 </div>
                 <input
                   className="block w-full rounded-2xl border-none bg-white dark:bg-[#1f1f1f] py-5 pr-14 pl-4 text-text-main shadow-xl ring-1 ring-gray-200 dark:ring-gray-700 focus:ring-2 focus:ring-primary transition-all text-lg placeholder:text-gray-400"
-                  placeholder="ابحث عن سؤالك هنا..."
+                  placeholder={t("searchPlaceholder")}
                   type="text"
-                  aria-label="ابحث عن سؤالك هنا"
+                  aria-label={t("searchAria")}
                 />
                 <button
                   className="absolute inset-y-2 left-2 flex items-center justify-center rounded-xl bg-primary hover:bg-primary-dark px-8 text-base font-bold text-white transition-all hover:shadow-lg hover:scale-[1.02] active:scale-95"
                   type="button"
                 >
-                  بحث
+                  {t("searchButton")}
                 </button>
               </div>
             </div>
@@ -66,35 +70,35 @@ export default function FAQPage() {
             className="flex h-10 items-center justify-center gap-2 rounded-full bg-primary hover:bg-primary-dark px-6 text-sm font-bold text-white shadow-soft transition-colors"
             type="button"
           >
-            الكل
+            {t("categories.all")}
           </button>
           <button
             className="flex h-10 items-center justify-center gap-2 rounded-full bg-surface-light dark:bg-[#1f1f1f] px-6 text-sm font-medium text-text-main dark:text-gray-300 border border-[#e6dccf] dark:border-gray-700 hover:border-primary hover:text-primary transition-all"
             type="button"
           >
             <RiBookOpenLine className="text-[18px]" aria-hidden />
-            إرشادات المناسك
+            {t("categories.rituals")}
           </button>
           <button
             className="flex h-10 items-center justify-center gap-2 rounded-full bg-surface-light dark:bg-[#1f1f1f] px-6 text-sm font-medium text-text-main dark:text-gray-300 border border-[#e6dccf] dark:border-gray-700 hover:border-primary hover:text-primary transition-all"
             type="button"
           >
             <RiHeartLine className="text-[18px]" aria-hidden />
-            الهدي والأضاحي
+            {t("categories.qurbani")}
           </button>
           <button
             className="flex h-10 items-center justify-center gap-2 rounded-full bg-surface-light dark:bg-[#1f1f1f] px-6 text-sm font-medium text-text-main dark:text-gray-300 border border-[#e6dccf] dark:border-gray-700 hover:border-primary hover:text-primary transition-all"
             type="button"
           >
             <RiShieldCheckLine className="text-[18px]" aria-hidden />
-            الصحة والسلامة
+            {t("categories.health")}
           </button>
           <button
             className="flex h-10 items-center justify-center gap-2 rounded-full bg-surface-light dark:bg-[#1f1f1f] px-6 text-sm font-medium text-text-main dark:text-gray-300 border border-[#e6dccf] dark:border-gray-700 hover:border-primary hover:text-primary transition-all"
             type="button"
           >
             <RiCustomerService2Line className="text-[18px]" aria-hidden />
-            الخدمات العامة
+            {t("categories.services")}
           </button>
         </div>
       </section>
@@ -107,7 +111,7 @@ export default function FAQPage() {
           >
             <summary className="flex cursor-pointer items-center justify-between gap-4 px-6 py-5 list-none">
               <span className="text-lg font-bold text-text-main dark:text-white leading-tight group-hover:text-secondary transition-colors">
-                ما هي أركان الحج الأربعة؟
+                {t("items.pillars.question")}
               </span>
               <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[#fff2eb] dark:bg-white/5 text-secondary transition-transform duration-300 group-open:rotate-180">
                 <RiArrowDownSLine className="text-2xl" aria-hidden />
@@ -116,22 +120,24 @@ export default function FAQPage() {
             <div className="px-6 pb-6 animate-in slide-in-from-top-2 duration-300">
               <div className="h-px w-full bg-[#f3efe9] dark:bg-[#2a2a2a] mb-4" />
               <p className="text-text-muted dark:text-gray-300 leading-relaxed text-base">
-                أركان الحج أربعة لا يصح الحج إلا بها، وهي:
+                {t("items.pillars.intro")}
               </p>
               <ul className="mt-3 space-y-2 list-disc list-inside text-text-muted dark:text-gray-400 marker:text-primary">
                 <li>
-                  <strong>الإحرام:</strong> وهو نية الدخول في النسك.
+                  <strong>{t("items.pillars.ihram").split(":")[0]}:</strong>{" "}
+                  {t("items.pillars.ihram").split(":").slice(1).join(":").trim()}
                 </li>
                 <li>
-                  <strong>الوقوف بعرفة:</strong> وهو أهم أركان الحج.
+                  <strong>{t("items.pillars.arafah").split(":")[0]}:</strong>{" "}
+                  {t("items.pillars.arafah").split(":").slice(1).join(":").trim()}
                 </li>
                 <li>
-                  <strong>طواف الإفاضة:</strong> ويكون بعد النزول من عرفة
-                  ومزدلفة.
+                  <strong>{t("items.pillars.tawaf").split(":")[0]}:</strong>{" "}
+                  {t("items.pillars.tawaf").split(":").slice(1).join(":").trim()}
                 </li>
                 <li>
-                  <strong>السعي بين الصفا والمروة:</strong> سبعة أشواط تبدأ من
-                  الصفا.
+                  <strong>{t("items.pillars.sai").split(":")[0]}:</strong>{" "}
+                  {t("items.pillars.sai").split(":").slice(1).join(":").trim()}
                 </li>
               </ul>
             </div>
@@ -140,7 +146,7 @@ export default function FAQPage() {
           <details className="group flex flex-col rounded-xl border border-[#e6dccf] dark:border-[#2a2a2a] bg-surface-light dark:bg-[#1f1f1f] shadow-soft transition-all duration-300 open:shadow-lg open:border-primary/30">
             <summary className="flex cursor-pointer items-center justify-between gap-4 px-6 py-5 list-none">
               <span className="text-lg font-bold text-text-main dark:text-white leading-tight group-hover:text-secondary transition-colors">
-                كيف يمكنني حجز نسك الهدي والأضاحي إلكترونياً؟
+                {t("items.qurbaniBooking.question")}
               </span>
               <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[#fff2eb] dark:bg-white/5 text-secondary transition-transform duration-300 group-open:rotate-180">
                 <RiArrowDownSLine className="text-2xl" aria-hidden />
@@ -149,10 +155,7 @@ export default function FAQPage() {
             <div className="px-6 pb-6">
               <div className="h-px w-full bg-[#f3efe9] dark:bg-[#2a2a2a] mb-4" />
               <p className="text-text-muted dark:text-gray-300 leading-relaxed text-base">
-                يمكنك حجز الهدي والأضاحي من خلال منصة &quot;أضاحي&quot; الرسمية
-                أو عبر التطبيقات المعتمدة مثل &quot;نسك&quot;. يتم الدفع
-                إلكترونياً وتصلك رسالة تأكيد عند إتمام الذبح في الوقت الشرعي
-                المحدد.
+                {t("items.qurbaniBooking.answer")}
               </p>
             </div>
           </details>
@@ -160,7 +163,7 @@ export default function FAQPage() {
           <details className="group flex flex-col rounded-xl border border-[#e6dccf] dark:border-[#2a2a2a] bg-surface-light dark:bg-[#1f1f1f] shadow-soft transition-all duration-300 open:shadow-lg open:border-primary/30">
             <summary className="flex cursor-pointer items-center justify-between gap-4 px-6 py-5 list-none">
               <span className="text-lg font-bold text-text-main dark:text-white leading-tight group-hover:text-secondary transition-colors">
-                ما هي الخدمات الطبية المتوفرة للحجاج في المشاعر المقدسة؟
+                {t("items.medical.question")}
               </span>
               <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[#fff2eb] dark:bg-white/5 text-secondary transition-transform duration-300 group-open:rotate-180">
                 <RiArrowDownSLine className="text-2xl" aria-hidden />
@@ -169,10 +172,7 @@ export default function FAQPage() {
             <div className="px-6 pb-6">
               <div className="h-px w-full bg-[#f3efe9] dark:bg-[#2a2a2a] mb-4" />
               <p className="text-text-muted dark:text-gray-300 leading-relaxed text-base">
-                تتوفر مستشفيات ومراكز صحية متكاملة في مشعر منى وعرفات ومزدلفة،
-                بالإضافة إلى فرق الإسعاف الجوالة والعيادات الميدانية التي تعمل
-                على مدار الساعة لتقديم الرعاية الطبية الفورية والمجانية لجميع
-                الحجاج.
+                {t("items.medical.answer")}
               </p>
             </div>
           </details>
@@ -180,7 +180,7 @@ export default function FAQPage() {
           <details className="group flex flex-col rounded-xl border border-[#e6dccf] dark:border-[#2a2a2a] bg-surface-light dark:bg-[#1f1f1f] shadow-soft transition-all duration-300 open:shadow-lg open:border-primary/30">
             <summary className="flex cursor-pointer items-center justify-between gap-4 px-6 py-5 list-none">
               <span className="text-lg font-bold text-text-main dark:text-white leading-tight group-hover:text-secondary transition-colors">
-                متى يبدأ وقت رمي الجمرات في أيام التشريق؟
+                {t("items.jamarat.question")}
               </span>
               <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[#fff2eb] dark:bg-white/5 text-secondary transition-transform duration-300 group-open:rotate-180">
                 <RiArrowDownSLine className="text-2xl" aria-hidden />
@@ -189,9 +189,7 @@ export default function FAQPage() {
             <div className="px-6 pb-6">
               <div className="h-px w-full bg-[#f3efe9] dark:bg-[#2a2a2a] mb-4" />
               <p className="text-text-muted dark:text-gray-300 leading-relaxed text-base">
-                يبدأ وقت رمي الجمرات في أيام التشريق (الحادي عشر والثاني عشر
-                والثالث عشر من ذي الحجة) من زوال الشمس، ويستمر حتى آخر الليل.
-                ويُفضل اتباع المواعيد المخصصة لكل حملة لتجنب الازدحام.
+                {t("items.jamarat.answer")}
               </p>
             </div>
           </details>
@@ -205,10 +203,9 @@ export default function FAQPage() {
 
           <div className="relative z-10 flex flex-col items-center gap-6 max-w-2xl mx-auto">
             <RiCustomerService2Line className="text-5xl" aria-hidden />
-            <h2 className="text-3xl md:text-4xl font-black">لم تجد إجابتك؟</h2>
+            <h2 className="text-3xl md:text-4xl font-black">{t("cta.title")}</h2>
             <p className="text-lg text-white/90 leading-relaxed">
-              فريق الدعم الفني والإرشادي متاح على مدار الساعة للإجابة على جميع
-              تساؤلاتكم وضمان رحلة حج ميسرة بإذن الله.
+              {t("cta.description")}
             </p>
 
             <div className="flex flex-wrap justify-center gap-4 mt-4">
@@ -217,14 +214,14 @@ export default function FAQPage() {
                 type="button"
               >
                 <RiQuestionLine className="text-xl" aria-hidden />
-                تواصل معنا
+                {t("cta.contact")}
               </button>
               <button
                 className="flex min-w-[160px] items-center justify-center gap-2 rounded-xl border-2 border-white px-8 py-4 text-lg font-bold text-white transition-colors hover:bg-white/10"
                 type="button"
               >
                 <RiPhoneLine className="text-xl" aria-hidden />
-                اتصل بنا
+                {t("cta.call")}
               </button>
             </div>
           </div>

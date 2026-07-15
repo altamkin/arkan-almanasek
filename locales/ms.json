@@ -3,7 +3,12 @@
     "home": "Utama",
     "language": "Bahasa",
     "error": "Ralat telah berlaku",
-    "try_again": "Cuba lagi"
+    "try_again": "Cuba lagi",
+    "addedToCart": "Berjaya ditambah ke troli",
+    "closeModal": "Tutup",
+    "pagination": "Navigasi halaman",
+    "sar": "SAR",
+    "unexpectedError": "Ralat tidak dijangka berlaku"
   },
   "languages": {
     "ar": "Arab",
@@ -51,21 +56,21 @@
     },
     "quickLinks": {
       "title": "Pautan pantas",
-      "about": "Tentang syarikat",
+      "about": "Tentang Kami",
       "products": "Produk"
     },
     "support": {
       "title": "Sokongan & bantuan",
-      "faq": "Soalan lazim",
+      "faq": "Soalan Lazim",
       "contact": "Hubungi kami"
     },
     "newsletter": {
-      "title": "Langgan",
-      "description": "Dapatkan tawaran dan tip terkini untuk perjalanan anda.",
-      "emailPlaceholder": "E-mel anda",
+      "title": "Langgan surat berita",
+      "description": "Dapatkan tawaran dan petua terkini untuk perjalanan anda.",
+      "emailPlaceholder": "alamat e-mel anda",
       "submitAria": "Hantar"
     },
-    "copyright": "© MACS {year} | All Rights Reserved"
+    "copyright": "© {year} Arkan Al-manasik. Hak cipta dilindungi."
   },
   "store": {
     "brand": {
@@ -85,7 +90,8 @@
       "price": "Harga",
       "minPrice": "Harga minimum",
       "maxPrice": "Harga maksimum",
-      "inStockOnly": "Hanya yang ada stok"
+      "inStockOnly": "Hanya yang ada stok",
+      "tags": "Tag"
     },
     "categories": {
       "all": "Semua"
@@ -139,13 +145,13 @@
         "specs": "Spesifikasi"
       },
       "description": {
-        "title": "Full kit details",
-        "paragraph1": "This premium kit is thoughtfully designed to support modern pilgrims and worshippers with comfort and practicality.",
-        "paragraph2": "It also includes essentials that help you stay organized and prepared throughout your journey."
+        "title": "Butiran pakej lengkap",
+        "paragraph1": "Pakej premium ini direka dengan teliti untuk menyokong jemaah haji moden dengan keselesaan dan praktikal. Ihram diperbuat daripada 100% kapas Mesir untuk penyerapan dan pengudaraan yang optimum, tanpa jahitan untuk kesesuaian sunnah.",
+        "paragraph2": "Pakej ini juga termasuk barangan penjagaan diri tanpa wangian dan haram, sesuai semasa Ihram. Beg ini ringan, kalis air dan mempunyai banyak poket untuk menyusun barang peribadi anda."
       },
       "reviews": {
         "title": "Ulasan pelanggan",
-        "placeholder": "You can list all reviews here or connect real data later."
+        "placeholder": "Anda boleh memaparkan semua ulasan di sini atau menyambung data sebenar kemudian."
       },
       "specs": {
         "title": "Spesifikasi"
@@ -284,9 +290,9 @@
         "description": "Buat pindahan ke akaun di bawah, kemudian muat naik resit untuk melengkapkan pesanan anda.",
         "details": {
           "bankNameLabel": "Nama bank",
-          "bankNameValue": "Test bank (edit later)",
+          "bankNameValue": "Bank ujian (edit kemudian)",
           "beneficiaryNameLabel": "Nama penerima",
-          "beneficiaryNameValue": "Test company",
+          "beneficiaryNameValue": "Syarikat percubaan",
           "ibanLabel": "Akaun / IBAN",
           "ibanValue": "SA00 0000 0000 0000 0000 0000"
         },
@@ -322,14 +328,14 @@
   },
   "qurbani": {
     "breadcrumbs": {
-      "ariaLabel": "Breadcrumb",
-      "home": "Home",
-      "current": "Hadi and udhiyah"
+      "ariaLabel": "Jejak navigasi",
+      "home": "Laman utama",
+      "current": "Hadi dan pengorbanan"
     },
     "hero": {
-      "titlePrefix": "Buy",
-      "titleHighlight": "Ritual",
-      "description": "Slaughtering and distribution services for udhiyah, hadi, and fidya according to sharia, with ease and reliability."
+      "titlePrefix": "Beli",
+      "titleHighlight": "Ibadah",
+      "description": "Perkhidmatan penyembelihan dan pengagihan korban, hadi dan fidyah mengikut hukum syarak, dengan mudah dan boleh dipercayai."
     },
     "listSeparator": ", ",
     "badges": {
@@ -351,30 +357,30 @@
     },
     "steps": {
       "selectType": {
-        "title": "Select ritual type",
-        "desc": "Choose the option that suits you"
+        "title": "Pilih jenis ibadah",
+        "desc": "Pilih pilihan yang sesuai dengan anda"
       },
       "securePayment": {
-        "title": "Secure payment",
-        "desc": "Trusted payment gateways"
+        "title": "Pembayaran selamat",
+        "desc": "Gerbang pembayaran yang dipercayai"
       },
       "sharia": {
-        "title": "Sharia compliant",
-        "desc": "Slaughter under expert supervision"
+        "title": "Pelaksanaan syariah",
+        "desc": "Penyembelihan di bawah pengawasan pakar"
       },
       "confirmation": {
-        "title": "Completion confirmation",
-        "desc": "Report via SMS"
+        "title": "Sahkan siap",
+        "desc": "Laporkan melalui SMS"
       }
     },
     "notice": {
-      "title": "Sharia notice",
-      "body": "All slaughtered animals undergo strict veterinary and sharia checks and are distributed to those in need at the prescribed times."
+      "title": "Pemberitahuan syariah",
+      "body": "Semua haiwan korban menjalani pemeriksaan veterinar dan syariah yang ketat, kemudian diagihkan kepada mereka yang memerlukan pada masa yang ditetapkan."
     },
     "cart": {
       "title": "Butiran pesanan",
       "empty": "Anda belum menambah sebarang item.",
-      "quantityLabel": "Qty:",
+      "quantityLabel": "Kuantiti:",
       "clear": "Padam",
       "continue": "Teruskan",
       "checkout": "Pembayaran",
@@ -391,236 +397,580 @@
   },
   "home": {
     "hero": {
-      "backgroundAlt": "Cinematic view of the Kaaba",
-      "seasonBadge": "Hajj season 1445 AH",
-      "titleTop": "Journey of a lifetime",
-      "titleHighlight": "Begins with a touch of excellence",
-      "description": "We accompany you every step of your spiritual journey to ensure peace of mind and ease in performing your rituals with the highest service standards.",
-      "primaryCta": "Start your journey",
-      "secondaryCta": "Contact us",
+      "backgroundAlt": "Pandangan sinematik Kaabah",
+      "seasonBadge": "Musim Haji 1445 H",
+      "titleTop": "Perjalanan seumur hidup",
+      "titleHighlight": "Bermula dengan sentuhan kecemerlangan",
+      "description": "Kami menemani anda dalam setiap langkah perjalanan rohani anda, memastikan ketenangan dan kemudahan dalam menjalankan ibadah dengan standard perkhidmatan tertinggi, serta menyediakan Badal haji dan Umrah.",
+      "primaryCta": "Mulakan perjalanan anda",
+      "secondaryCta": "Hubungi kami",
       "stats": {
         "pilgrimsValue": "50k+",
-        "pilgrimsLabel": "Pilgrims served"
+        "pilgrimsLabel": "Jemaah dihidangkan"
       },
       "support": {
-        "title": "Always-on support",
-        "subtitle": "24/7 throughout the journey",
-        "body": "A dedicated team to serve you and answer your questions at any time."
+        "title": "Sokongan berterusan",
+        "subtitle": "24/7 sepanjang perjalanan",
+        "body": "Pasukan yang berdedikasi bersedia untuk berkhidmat dan menjawab soalan anda pada bila-bila masa."
       }
     },
     "video": {
-      "eyebrow": "Get to know us",
-      "heading": "Integrated services for pilgrims",
-      "description": "We build a digital experience that reflects the spirit of the journey: clear, reassuring, and respectful of the sacred rituals—from planning to completion.",
-      "iframeTitle": "Intro video",
-      "html5Fallback": "Your browser does not support the video tag."
+      "eyebrow": "Kenali kami",
+      "heading": "Perkhidmatan bersepadu untuk jemaah haji",
+      "description": "Kami mencipta pengalaman digital yang mencerminkan semangat perjalanan: jelas, menenangkan dan menghormati kesucian ibadat—daripada perancangan hingga selesai.",
+      "iframeTitle": "Video pengenalan",
+      "html5Fallback": "Penyemak imbas anda tidak menyokong main balik video."
     },
     "products": {
-      "sectionTitle": "Featured products",
-      "viewAll": "View all",
-      "addToCartAria": "Add {title} to cart",
-      "emptyMessage": "No products available right now."
+      "sectionTitle": "Produk terpilih",
+      "viewAll": "Lihat semua",
+      "addToCartAria": "Tambahkan {title} pada troli",
+      "emptyMessage": "Tiada produk yang tersedia pada masa ini."
     },
     "services": {
-      "sectionTitle": "Our featured services",
-      "sectionDescription": "A complete suite of sharia-compliant and logistical services to make your Hajj and Umrah journey easier.",
+      "sectionTitle": "Perkhidmatan unggul kami",
+      "sectionDescription": "Satu siri perkhidmatan syariah dan logistik bersepadu untuk memudahkan perjalanan Haji dan Umrah anda.",
       "items": {
         "hadiAndUdhiyah": {
-          "title": "Hadi and udhiyah",
-          "description": "A trusted service for slaughtering and distributing hadi and udhiyah to the poor in the Haram, supervised end-to-end with integrity."
+          "title": "Hadi dan pengorbanan",
+          "description": "Khidmat amanah menyembelih dan mengagihkan hadi serta korban kepada fakir miskin di Tanah Haram, diselia dengan penuh amanah."
         },
         "pilgrimageGuide": {
-          "title": "Rituals guide",
-          "description": "A comprehensive, visual, and interactive guide to perform Hajj/Umrah correctly according to the Sunnah."
+          "title": "Panduan manasik",
+          "description": "Panduan lengkap, visual dan interaktif menunaikan haji/Umrah dengan betul mengikut sunnah."
         },
         "permits": {
-          "title": "Hajj & Umrah permits",
-          "description": "We help you obtain all official permits through approved channels quickly and easily."
+          "title": "Izin Haji & Umrah",
+          "description": "Kami membantu anda mendapatkan semua permit rasmi melalui saluran rasmi dengan cepat dan mudah."
         },
         "shariaConsultations": {
-          "title": "Sharia consultations",
-          "description": "Direct access to scholars and preachers to answer your jurisprudence questions during the rituals."
+          "title": "Perundingan syariah",
+          "description": "Akses terus kepada ulama dan pendakwah untuk menjawab soalan fiqh semasa beribadat."
         },
         "hajjAndUmrahOnBehalf": {
-          "title": "Hajj/Umrah on behalf",
-          "description": "We perform rituals on behalf of the incapacitated or deceased, with full documentation of every stage."
+          "title": "Badal Haji/Umrah",
+          "description": "Kami menjalankan ibadah bagi pihak mereka yang hilang upaya atau yang telah meninggal dunia, dengan dokumentasi lengkap pada setiap peringkat."
         }
       }
     },
     "cta": {
-      "limitedBadge": "Limited spots this season",
-      "titleLine1": "Your journey starts with",
-      "titleLine2": "one step of preparation",
-      "description": "Let us accompany you from preparation to performing the rituals with ease and peace of mind. Join thousands of pilgrims who trusted us.",
-      "primaryCta": "Book now",
-      "secondaryCta": "Download the guide",
+      "limitedBadge": "Kuota adalah terhad musim ini",
+      "titleLine1": "Perjalanan anda bermula dengan",
+      "titleLine2": "satu langkah persediaan",
+      "description": "Izinkan kami menemani anda dari persiapan hinggalah menunaikan ibadah dengan tenang dan tenteram. Sertai ribuan penyembah yang mempercayai kami.",
+      "primaryCta": "Pesan sekarang",
+      "secondaryCta": "Muat turun panduan",
       "trustBadge": "+2k",
       "trustValue": "2,000+",
-      "trustLabel": "Pilgrims who trusted us",
-      "appTagline": "Your smart rituals guide",
-      "liveLabel": "Live"
+      "trustLabel": "Jemaah mempercayai kita",
+      "appTagline": "Panduan manasik bijak anda",
+      "liveLabel": "Langsung"
     }
   },
   "about": {
     "hero": {
-      "titleTop": "We accompany you on the purest",
-      "titleHighlight": "journey of a lifetime",
-      "description": "Your trusted partner for serving pilgrims—combining heritage of service with modern technology to make your rituals easier."
+      "titleTop": "Kami menemani anda masuk",
+      "titleHighlight": "perjalanan paling suci seumur hidup",
+      "description": "Rakan kongsi anda yang dipercayai kerana berkhidmat kepada jemaah anda—menggabungkan legasi perkhidmatan dengan teknologi moden untuk memudahkan ibadah anda."
     },
     "values": {
-      "title": "Our values and services",
-      "subtitle": "An integrated system designed for your comfort and peace"
+      "title": "Nilai dan perkhidmatan kami",
+      "subtitle": "Sistem bersepadu yang direka untuk keselesaan dan ketenangan fikiran anda"
     },
     "vision": {
-      "title": "Our vision",
-      "body": "To be the world’s leading digital platform in facilitating Hajj and Umrah—delivering innovative solutions that unite spirituality and technology with transparency and integrity."
+      "title": "Penglihatan kita",
+      "body": "Untuk menjadi platform digital terkemuka dunia dalam memudahkan ibadah haji dan Umrah, mempersembahkan penyelesaian inovatif yang menggabungkan kerohanian dan teknologi dengan ketelusan dan amanah."
     },
     "mission": {
-      "title": "Our mission",
-      "body": "We empower pilgrims to perform their rituals with ease and reassurance by providing trusted, transparent, sharia-compliant services at the highest quality standards."
+      "title": "misi kami",
+      "body": "Kami memperkasakan jemaah haji untuk menjalankan ibadah mereka dengan mudah dan tenang melalui perkhidmatan yang dipercayai, telus dan patuh syariah dengan standard kualiti tertinggi."
     },
     "cards": {
       "badal": {
-        "title": "Badal Hajj",
-        "body": "Performing rituals on behalf of those unable or deceased by trustworthy students of knowledge."
+        "title": "Haji Badal",
+        "body": "Menunaikan ibadah bagi pihak yang tidak mampu atau yang meninggal dunia oleh penuntut ilmu yang dipercayai."
       },
       "trust": {
-        "title": "Integrity & credibility",
-        "body": "The foundation of how we serve pilgrims"
+        "title": "Integriti & kredibiliti",
+        "body": "Asas cara kita berkhidmat kepada jemaah"
       },
       "guidance": {
-        "title": "Ritual guidance",
-        "body": "A comprehensive guide and certified guides to support you step by step."
+        "title": "Hadi dan pengorbanan",
+        "body": "Bimbingan lengkap dan mentor bertauliah untuk menemani anda langkah demi langkah."
       },
       "permits": {
-        "title": "Permits",
-        "body": "Fast, simplified official procedures to ensure compliant pilgrimage."
+        "title": "kebenaran",
+        "body": "Prosedur rasmi yang cepat dan dipermudahkan bagi memastikan ibadah mengikut peraturan."
       }
     },
     "why": {
-      "title": "Why us?",
+      "title": "Kenapa kita?",
       "bullets": {
-        "sharia": "Full commitment to sharia guidelines",
-        "support": "24/7 technical and advisory support",
-        "ease": "Easy-to-use across digital platforms"
+        "sharia": "Komitmen penuh kepada garis panduan syariah",
+        "support": "Sokongan teknikal dan perundingan 24/7",
+        "ease": "Mudah digunakan pada semua platform digital"
       },
-      "imageAlt": "Pilgrims"
+      "imageAlt": "Jemaah"
     },
     "stats": {
       "experienceValue": "15+",
-      "experienceLabel": "Years of experience",
+      "experienceLabel": "Bertahun pengalaman",
       "pilgrimsValue": "50k+",
-      "pilgrimsLabel": "Pilgrims served",
+      "pilgrimsLabel": "Jemaah dihidangkan",
       "satisfactionValue": "99%",
-      "satisfactionLabel": "Satisfaction rate"
+      "satisfactionLabel": "Tahap kepuasan"
     },
     "cta": {
-      "title": "Ready to start your spiritual journey?",
-      "description": "Join thousands of pilgrims who trusted us for a memorable journey and accepted rituals, God willing.",
-      "primaryCta": "Start now",
-      "secondaryCta": "Talk to an advisor"
+      "title": "Bersedia untuk memulakan perjalanan rohani anda?",
+      "description": "Sertai ribuan jemaah yang mempercayai kami untuk perjalanan yang tidak dapat dilupakan dan ibadah yang diterima, insya-Allah.",
+      "primaryCta": "Mulai sekarang",
+      "secondaryCta": "Bercakap dengan perunding"
     }
   },
   "contact": {
     "hero": {
-      "title": "Contact us",
-      "description": "We’re here to serve you and answer your questions to ensure an easier and safer spiritual journey."
+      "title": "hubungi kami",
+      "description": "Kami bersedia untuk melayani dan menjawab soalan anda untuk memastikan perjalanan rohani yang lebih mudah dan selamat."
     },
     "form": {
-      "title": "Send us a message",
+      "title": "Hantar mesej kepada kami",
       "fullName": {
-        "label": "Full name",
-        "placeholder": "Enter your name"
+        "label": "Nama penuh",
+        "placeholder": "Masukkan nama anda"
       },
       "email": {
-        "label": "Email",
+        "label": "E-mel",
         "placeholder": "example@email.com"
       },
       "phone": {
-        "label": "Phone number",
+        "label": "Nombor telefon",
         "placeholder": "+9xxxxxxxxx"
       },
       "subject": {
-        "label": "Subject",
-        "placeholder": "Select a subject",
+        "label": "Subjek",
+        "placeholder": "Pilih subjek",
         "options": {
-          "haj": "Hajj services",
-          "umrah": "Umrah services",
-          "support": "Technical support",
-          "other": "Other"
+          "haj": "Perkhidmatan Haji",
+          "umrah": "Perkhidmatan Umrah",
+          "support": "Sokongan teknikal",
+          "other": "Lain-lain"
         }
       },
       "message": {
-        "label": "Message",
-        "placeholder": "Write your message here..."
+        "label": "Mesej",
+        "placeholder": "Tulis mesej anda di sini..."
       },
-      "submit": "Send message"
+      "submit": "hantar mesej"
     },
     "info": {
       "phone": {
-        "title": "Phone",
-        "description": "Contact us directly by phone",
+        "title": "telefon",
+        "description": "Hubungi kami terus melalui telefon",
         "value": "+966 50 000 0000"
       },
       "email": {
-        "title": "Email",
-        "description": "For official inquiries and complaints",
+        "title": "E-mel",
+        "description": "Untuk pertanyaan dan aduan rasmi",
         "value": "info@manasik.sa"
       },
       "hours": {
-        "title": "Working hours",
-        "description": "We’re available to support you",
-        "value": "Sat–Thu: 9am–5pm"
+        "title": "Waktu bekerja",
+        "description": "Kami sedia membantu anda",
+        "value": "Sabtu–Khamis: 09.00–17.00"
       },
       "location": {
-        "title": "Location",
-        "description": "Visit our headquarters",
-        "value": "Makkah, Al Aziziyah, Saudi Arabia"
+        "title": "Lokasi",
+        "description": "Lawati ibu pejabat kami",
+        "value": "Makkah, Al Aziziyah, Arab Saudi"
       }
     },
     "social": {
       "xSymbol": "𝕏",
-      "xAria": "Our X account",
-      "whatsAppAria": "Contact via WhatsApp",
-      "instagramAria": "Our Instagram"
+      "xAria": "Akaun X kami",
+      "whatsAppAria": "Hubungi melalui WhatsApp",
+      "instagramAria": "Akaun Instagram kami"
     },
     "helpCenter": {
-      "title": "Help center",
-      "subtitle": "Quick answers and direct services to make your journey easier",
+      "title": "Pusat bantuan",
+      "subtitle": "Jawapan pantas dan perkhidmatan segera untuk memudahkan perjalanan anda",
       "cards": {
         "faq": {
-          "title": "FAQs",
-          "description": "Search our knowledge base for answers",
-          "action": "Browse FAQs"
+          "title": "Soalan Lazim",
+          "description": "Cari pangkalan pengetahuan kami untuk mendapatkan jawapan",
+          "action": "Terokai Soalan Lazim"
         },
         "consultations": {
-          "title": "Hajj consultations",
-          "description": "Book a private consultation with one of our experts",
-          "action": "Book a consultation"
+          "title": "Perundingan Haji",
+          "description": "Tempah perundingan peribadi dengan salah seorang pakar kami",
+          "action": "Tempah perundingan"
         },
         "services": {
-          "title": "Services guide",
-          "description": "Learn about available services and packages",
-          "action": "View services"
+          "title": "Panduan perkhidmatan",
+          "description": "Ketahui tentang perkhidmatan dan pakej yang tersedia",
+          "action": "Lihat perkhidmatan"
         }
       }
     },
     "finalCta": {
-      "title": "Ready to start your spiritual journey?",
-      "description": "We’re here to accompany you every step—from planning to performing the rituals—for an unforgettable experience.",
-      "primaryCta": "Request a free consultation",
-      "secondaryCta": "Contact us on WhatsApp"
+      "title": "Bersedia untuk memulakan perjalanan rohani anda?",
+      "description": "Kami menemani anda setiap langkah—daripada perancangan hingga pelaksanaan ibadah—untuk pengalaman yang tidak dapat dilupakan.",
+      "primaryCta": "Minta konsultasi percuma",
+      "secondaryCta": "Hubungi kami melalui WhatsApp"
     },
     "validation": {
-      "fullNameRequired": "Full name is required",
-      "fullNameTooLong": "Full name is too long",
-      "emailRequired": "Email is required",
-      "emailInvalid": "Email is invalid",
-      "phoneRequired": "Phone number is required",
-      "phoneInvalid": "Phone number is invalid",
-      "subjectRequired": "Please select a subject",
-      "messageTooShort": "Message is too short",
-      "messageTooLong": "Message is too long"
+      "fullNameRequired": "Nama penuh adalah wajib",
+      "fullNameTooLong": "Nama terlalu panjang",
+      "emailRequired": "E-mel diperlukan",
+      "emailInvalid": "E-mel tidak sah",
+      "phoneRequired": "Nombor telefon adalah wajib",
+      "phoneInvalid": "Nombor telefon tidak sah",
+      "subjectRequired": "Pilih subjek soalan",
+      "messageTooShort": "Mesej terlalu pendek",
+      "messageTooLong": "Mesej terlalu panjang"
+    }
+  },
+  "notFound": {
+    "title": "Halaman tidak dijumpai",
+    "description": "Maaf, nampaknya anda telah tersesat. Halaman ini tidak tersedia—sila kembali untuk meneruskan perjalanan anda.",
+    "homeCta": "Kembali ke laman utama",
+    "guideCta": "Panduan jemaah",
+    "helpCenter": "Pusat bantuan & sokongan"
+  },
+  "faq": {
+    "titlePrefix": "Soalan",
+    "titleHighlight": "Lazim",
+    "description": "Kami bersedia untuk menjawab semua soalan anda tentang ibadah haji dan perkhidmatan yang tersedia untuk memudahkan perjalanan rohani anda.",
+    "searchPlaceholder": "Cari soalan anda di sini...",
+    "searchAria": "Cari soalan anda di sini",
+    "searchButton": "Cari",
+    "categories": {
+      "all": "Semua",
+      "rituals": "Panduan manasik",
+      "qurbani": "Hadi & korban",
+      "health": "Kesihatan & keselamatan",
+      "services": "Perkhidmatan am"
+    },
+    "items": {
+      "pillars": {
+        "question": "Apakah empat rukun haji?",
+        "intro": "Ibadah haji mempunyai empat rukun wajib, yaitu:",
+        "ihram": "Ihram: niat masuk ibadah.",
+        "arafah": "Wukuf di Arafah: rukun haji yang paling utama.",
+        "tawaf": "Tawaf ifadhah: dilakukan setelah turun dari Arafah dan Muzdalifah.",
+        "sai": "Sa'i antara Shafa dan Marwah: tujuh kali bermula dari Shafa."
+      },
+      "qurbaniBooking": {
+        "question": "Bagaimana cara saya menempah hadi dan qurbani secara online?",
+        "answer": "Anda boleh menempah hadi dan qurbani melalui platform rasmi Adahi atau aplikasi rasmi seperti Nusuk. Pembayaran dibuat secara elektronik dan anda menerima pengesahan apabila penyembelihan selesai pada masa yang ditetapkan."
+      },
+      "medical": {
+        "question": "Apakah perkhidmatan perubatan yang disediakan untuk jemaah haji di tanah suci?",
+        "answer": "Hospital dan pusat kesihatan yang serba lengkap tersedia di Mina, Arafah, dan Muzdalifah, bersama-sama pasukan ambulans dan klinik lapangan beroperasi 24 jam untuk rawatan perubatan percuma untuk semua jemaah haji."
+      },
+      "jamarat": {
+        "question": "Bilakah waktu melontar jamarat bermula pada hari tasyriq?",
+        "answer": "Waktu melontar jamarat pada hari tasyriq (11, 12, dan 13 Dzulhijjah) bermula selepas zuhur hingga akhir malam. Adalah disyorkan untuk mengikuti jadual kumpulan untuk mengelakkan kesesakan."
+      }
+    },
+    "cta": {
+      "title": "Tidak jumpa jawapan anda?",
+      "description": "Pasukan sokongan teknikal dan bimbingan kami sedia 24 jam untuk menjawab soalan anda dan memastikan perjalanan Haji lancar, insya-Allah.",
+      "contact": "Hubungi kami",
+      "call": "Hubungi telefon"
+    }
+  },
+  "permits": {
+    "hero": {
+      "badge": "Pintu masuk Haji & Umrah",
+      "title": "Perkhidmatan permit",
+      "description": "Kami berada di sini untuk memudahkan perjalanan rohani anda. Kami menyediakan pengeluaran permit Haji dan Umrah yang boleh dipercayai dengan prosedur mudah supaya anda boleh fokus pada ibadah anda dengan tenang.",
+      "imageAlt": "Latar belakang corak geometri Islam"
+    },
+    "about": {
+      "title": "Rakan kongsi yang dipercayai untuk perjalanan seumur hidup",
+      "body": "Perjalanan haji dan Umrah memerlukan prosedur yang teliti dan pematuhan peraturan yang berubah-ubah. Kami mengendalikan bahagian pentadbiran yang kompleks—daripada permohonan hingga menerima permit akhir—memastikan pematuhan sepenuhnya terhadap keperluan Kementerian Haji dan Umrah."
+    },
+    "types": {
+      "title": "Jenis kebenaran yang tersedia",
+      "subtitle": "Pilih perkhidmatan yang sesuai dengan keperluan anda",
+      "cards": {
+        "hajj": {
+          "title": "Izin Haji",
+          "description": "Perkhidmatan pengeluaran permit haji yang lengkap untuk rakyat dan penduduk, termasuk pendaftaran laluan elektronik dan susulan kelulusan."
+        },
+        "umrah": {
+          "title": "Permit Umrah",
+          "description": "Permit Umrah segera dan lawatan Raudhah melalui aplikasi rasmi, untuk individu dan kumpulan."
+        },
+        "seasonal": {
+          "title": "permit bermusim",
+          "description": "Perkhidmatan khas untuk penganjur pelancongan dan kakitangan bermusim untuk memasuki tanah suci secara sah."
+        }
+      }
+    },
+    "documents": {
+      "eyebrow": "keadaan",
+      "title": "Dokumen yang diperlukan",
+      "description": "Untuk mempercepatkan pemprosesan, sediakan dokumen berikut sebelum menyerahkan. Kami membantu menyemak dokumen sebelum dimuat naik.",
+      "imageAlt": "Close-up tangan memegang Al-Quran",
+      "badgeTitle": "Semakan segera",
+      "badgeBody": "Kami menyemak dokumen sebelum diserahkan kepada kementerian",
+      "items": {
+        "id": "Gambar KTP / permit kediaman",
+        "vaccination": "Rekod vaksinasi (COVID-19 dan meningitis)",
+        "photo": "Foto peribadi terkini (latar belakang putih)",
+        "passport": "Pasport (untuk pelawat dari luar negara)",
+        "visa": "Visa kemasukan yang sah",
+        "mahram": "Bukti hubungan kekeluargaan (untuk mahram)"
+      }
+    },
+    "steps": {
+      "title": "Langkah-langkah untuk mendapatkan kebenaran",
+      "subtitle": "Perjalanan mudah dari permohonan ke ketibaan",
+      "items": {
+        "submit": {
+          "title": "Mohon",
+          "description": "Isi borang dalam talian dan muat naik dokumen awal."
+        },
+        "review": {
+          "title": "Semakan & pengesahan",
+          "description": "Pasukan kami mengesahkan ketepatan data dan lampiran."
+        },
+        "approval": {
+          "title": "Kelulusan rasmi",
+          "description": "Permohonan dihantar kepada pihak berkuasa yang berkenaan untuk kelulusan."
+        },
+        "receive": {
+          "title": "Terima kebenaran",
+          "description": "Kebenaran anda dihantar melalui apl atau e-mel."
+        }
+      }
+    },
+    "notice": {
+      "title": "Nota penting untuk pemohon",
+      "body": "Pengeluaran permit tertakluk kepada kapasiti di Dua Masjid Suci dan peraturan Kementerian Haji dan Umrah. Masa pemprosesan mungkin berubah semasa musim puncak (Ramadan dan Haji). Kami mengesyorkan anda memfailkan lebih awal daripada tarikh rancangan anda.",
+      "policyLink": "Baca dasar perkhidmatan, terma & syarat"
+    },
+    "cta": {
+      "title": "Bersedia untuk memulakan perjalanan rohani anda?",
+      "description": "Jangan biarkan prosedur mengganggu anda daripada beribadat. Mulakan permohonan anda sekarang dan pasukan kami akan membimbing anda langkah demi langkah.",
+      "request": "Mohon perkhidmatan permit",
+      "support": "Hubungi sokongan"
+    },
+    "modal": {
+      "title": "Permohonan perkhidmatan permit Haji & Umrah",
+      "description": "Lengkapkan data untuk mendapatkan kebenaran rasmi",
+      "steps": {
+        "type": "Jenis kebenaran",
+        "details": "Data & dokumen",
+        "payment": "Bayaran",
+        "review": "Semak permohonan itu"
+      },
+      "step1": {
+        "title": "Pilih jenis kebenaran yang diperlukan",
+        "hajjTitle": "Izin Haji",
+        "hajjDesc": "Mengeluarkan permit menunaikan haji kepada rakyat dan penduduk.",
+        "umrahTitle": "Permit Umrah",
+        "umrahDesc": "Mengeluarkan kebenaran menunaikan Umrah dan melawat Raudhah.",
+        "notesLabel": "Nota tambahan (pilihan)",
+        "notesPlaceholder": "Sebarang butiran yang membantu kami melengkapkan permohonan anda"
+      },
+      "step2": {
+        "personalInfo": "Maklumat peribadi",
+        "fullNameLabel": "Nama penuh (mengikut KTP)",
+        "fullNamePlaceholder": "Masukkan nama penuh anda",
+        "phoneLabel": "Nombor mudah alih (dengan kod negara)",
+        "phoneFormat": "Akan disimpan sebagai: {dial}",
+        "countryLabel": "Negara",
+        "countryPlaceholder": "Pilih negara",
+        "emailLabel": "E-mel (pilihan)",
+        "idLabel": "Nombor KTP / pasport",
+        "birthDateLabel": "Tarikh lahir",
+        "nationalityLabel": "Kewarganegaraan",
+        "nationalityPlaceholder": "Pilih kewarganegaraan",
+        "attachments": "Lampiran & dokumen",
+        "idPhoto": "Kad pengenalan bergambar",
+        "idPhotoHint": "JPG, PNG, PDF up to 10MB",
+        "personalPhoto": "Foto peribadi",
+        "personalPhotoHint": "Mesti mempunyai latar belakang putih",
+        "docsRequired": "Sila muat naik gambar KTP dan gambar peribadi anda"
+      },
+      "step3": {
+        "title": "Bayaran",
+        "card": "Kad",
+        "bank": "Pindahan bank",
+        "uploadReceipt": "Muat naik bukti pemindahan",
+        "fileChosen": "Dipilih: {name}"
+      },
+      "step4": {
+        "title": "Ringkasan permohonan",
+        "permitType": "Jenis kebenaran",
+        "fullName": "Nama penuh",
+        "idNumber": "nombor KTP",
+        "phone": "Nombor telefon bimbit",
+        "country": "Negara",
+        "email": "E-mel",
+        "nationality": "Kewarganegaraan",
+        "documents": "Dokumen",
+        "documentsComplete": "lengkap",
+        "disclaimer": "Dengan mengklik \"Serahkan permohonan\", anda mengisytiharkan ketepatan semua data dan bersetuju dengan syarat Kementerian Haji dan Umrah."
+      },
+      "permitLabels": {
+        "hajj": "Izin Haji",
+        "umrah": "Permit Umrah"
+      },
+      "nationalities": {
+        "sa": "Arab Saudi",
+        "eg": "Mesir",
+        "ae": "Emiriah Arab Bersatu",
+        "kw": "Kuwait",
+        "jo": "Jordan",
+        "other": "Lain-lain"
+      },
+      "actions": {
+        "cancel": "Dibatalkan",
+        "back": "Kembali",
+        "next": "Seterusnya",
+        "submit": "Hantar permohonan"
+      },
+      "validation": {
+        "permitTypeRequired": "Jenis permit adalah wajib",
+        "idNumberInvalid": "Nombor KTP/pasport tidak sah",
+        "nationalityRequired": "Kewarganegaraan adalah wajib"
+      }
+    }
+  },
+  "badal": {
+    "hero": {
+      "badge": "Perkhidmatan yang disahkan Syariah dan undang-undang",
+      "titleLine1": "Haji & Umrah",
+      "titleHighlight": "bagi pihak orang lain",
+      "description": "Kami menunaikan Haji dan Umrah bagi pihak orang tersayang yang hilang upaya atau meninggal dunia dengan amanah dan ikhlas, melalui penuntut ilmu yang berkelayakan dan dipercayai, dengan dokumentasi lengkap semua ibadah.",
+      "primaryCta": "Mulakan permohonan sekarang",
+      "videoCta": "Tonton video pengenalan",
+      "imageAlt": "Kaabah di Mekah dengan jemaah haji melakukan Tawaf",
+      "caption": "Pelaksanaan mandat dengan dokumentasi audio dan video",
+      "verified": "Disahkan",
+      "statsValue": "5,000+ ritual",
+      "statsLabel": "Berjaya dilaksanakan pada tahun ini"
+    },
+    "about": {
+      "title": "Untuk siapa perkhidmatan ini?",
+      "description": "Islam membenarkan Haji dan Badal Umrah dalam keadaan tertentu sebagai rahmat kepada hamba. Kami memudahkan anda menjalankan ibadah ini bagi pihak ibu bapa atau saudara mara yang menepati kehendak syariah.",
+      "shariaTitle": "Pengawasan syariah",
+      "shariaBody": "Kami memastikan kesesuaian dan pengetahuan pengamal tentang ritual tersebut.",
+      "deceasedTitle": "Badal atas nama arwah",
+      "deceasedBody": "Menunaikan haji atau Umrah bagi mereka yang telah meninggal dunia dengan niat yang ikhlas.",
+      "conditions": {
+        "deceased": {
+          "title": "lewat",
+          "description": "Badal Haji dan Umrah dibolehkan bagi mereka yang meninggal dunia tanpa menunaikan kewajipannya, atau apabila keluarga ingin menyembah sunnah bagi pihak mereka."
+        },
+        "incapacitated": {
+          "title": "Hilang upaya secara kekal",
+          "description": "Pesakit yang tidak mempunyai harapan untuk sembuh, atau orang tua yang tidak dapat melakukan perjalanan dan perjalanan."
+        },
+        "financial": {
+          "title": "Keupayaan kewangan",
+          "description": "Pengetua mesti mampu menanggung kos pelaksanaan dan pemberian kuasa."
+        }
+      }
+    },
+    "trust": {
+      "title": "Kepercayaan & ketelusan mutlak",
+      "description": "Kami komited kepada piawaian kredibiliti tertinggi untuk ketenangan fikiran anda.",
+      "performers": "Pelaksana yang dipercayai",
+      "video": "Dokumentasi video",
+      "certificate": "Sijil tamat",
+      "support": "Sokongan berterusan"
+    },
+    "process": {
+      "eyebrow": "Cara kita bekerja",
+      "title": "Langkah demi langkah perjalanan perkhidmatan",
+      "steps": {
+        "submit": {
+          "title": "Mohon",
+          "description": "Isikan data penerima dan jenis ibadah (Haji atau Umrah)."
+        },
+        "payment": {
+          "title": "Pengesahan & pembayaran",
+          "description": "Semak permohonan dan sahkan pembayaran dengan selamat dalam talian."
+        },
+        "assign": {
+          "title": "Tugaskan pelaksana",
+          "description": "Pilihlah pelajar yang memenuhi syarat untuk menjalankan ibadah anda."
+        },
+        "perform": {
+          "title": "Lakukan ritual",
+          "description": "Mulakan ritual dengan dokumentasi langsung termasuk doa."
+        },
+        "document": {
+          "title": "Dokumentasi",
+          "description": "Terima sijil penyiapan dan rakaman video."
+        }
+      }
+    },
+    "pricing": {
+      "title": "Pilih pakej yang sesuai",
+      "subtitle": "Harga telus dan merangkumi semua",
+      "mostPopular": "Paling popular",
+      "umrahFeatures": {
+        "intention": "Niat dan talbiyah pada nama",
+        "rituals": "Tawaf, sa'i, dan cukur/gunting rambut",
+        "video": "Video solat di Kaabah",
+        "completion": "Siap dalam masa 48 jam"
+      },
+      "hajjFeatures": {
+        "type": "Haji tamattu' atau ifrad",
+        "arafah": "Wukuf di Arafah dan bermalam di Mina",
+        "hadi": "Hadi (pengorbanan)",
+        "documentation": "Dokumentasi lengkap semua lokasi",
+        "certificate": "Sijil Rasmi Haji"
+      },
+      "umrahCta": "Minta Badal Umrah",
+      "hajjCta": "Mohon Badal haji"
+    },
+    "faq": {
+      "title": "Soalan lazim",
+      "items": {
+        "legality": {
+          "question": "Adakah perkhidmatan ini dibenarkan mengikut syarak?",
+          "answer": "Ya, haji dan Umrah untuk si mati dan mereka yang hilang upaya selama-lamanya dibenarkan menurut ulama, disokong oleh hadis sahih."
+        },
+        "verification": {
+          "question": "Bagaimana untuk memastikan ibadah telah dijalankan?",
+          "answer": "Kami menyediakan dokumentasi video pelaksana menyatakan niat bagi pihak pemohon, ditambah dengan rakaman tawaf, sa'i dan doa."
+        },
+        "performers": {
+          "question": "Siapa yang mengerjakan Umrah dan haji?",
+          "answer": "Kami bekerjasama dengan penuntut ilmu dan penghafaz al-Quran di Makkah yang terkenal alim dan amanah, yang telah menunaikan kewajipan terhadap diri mereka."
+        }
+      }
+    },
+    "modal": {
+      "stepOf": "Langkah {step} daripada {total}",
+      "beneficiaryData": "Data benefisiari",
+      "payment": "Bayaran",
+      "fullName": "Nama penuh",
+      "phoneLabel": "Nombor mudah alih (dengan kod negara)",
+      "phoneFormat": "Akan disimpan sebagai: {dial}",
+      "countryLabel": "Negara",
+      "countryPlaceholder": "Pilih negara",
+      "emailOptional": "E-mel (pilihan)",
+      "birthDateLabel": "Umur - tarikh lahir",
+      "performedBefore": "Adakah anda pernah menunaikan haji atau Umrah sebelum ini?",
+      "yes": "ya",
+      "no": "Tidak",
+      "cancel": "Dibatalkan",
+      "next": "Seterusnya",
+      "saving": "Simpan aplikasi...",
+      "back": "Kembali",
+      "submitting": "Hantar permohonan...",
+      "confirmUmrah": "Pengesahan permohonan Umrah Badal",
+      "confirmHajj": "Pengesahan permohonan Badal Haji",
+      "description": "Lengkapkan data anda kemudian teruskan ke pembayaran",
+      "requestUmrah": "Minta Badal Umrah",
+      "requestHajj": "Mohon Badal haji"
     }
   }
 }

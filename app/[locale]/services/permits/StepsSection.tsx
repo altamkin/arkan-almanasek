@@ -1,20 +1,26 @@
+import { getTranslations } from "next-intl/server";
+
 type Step = {
   number: number;
   title: string;
   description: string;
 };
 
-export default function StepsSection({ steps }: { steps: readonly Step[] }) {
+export default async function StepsSection({
+  steps,
+}: {
+  steps: readonly Step[];
+}) {
+  const t = await getTranslations("permits.steps");
+
   return (
     <section className="py-20 bg-background-light dark:bg-background-dark">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
-            خطوات الحصول على التصريح
+            {t("title")}
           </h2>
-          <p className="text-gray-500 dark:text-gray-400">
-            رحلة مبسطة من الطلب وحتى الوصول
-          </p>
+          <p className="text-gray-500 dark:text-gray-400">{t("subtitle")}</p>
         </div>
 
         <div className="relative">

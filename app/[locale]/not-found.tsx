@@ -1,4 +1,5 @@
 import { Link } from "@/i18n/navigation";
+import { getTranslations } from "next-intl/server";
 import { MdOutlineLightbulb } from "react-icons/md";
 import {
   RiBookOpenLine,
@@ -8,7 +9,9 @@ import {
 
 import styles from "./not-found.module.css";
 
-export default function NotFoundPage() {
+export default async function NotFoundPage() {
+  const t = await getTranslations("notFound");
+
   return (
     <main
       className={
@@ -72,11 +75,10 @@ export default function NotFoundPage() {
               id="not-found-title"
               className="mt-2 font-display text-3xl font-bold text-gray-800 md:text-4xl"
             >
-              الصفحة غير موجودة
+              {t("title")}
             </h2>
             <p className="mx-auto mt-4 max-w-md font-serif text-lg font-normal leading-relaxed text-gray-500">
-              عذرًا، يبدو أنك ضللت الطريق في رحلتك. هذه الصفحة غير متاحة، نرجو
-              منك العودة لإكمال مسيرك.
+              {t("description")}
             </p>
           </div>
 
@@ -86,7 +88,7 @@ export default function NotFoundPage() {
               className={`w-full inline-flex items-center justify-center gap-2 rounded-xl py-3.5 px-8 font-bold text-white shadow-lg shadow-primary/20 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-primary/40 sm:w-auto ${styles.btnGoldShimmer}`}
             >
               <RiHome5Line className="text-xl" />
-              <span>العودة إلى الرئيسية</span>
+              <span>{t("homeCta")}</span>
             </Link>
 
             <Link
@@ -94,7 +96,7 @@ export default function NotFoundPage() {
               className="group inline-flex w-full items-center justify-center gap-2 rounded-xl border border-gray-200 bg-white py-3.5 px-8 font-medium text-gray-700 shadow-sm transition-all duration-300 hover:border-primary/40 hover:bg-gray-50 hover:text-primary hover:shadow-md sm:w-auto"
             >
               <RiBookOpenLine className="text-xl text-gray-400 transition-colors group-hover:text-primary" />
-              <span>دليل الحجاج</span>
+              <span>{t("guideCta")}</span>
             </Link>
           </div>
 
@@ -105,7 +107,7 @@ export default function NotFoundPage() {
             >
               <RiCustomerService2Line className="text-lg transition-colors group-hover:text-primary/80" />
               <span className="border-b border-transparent group-hover:border-primary/50">
-                مركز المساعدة والدعم
+                {t("helpCenter")}
               </span>
             </Link>
           </div>

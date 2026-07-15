@@ -1,10 +1,11 @@
 "use client";
 
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import React from "react";
 
 const LogoVertical = () => {
   const locale = useLocale();
+  const t = useTranslations("header.services.items");
   const isRTL = locale === "ar";
   return (
     <svg
@@ -21,7 +22,7 @@ const LogoVertical = () => {
         transform={isRTL ? "translate(390.4 347.4)" : "translate(105.4 347.4)"}
       >
         <tspan x="0" y="0">
-          أركان المناسك
+          {t("appName")}
         </tspan>
       </text>
       <g>

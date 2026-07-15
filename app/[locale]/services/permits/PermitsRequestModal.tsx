@@ -8,7 +8,12 @@ import { AnimatePresence, motion } from "framer-motion";
 import React, { useEffect, useId, useMemo, useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
+import {
+  createPaymentSchema,
+  isValidISODate,
+} from "@/lib/validation/modalSchemas";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { useTranslations } from "next-intl";
 import {
   editPermitRequest,
   getPermitsWithToken,
@@ -65,12 +70,12 @@ type CountryOption = {
   label: string;
 };
 
-const COUNTRY_OPTIONS: readonly CountryOption[] = [
-  { value: "sa", dial: "+966", flag: "sa", label: "السعودية" },
-  { value: "id", dial: "+62", flag: "id", label: "إندونيسيا" },
-  { value: "ms", dial: "+60", flag: "my", label: "ماليزيا" },
-  { value: "tr", dial: "+90", flag: "tr", label: "تركيا" },
-  { value: "lk", dial: "+94", flag: "lk", label: "سريلانكا" },
+const COUNTRY_OPTIONS: readonly Omit<CountryOption, "label">[] = [
+  { value: "sa", dial: "+966", flag: "sa" },
+  { value: "id", dial: "+62", flag: "id" },
+  { value: "ms", dial: "+60", flag: "my" },
+  { value: "tr", dial: "+90", flag: "tr" },
+  { value: "lk", dial: "+94", flag: "lk" },
 ] as const;
 
 type CountryDropdownMode = "dial" | "country";
@@ -219,55 +224,6 @@ function joinClassNames(...values: Array<string | undefined | false | null>) {
   return values.filter(Boolean).join(" ");
 }
 
-function isValidISODate(value: string) {
-  if (!/^\d{4}-\d{2}-\d{2}$/.test(value)) return false;
-  const dt = new Date(`${value}T00:00:00Z`);
-  if (Number.isNaN(dt.getTime())) return false;
-  const [y, m, d] = value.split("-").map(Number);
-  return (
-    dt.getUTCFullYear() === y &&
-    dt.getUTCMonth() + 1 === m &&
-    dt.getUTCDate() === d
-  );
-}
-
-function luhnCheck(inputDigits: string) {
-  let sum = 0;
-  let shouldDouble = false;
-
-  for (let i = inputDigits.length - 1; i >= 0; i -= 1) {
-    const code = inputDigits.charCodeAt(i) - 48;
-    if (code < 0 || code > 9) return false;
-
-    let digit = code;
-    if (shouldDouble) {
-      digit *= 2;
-      if (digit > 9) digit -= 9;
-    }
-
-    sum += digit;
-    shouldDouble = !shouldDouble;
-  }
-
-  return sum % 10 === 0;
-}
-
-function isValidExpiryMMYY(value: string) {
-  const match = /^(0[1-9]|1[0-2])\/(\d{2})$/.exec(value);
-  if (!match) return false;
-
-  const mm = Number(match[1]);
-  const yy = Number(match[2]);
-
-  const now = new Date();
-  const currentYear = now.getFullYear() % 100;
-  const currentMonth = now.getMonth() + 1;
-
-  if (yy < currentYear) return false;
-  if (yy === currentYear && mm < currentMonth) return false;
-  return true;
-}
-
 function formatCardNumber(value: string) {
   const digits = value.replace(/\D+/g, "").slice(0, 19);
   const groups: string[] = [];
@@ -283,97 +239,75 @@ function formatExpiry(value: string) {
   return `${digits.slice(0, 2)}/${digits.slice(2)}`;
 }
 
-const step1Schema = z.object({
-  permitType: z
-    .string()
-    .trim()
-    .min(1, "نوع التصريح مطلوب")
-    .refine((v) => v === "hajj" || v === "umrah", "نوع التصريح مطلوب"),
-  notes: z.string().trim().optional().or(z.literal("")),
-});
+function createStep1Schema(t: (key: string) => string) {
+  return z.object({
+    permitType: z
+      .string()
+      .trim()
+      .min(1, t("validation.permitTypeRequired"))
+      .refine(
+        (v) => v === "hajj" || v === "umrah",
+        t("validation.permitTypeRequired"),
+      ),
+    notes: z.string().trim().optional().or(z.literal("")),
+  });
+}
 
-const step2Schema = z.object({
-  fullName: z.string().trim().min(1, "الاسم الكامل مطلوب"),
-  phoneCountry: z
-    .string()
-    .trim()
-    .min(1, "رمز الدولة مطلوب")
-    .refine(
-      (v) => COUNTRY_OPTIONS.some((c) => c.value === v),
-      "رمز الدولة غير صالح",
-    ),
-  phone: z
-    .string()
-    .trim()
-    .min(1, "رقم الجوال مطلوب")
-    .transform((value) => value.replace(/\s+/g, ""))
-    .refine((value) => /^\d{8,12}$/.test(value), "رقم الجوال غير صحيح"),
-  country: z
-    .string()
-    .trim()
-    .min(1, "الدولة مطلوبة")
-    .refine(
-      (v) => COUNTRY_OPTIONS.some((c) => c.value === v),
-      "الدولة غير صالحة",
-    ),
-  email: z
-    .string()
-    .trim()
-    .optional()
-    .or(z.literal(""))
-    .refine(
-      (v) => v == null || v === "" || /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v),
-      "البريد الإلكتروني غير صحيح",
-    ),
-  idNumber: z.string().trim().min(6, "رقم الهوية / الجواز غير صحيح"),
-  birthDate: z
-    .string()
-    .trim()
-    .min(1, "تاريخ الميلاد مطلوب")
-    .refine((v) => isValidISODate(v), "تاريخ الميلاد غير صحيح"),
-  nationality: z.string().trim().min(1, "الجنسية مطلوبة"),
-});
+function createStep2Schema(
+  tModal: (key: string) => string,
+  tStep2: (key: string) => string,
+) {
+  const allowed = COUNTRY_OPTIONS.map((c) => c.value) as string[];
+  return z.object({
+    fullName: z.string().trim().min(1, tStep2("validation.fullNameRequired")),
+    phoneCountry: z
+      .string()
+      .trim()
+      .min(1, tStep2("validation.phoneCountryRequired"))
+      .refine(
+        (v) => allowed.includes(v),
+        tStep2("validation.phoneCountryRequired"),
+      ),
+    phone: z
+      .string()
+      .trim()
+      .min(1, tStep2("validation.phoneRequired"))
+      .transform((value) => value.replace(/\s+/g, ""))
+      .refine(
+        (value) => /^\d{8,12}$/.test(value),
+        tStep2("validation.phoneInvalid"),
+      ),
+    country: z
+      .string()
+      .trim()
+      .min(1, tStep2("validation.countryRequired"))
+      .refine((v) => allowed.includes(v), tStep2("validation.countryRequired")),
+    email: z
+      .string()
+      .trim()
+      .optional()
+      .or(z.literal(""))
+      .refine(
+        (v) => v == null || v === "" || /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v),
+        tStep2("validation.emailInvalid"),
+      ),
+    idNumber: z
+      .string()
+      .trim()
+      .min(6, tModal("validation.idNumberInvalid")),
+    birthDate: z
+      .string()
+      .trim()
+      .min(1, tStep2("validation.birthDateRequired"))
+      .refine((v) => isValidISODate(v), tStep2("validation.birthDateInvalid")),
+    nationality: z
+      .string()
+      .trim()
+      .min(1, tModal("validation.nationalityRequired")),
+  });
+}
 
-const receiptSchema = z
-  .instanceof(File, { message: "إيصال التحويل مطلوب" })
-  .refine(
-    (f) =>
-      f.type === "application/pdf" ||
-      f.type.startsWith("image/") ||
-      f.type === "",
-    "صيغة الإيصال غير مدعومة",
-  )
-  .refine((f) => f.size <= 10 * 1024 * 1024, "حجم الملف كبير جداً");
-
-const cardSchema = z.object({
-  method: z.literal("card"),
-  cardholder: z.string().trim().min(2, "اسم حامل البطاقة مطلوب"),
-  cardNumber: z
-    .string()
-    .trim()
-    .min(12, "رقم البطاقة غير صحيح")
-    .transform((v) => v.replace(/\s+/g, ""))
-    .refine((digits) => /^\d{12,19}$/.test(digits), "رقم البطاقة غير صحيح")
-    .refine((digits) => luhnCheck(digits), "رقم البطاقة غير صحيح"),
-  expiry: z
-    .string()
-    .trim()
-    .min(1, "تاريخ الانتهاء مطلوب")
-    .refine((v) => isValidExpiryMMYY(v), "تاريخ الانتهاء غير صحيح"),
-  cvc: z
-    .string()
-    .trim()
-    .min(3, "رمز الأمان غير صحيح")
-    .refine((v) => /^\d{3,4}$/.test(v), "رمز الأمان غير صحيح"),
-});
-
-const bankSchema = z.object({
-  method: z.literal("bank"),
-  receipt: receiptSchema,
-});
-
-const paymentSchema = z.discriminatedUnion("method", [cardSchema, bankSchema]);
-type PaymentValues = z.infer<typeof paymentSchema>;
+type PaymentValues = z.infer<ReturnType<typeof createPaymentSchema>>;
 
 export type PermitsRequestPayload = {
   permitType: PermitType;
@@ -417,7 +351,8 @@ export type PermitsRequestModalProps = {
   >;
 };
 
-type FormValues = z.infer<typeof step1Schema> & z.infer<typeof step2Schema>;
+type FormValues = z.infer<ReturnType<typeof createStep1Schema>> &
+  z.infer<ReturnType<typeof createStep2Schema>>;
 
 const DEFAULT_FORM_VALUES: FormValues = {
   permitType: "umrah",
@@ -507,17 +442,21 @@ async function fetchFileFromUrl(
   }
 }
 
-const NATIONALITIES = [
-  "المملكة العربية السعودية",
-  "مصر",
-  "الإمارات العربية المتحدة",
-  "الكويت",
-  "الأردن",
-  "أخرى",
-] as const;
+const NATIONALITY_KEYS = ["sa", "eg", "ae", "kw", "jo", "other"] as const;
 
-function getPermitLabel(type: PermitType) {
-  return type === "hajj" ? "تصريح حج" : "تصريح عمرة";
+function getCountryLabel(
+  t: (key: string) => string,
+  value: CountryValue,
+): string {
+  if (value === "sa") return t("options.phoneCountries.sa");
+  return t(`options.countries.${value}`);
+}
+
+function getPermitLabel(
+  t: (key: string) => string,
+  type: PermitType,
+) {
+  return type === "hajj" ? t("permitLabels.hajj") : t("permitLabels.umrah");
 }
 
 export default function PermitsRequestModal({
@@ -528,6 +467,10 @@ export default function PermitsRequestModal({
   onComplete,
   modalProps,
 }: PermitsRequestModalProps) {
+  const t = useTranslations("permits.modal");
+  const tStep2 = useTranslations("cart.step2");
+  const tStep3 = useTranslations("cart.step3");
+  const tCommon = useTranslations("common");
   const formId = useId();
   const [step, setStep] = useState<1 | 2 | 3 | 4>(1);
   const [idFile, setIdFile] = useState<File | null>(null);
@@ -550,6 +493,23 @@ export default function PermitsRequestModal({
   const [bankReceipt, setBankReceipt] = useState<File | null>(null);
   const [paymentErrors, setPaymentErrors] = useState<PaymentErrors>({});
 
+  const formSchema = useMemo(
+    () => createStep1Schema(t).merge(createStep2Schema(t, tStep2)),
+    [t, tStep2],
+  );
+  const paymentSchema = useMemo(
+    () => createPaymentSchema(tStep3),
+    [tStep3],
+  );
+  const countryOptions = useMemo<CountryOption[]>(
+    () =>
+      COUNTRY_OPTIONS.map((opt) => ({
+        ...opt,
+        label: getCountryLabel(tStep2, opt.value),
+      })),
+    [tStep2],
+  );
+
   const {
     register,
     trigger,
@@ -559,7 +519,7 @@ export default function PermitsRequestModal({
     formState: { errors, isSubmitting },
     reset,
   } = useForm<FormValues>({
-    resolver: zodResolver(step1Schema.merge(step2Schema)),
+    resolver: zodResolver(formSchema),
     defaultValues: DEFAULT_FORM_VALUES,
     mode: "onSubmit",
   });
@@ -631,7 +591,6 @@ export default function PermitsRequestModal({
   }, [open, prefillRequest, reset]);
 
   const permitType = watch("permitType") as PermitType;
-  const countryOptions = useMemo(() => COUNTRY_OPTIONS, []);
 
   const phoneCountry = watch("phoneCountry") as CountryValue | "";
   const selectedPhoneDial =
@@ -654,7 +613,7 @@ export default function PermitsRequestModal({
 
   async function savePermitRequest(): Promise<PermitSubmitArgs> {
     if (!idFile || !personalPhoto) {
-      throw new Error("يرجى رفع صورة الهوية والصورة الشخصية");
+      throw new Error(t("step2.docsRequired"));
     }
 
     const values = getValues();
@@ -724,7 +683,7 @@ export default function PermitsRequestModal({
 
   function validateDocuments() {
     if (!idFile || !personalPhoto) {
-      setDocsError("يرجى رفع صورة الهوية والصورة الشخصية");
+      setDocsError(t("step2.docsRequired"));
       return false;
     }
     setDocsError(null);
@@ -804,14 +763,14 @@ export default function PermitsRequestModal({
   }
 
   const steps = [
-    { n: 1, label: "نوع التصريح", icon: <MdDescription aria-hidden /> },
+    { n: 1, label: t("steps.type"), icon: <MdDescription aria-hidden /> },
     {
       n: 2,
-      label: "البيانات والمستندات",
+      label: t("steps.details"),
       icon: <MdFolderShared aria-hidden />,
     },
-    { n: 3, label: "الدفع", icon: <MdPayment aria-hidden /> },
-    { n: 4, label: "مراجعة الطلب", icon: <MdCheckCircle aria-hidden /> },
+    { n: 3, label: t("steps.payment"), icon: <MdPayment aria-hidden /> },
+    { n: 4, label: t("steps.review"), icon: <MdCheckCircle aria-hidden /> },
   ] as const;
 
   const stepPanel = (
@@ -826,7 +785,7 @@ export default function PermitsRequestModal({
           className="space-y-6"
         >
           <h2 className="text-lg font-bold text-gray-800 dark:text-gray-100">
-            اختر نوع التصريح المطلوب
+            {t("step1.title")}
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -850,7 +809,7 @@ export default function PermitsRequestModal({
                 </div>
                 <div>
                   <h3 className="font-bold text-gray-900 dark:text-white text-lg">
-                    تصريح حج
+                    {t("step1.hajjTitle")}
                   </h3>
                   {typeof permitPriceByType.hajj === "number" &&
                   Number.isFinite(permitPriceByType.hajj) ? (
@@ -859,7 +818,7 @@ export default function PermitsRequestModal({
                     </p>
                   ) : null}
                   <p className="text-sm text-gray-500 dark:text-gray-400 mt-2 leading-relaxed">
-                    إصدار تصريح لأداء فريضة الحج للمواطنين والمقيمين.
+                    {t("step1.hajjDesc")}
                   </p>
                 </div>
               </div>
@@ -885,7 +844,7 @@ export default function PermitsRequestModal({
                 </div>
                 <div>
                   <h3 className="font-bold text-gray-900 dark:text-white text-lg">
-                    تصريح عمرة
+                    {t("step1.umrahTitle")}
                   </h3>
                   {typeof permitPriceByType.umrah === "number" &&
                   Number.isFinite(permitPriceByType.umrah) ? (
@@ -894,7 +853,7 @@ export default function PermitsRequestModal({
                     </p>
                   ) : null}
                   <p className="text-sm text-gray-500 dark:text-gray-400 mt-2 leading-relaxed">
-                    إصدار تصريح لأداء العمرة وزيارة الروضة الشريفة.
+                    {t("step1.umrahDesc")}
                   </p>
                 </div>
               </div>
@@ -907,7 +866,7 @@ export default function PermitsRequestModal({
 
           <label className="space-y-2">
             <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
-              ملاحظات إضافية (اختياري)
+              {t("step1.notesLabel")}
             </span>
             <textarea
               {...register("notes")}
@@ -915,7 +874,7 @@ export default function PermitsRequestModal({
               className={joinClassNames(
                 "w-full px-4 py-3 bg-input-fill dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-[#332e25] focus:ring-2 focus:ring-primary/50 focus:border-primary text-gray-900 dark:text-white placeholder-gray-400 transition-all",
               )}
-              placeholder="أي تفاصيل تساعدنا في إنجاز طلبك"
+              placeholder={t("step1.notesPlaceholder")}
             />
           </label>
         </motion.div>
@@ -931,13 +890,13 @@ export default function PermitsRequestModal({
           <div>
             <h3 className="text-lg font-bold text-gray-800 dark:text-gray-100 mb-4 flex items-center gap-2">
               <span className="w-1 h-6 bg-primary rounded-full" />
-              المعلومات الشخصية
+              {t("step2.personalInfo")}
             </h3>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="space-y-2">
                 <label className="text-sm font-medium text-gray-700 dark:text-gray-300">
-                  الاسم الكامل (كما في الهوية)
+                  {t("step2.fullNameLabel")}
                 </label>
                 <div className="relative">
                   <span className="absolute right-3 inset-y-0 flex items-center text-gray-400 pointer-events-none">
@@ -949,7 +908,7 @@ export default function PermitsRequestModal({
                       inputBase,
                       errors.fullName ? "ring-2 ring-red-500/40" : undefined,
                     )}
-                    placeholder="أدخل اسمك الرباعي"
+                    placeholder={t("step2.fullNamePlaceholder")}
                     type="text"
                     aria-invalid={Boolean(errors.fullName)}
                   />
@@ -963,7 +922,7 @@ export default function PermitsRequestModal({
 
               <div className="space-y-2">
                 <label className="text-sm font-medium text-gray-700 dark:text-gray-300">
-                  رقم الجوال (مع مفتاح الدولة)
+                  {t("step2.phoneLabel")}
                 </label>
 
                 <div className="flex w-full min-w-0" dir="ltr">
@@ -1009,7 +968,7 @@ export default function PermitsRequestModal({
                     className="text-xs text-gray-500 dark:text-gray-400"
                     dir="ltr"
                   >
-                    سيتم الحفظ بصيغة: {selectedPhoneDial}
+                    {t("step2.phoneFormat", { dial: selectedPhoneDial })}
                     {String(watch("phone") ?? "").replace(/\s+/g, "")}
                   </p>
                 ) : null}
@@ -1017,7 +976,7 @@ export default function PermitsRequestModal({
 
               <div className="space-y-2">
                 <label className="text-sm font-medium text-gray-700 dark:text-gray-300">
-                  الدولة
+                  {t("step2.countryLabel")}
                 </label>
                 <CountryDropdown
                   value={watch("country") as CountryValue | ""}
@@ -1028,7 +987,7 @@ export default function PermitsRequestModal({
                   }
                   options={countryOptions}
                   mode="country"
-                  placeholder="اختر الدولة"
+                  placeholder={t("step2.countryPlaceholder")}
                   invalid={Boolean(errors.country)}
                   buttonClassName={joinClassNames(
                     inputBaseNoIcon,
@@ -1045,7 +1004,7 @@ export default function PermitsRequestModal({
 
               <div className="space-y-2">
                 <label className="text-sm font-medium text-gray-700 dark:text-gray-300">
-                  البريد الإلكتروني (اختياري)
+                  {t("step2.emailLabel")}
                 </label>
                 <div className="relative">
                   <input
@@ -1067,7 +1026,7 @@ export default function PermitsRequestModal({
 
               <div className="space-y-2">
                 <label className="text-sm font-medium text-gray-700 dark:text-gray-300">
-                  رقم الهوية / جواز السفر
+                  {t("step2.idLabel")}
                 </label>
                 <div className="relative">
                   <span className="absolute right-3 inset-y-0 flex items-center text-gray-400 pointer-events-none">
@@ -1093,7 +1052,7 @@ export default function PermitsRequestModal({
 
               <div className="space-y-2">
                 <label className="text-sm font-medium text-gray-700 dark:text-gray-300">
-                  تاريخ الميلاد
+                  {t("step2.birthDateLabel")}
                 </label>
                 <div className="relative">
                   <input
@@ -1115,7 +1074,7 @@ export default function PermitsRequestModal({
 
               <div className="space-y-2">
                 <label className="text-sm font-medium text-gray-700 dark:text-gray-300">
-                  الجنسية
+                  {t("step2.nationalityLabel")}
                 </label>
                 <div className="relative">
                   <span className="absolute right-3 inset-y-0 flex items-center text-gray-400 pointer-events-none">
@@ -1129,10 +1088,10 @@ export default function PermitsRequestModal({
                     )}
                     aria-invalid={Boolean(errors.nationality)}
                   >
-                    <option value="">اختر الجنسية</option>
-                    {NATIONALITIES.map((n) => (
-                      <option key={n} value={n}>
-                        {n}
+                    <option value="">{t("step2.nationalityPlaceholder")}</option>
+                    {NATIONALITY_KEYS.map((key) => (
+                      <option key={key} value={t(`nationalities.${key}`)}>
+                        {t(`nationalities.${key}`)}
                       </option>
                     ))}
                   </select>
@@ -1152,7 +1111,7 @@ export default function PermitsRequestModal({
           <div>
             <h3 className="text-lg font-bold text-gray-800 dark:text-gray-100 mb-4 flex items-center gap-2">
               <span className="w-1 h-6 bg-primary rounded-full" />
-              المرفقات والمستندات
+              {t("step2.attachments")}
             </h3>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -1173,10 +1132,10 @@ export default function PermitsRequestModal({
                       <MdCloudUpload className="text-2xl" aria-hidden />
                     </div>
                     <span className="text-sm font-bold text-gray-700 dark:text-gray-200 mb-1">
-                      صورة الهوية
+                      {t("step2.idPhoto")}
                     </span>
                     <span className="text-xs text-gray-400">
-                      JPG, PNG, PDF بحد أقصى 10MB
+                      {t("step2.idPhotoHint")}
                     </span>
                     {idFile ? (
                       <span className="mt-2 text-xs text-primary truncate max-w-full">
@@ -1204,10 +1163,10 @@ export default function PermitsRequestModal({
                       <MdAddAPhoto className="text-2xl" aria-hidden />
                     </div>
                     <span className="text-sm font-bold text-gray-700 dark:text-gray-200 mb-1">
-                      الصورة الشخصية
+                      {t("step2.personalPhoto")}
                     </span>
                     <span className="text-xs text-gray-400">
-                      يجب أن تكون خلفية بيضاء
+                      {t("step2.personalPhotoHint")}
                     </span>
                     {personalPhoto ? (
                       <span className="mt-2 text-xs text-primary truncate max-w-full">
@@ -1234,7 +1193,7 @@ export default function PermitsRequestModal({
           className="space-y-5"
         >
           <h2 className="text-lg font-bold text-gray-800 dark:text-gray-100">
-            الدفع
+            {t("step3.title")}
           </h2>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -1260,7 +1219,7 @@ export default function PermitsRequestModal({
                 className="size-4 text-primary focus:ring-primary"
               />
               <span className="font-bold text-gray-900 dark:text-white">
-                بطاقة
+                {tStep3("methods.card.title")}
               </span>
             </label>
 
@@ -1289,7 +1248,7 @@ export default function PermitsRequestModal({
                 className="size-4 text-primary focus:ring-primary"
               />
               <span className="font-bold text-gray-900 dark:text-white">
-                تحويل بنكي
+                {tStep3("methods.bank.title")}
               </span>
             </label>
           </div>
@@ -1303,7 +1262,7 @@ export default function PermitsRequestModal({
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <label className="sm:col-span-2 space-y-2">
                   <span className="text-sm font-bold text-gray-900 dark:text-white">
-                    اسم حامل البطاقة
+                    {tStep3("card.fields.cardholder.label")}
                   </span>
                   <input
                     value={cardData.cardholder}
@@ -1333,7 +1292,7 @@ export default function PermitsRequestModal({
 
                 <label className="sm:col-span-2 space-y-2">
                   <span className="text-sm font-bold text-gray-900 dark:text-white">
-                    رقم البطاقة
+                    {tStep3("card.fields.cardNumber.label")}
                   </span>
                   <input
                     dir="ltr"
@@ -1366,7 +1325,7 @@ export default function PermitsRequestModal({
 
                 <label className="space-y-2">
                   <span className="text-sm font-bold text-gray-900 dark:text-white">
-                    تاريخ الانتهاء
+                    {tStep3("card.fields.expiry.label")}
                   </span>
                   <input
                     dir="ltr"
@@ -1427,7 +1386,7 @@ export default function PermitsRequestModal({
             <div className="rounded-2xl border border-gray-100 dark:border-[#332e25] bg-background-light/60 dark:bg-background-dark/40 p-5 space-y-3">
               <label className="space-y-2">
                 <span className="text-sm font-bold text-gray-900 dark:text-white">
-                  رفع إيصال التحويل
+                  {t("step3.uploadReceipt")}
                 </span>
                 <input
                   type="file"
@@ -1451,7 +1410,7 @@ export default function PermitsRequestModal({
                 ) : null}
                 {bankReceipt ? (
                   <p className="text-xs text-gray-500 dark:text-gray-400">
-                    تم اختيار: {bankReceipt.name}
+                    {t("step3.fileChosen", { name: bankReceipt.name })}
                   </p>
                 ) : null}
               </label>
@@ -1469,33 +1428,33 @@ export default function PermitsRequestModal({
         >
           <div className="bg-primary/5 rounded-xl p-6 border border-primary/20">
             <h3 className="text-lg font-bold text-gray-800 dark:text-gray-100 mb-4">
-              ملخص الطلب
+              {t("step4.title")}
             </h3>
 
             <div className="space-y-4">
               <div className="flex justify-between border-b border-primary/10 pb-2">
-                <span className="text-gray-500">نوع التصريح</span>
+                <span className="text-gray-500">{t("step4.permitType")}</span>
                 <span className="font-bold text-gray-900 dark:text-white">
-                  {getPermitLabel(permitType)}
+                  {getPermitLabel(t, permitType)}
                 </span>
               </div>
 
               <div className="flex justify-between border-b border-primary/10 pb-2">
-                <span className="text-gray-500">الاسم الكامل</span>
+                <span className="text-gray-500">{t("step4.fullName")}</span>
                 <span className="font-bold text-gray-900 dark:text-white">
                   {watch("fullName") || "—"}
                 </span>
               </div>
 
               <div className="flex justify-between border-b border-primary/10 pb-2">
-                <span className="text-gray-500">رقم الهوية</span>
+                <span className="text-gray-500">{t("step4.idNumber")}</span>
                 <span className="font-bold text-gray-900 dark:text-white">
                   {watch("idNumber") || "—"}
                 </span>
               </div>
 
               <div className="flex justify-between border-b border-primary/10 pb-2">
-                <span className="text-gray-500">رقم الجوال</span>
+                <span className="text-gray-500">{t("step4.phone")}</span>
                 <span
                   className="font-bold text-gray-900 dark:text-white"
                   dir="ltr"
@@ -1515,7 +1474,7 @@ export default function PermitsRequestModal({
               </div>
 
               <div className="flex justify-between border-b border-primary/10 pb-2">
-                <span className="text-gray-500">الدولة</span>
+                <span className="text-gray-500">{t("step4.country")}</span>
                 <span className="font-bold text-gray-900 dark:text-white">
                   {(() => {
                     const value = watch("country");
@@ -1528,24 +1487,24 @@ export default function PermitsRequestModal({
               </div>
 
               <div className="flex justify-between border-b border-primary/10 pb-2">
-                <span className="text-gray-500">البريد الإلكتروني</span>
+                <span className="text-gray-500">{t("step4.email")}</span>
                 <span className="font-bold text-gray-900 dark:text-white">
                   {watch("email") || "—"}
                 </span>
               </div>
 
               <div className="flex justify-between border-b border-primary/10 pb-2">
-                <span className="text-gray-500">الجنسية</span>
+                <span className="text-gray-500">{t("step4.nationality")}</span>
                 <span className="font-bold text-gray-900 dark:text-white">
                   {watch("nationality") || "—"}
                 </span>
               </div>
 
               <div className="flex justify-between pt-2">
-                <span className="text-gray-500">المستندات</span>
+                <span className="text-gray-500">{t("step4.documents")}</span>
                 <span className="font-bold text-green-600 dark:text-green-400 flex items-center gap-1">
                   <MdCheck className="text-sm" aria-hidden />
-                  مكتملة
+                  {t("step4.documentsComplete")}
                 </span>
               </div>
             </div>
@@ -1553,10 +1512,7 @@ export default function PermitsRequestModal({
 
           <div className="flex items-start gap-3 p-4 bg-gray-50 dark:bg-gray-800 rounded-lg text-sm text-gray-600 dark:text-gray-300">
             <MdInfo className="text-primary mt-0.5" aria-hidden />
-            <p>
-              بالضغط على &quot;إرسال الطلب&quot;، فإنك تقر بصحة جميع البيانات
-              المدخلة وتوافق على الشروط والأحكام الخاصة بوزارة الحج والعمرة.
-            </p>
+            <p>{t("step4.disclaimer")}</p>
           </div>
         </motion.div>
       )}
@@ -1582,10 +1538,10 @@ export default function PermitsRequestModal({
         <header className="flex items-start sm:items-center justify-between gap-4 p-4 sm:p-6 pb-3 sm:pb-4 border-b border-gray-100 dark:border-gray-700/50">
           <div className="min-w-0">
             <h1 className="text-lg sm:text-2xl font-bold text-gray-900 dark:text-white leading-snug break-words sm:truncate">
-              طلب خدمة تصاريح الحج والعمرة
+              {t("title")}
             </h1>
             <p className="text-xs sm:text-sm text-gray-500 dark:text-gray-400 mt-0.5 sm:mt-1">
-              أكمل البيانات للحصول على التصريح الرسمي
+              {t("description")}
             </p>
           </div>
           <button
@@ -1593,7 +1549,7 @@ export default function PermitsRequestModal({
             onClick={() => onOpenChange(false, "closeButton")}
             disabled={!canClose}
             className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors text-gray-500 dark:text-gray-400 disabled:opacity-50"
-            aria-label="إغلاق"
+            aria-label={tCommon("closeModal")}
           >
             <MdClose className="text-2xl" aria-hidden />
           </button>
@@ -1698,7 +1654,7 @@ export default function PermitsRequestModal({
                 className="text-lg group-hover:-translate-x-1 transition-transform ltr:rotate-180"
                 aria-hidden
               />
-              {step === 1 ? "إلغاء" : "السابق"}
+              {step === 1 ? t("actions.cancel") : t("actions.back")}
             </button>
 
             {step === 4 ? (
@@ -1708,7 +1664,7 @@ export default function PermitsRequestModal({
                 disabled={!canClose}
                 className="px-8 py-2.5 rounded-lg bg-primary hover:bg-primary/90 text-white font-bold shadow-lg shadow-primary/30 transition-all hover:shadow-xl hover:shadow-primary/40 flex items-center gap-2 group transform active:scale-95 disabled:opacity-75"
               >
-                إرسال الطلب
+                {t("actions.submit")}
                 <MdArrowBack
                   className="text-lg group-hover:translate-x-[-4px] transition-transform ltr:rotate-180"
                   aria-hidden
@@ -1721,7 +1677,7 @@ export default function PermitsRequestModal({
                 disabled={!canClose}
                 className="px-8 py-2.5 rounded-lg bg-primary hover:bg-primary/90 text-white font-bold shadow-lg shadow-primary/30 transition-all hover:shadow-xl hover:shadow-primary/40 flex items-center gap-2 group transform active:scale-95 disabled:opacity-75"
               >
-                التالي
+                {t("actions.next")}
                 <MdArrowBack
                   className="text-lg group-hover:translate-x-[-4px] transition-transform ltr:rotate-180"
                   aria-hidden

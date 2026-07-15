@@ -1,6 +1,6 @@
 "use client";
 
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { useMemo } from "react";
 import SaudiRiyalSymbol from "./SaudiRiyalSymbol";
 
@@ -18,6 +18,7 @@ export default function SarAmount({
   symbolClassName,
 }: Props) {
   const locale = useLocale();
+  const tCommon = useTranslations("common");
 
   const formatted = useMemo(() => {
     try {
@@ -35,7 +36,7 @@ export default function SarAmount({
         <span>{formatted}</span>
         <SaudiRiyalSymbol
           className={symbolClassName ?? "inline-block h-[0.9em] w-auto"}
-          title="SAR"
+          title={tCommon("sar")}
         />
       </span>
     </span>

@@ -110,6 +110,7 @@ export default function HadiAndUdhiyahClient({
   requestedHadi,
 }: Props) {
   const t = useTranslations("qurbani");
+  const tCommon = useTranslations("common");
   const locale = useLocale();
 
   const [step, setStep] = useState<1 | 2 | 3 | 4>(1);
@@ -196,7 +197,7 @@ export default function HadiAndUdhiyahClient({
 
   const currencyMark = useMemo(
     () => (
-      <SaudiRiyalSymbol className="inline-block h-[0.9em] w-auto" title="SAR" />
+      <SaudiRiyalSymbol className="inline-block h-[0.9em] w-auto" title={tCommon("sar")} />
     ),
     [],
   );

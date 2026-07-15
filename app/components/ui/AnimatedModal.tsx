@@ -4,6 +4,7 @@ import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import type { MotionProps } from "framer-motion";
 import React, { useEffect, useId, useMemo, useRef } from "react";
 import { createPortal } from "react-dom";
+import { useTranslations } from "next-intl";
 import { MdClose } from "react-icons/md";
 
 export type ModalCloseReason =
@@ -108,6 +109,7 @@ export function AnimatedModal({
 }: AnimatedModalProps) {
   const reactId = useId();
   const reduceMotion = useReducedMotion();
+  const tCommon = useTranslations("common");
 
   const panelRef = useRef<HTMLDivElement | null>(null);
   const previousBodyOverflowRef = useRef<string | null>(null);
@@ -322,7 +324,7 @@ export function AnimatedModal({
                     type="button"
                     onClick={() => requestClose("closeButton")}
                     className="shrink-0 inline-flex items-center justify-center rounded-lg border border-gray-200 dark:border-gray-700 p-2 text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800"
-                    aria-label="Close modal"
+                    aria-label={tCommon("closeModal")}
                   >
                     <MdClose className="text-xl" aria-hidden />
                   </button>

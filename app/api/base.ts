@@ -41,7 +41,7 @@ export function isMissingSessionApiError(error: unknown): boolean {
 
 export function getApiErrorMessage(
   error: unknown,
-  fallback = "حدث خطأ غير متوقع",
+  fallback = "An unexpected error occurred",
 ): string {
   if (
     error instanceof ApiError &&

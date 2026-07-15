@@ -3,7 +3,12 @@
     "home": "Home",
     "language": "Language",
     "error": "An error occurred",
-    "try_again": "Try again"
+    "try_again": "Try again",
+    "addedToCart": "Added to cart successfully",
+    "closeModal": "Close",
+    "pagination": "Pagination",
+    "sar": "SAR",
+    "unexpectedError": "An unexpected error occurred"
   },
   "languages": {
     "ar": "Arabic",
@@ -23,7 +28,7 @@
     "services": {
       "menuAria": "Services menu",
       "items": {
-        "appName": "أركان المناسك",
+        "appName": "Arkan Al-Manasik",
         "hadiAndUdhiyah": "Hadi and udhiyah",
         "badal": "Badal",
         "consultations": "Consultations",
@@ -50,20 +55,20 @@
       "facebook": "Facebook"
     },
     "quickLinks": {
-      "title": "روابط سريعة",
-      "about": "عن الشركة",
-      "products": "المنتجات"
+      "title": "Quick links",
+      "about": "About us",
+      "products": "Products"
     },
     "support": {
-      "title": "الدعم والمساعدة",
-      "faq": "الأسئلة الشائعة",
-      "contact": "اتصل بنا"
+      "title": "Support & help",
+      "faq": "FAQs",
+      "contact": "Contact us"
     },
     "newsletter": {
-      "title": "اشترك في النشرة",
-      "description": "احصل على آخر العروض والنصائح لرحلتك.",
-      "emailPlaceholder": "بريدك الإلكتروني",
-      "submitAria": "إرسال"
+      "title": "Subscribe to our newsletter",
+      "description": "Get the latest offers and tips for your journey.",
+      "emailPlaceholder": "Your email address",
+      "submitAria": "Submit"
     },
     "copyright": "© MACS {year} | All Rights Reserved"
   },
@@ -110,7 +115,7 @@
     "products": {
       "items": {
         "details": {
-          "title": "عنوان المنتج"
+          "title": "Product title"
         }
       }
     },
@@ -199,7 +204,7 @@
       }
     },
     "step2": {
-      "title": "بيانات العميل",
+      "title": "Customer information",
       "fields": {
         "fullNameLabel": "Full name",
         "fullNamePlaceholder": "Mohammed Ahmed",
@@ -622,6 +627,350 @@
       "subjectRequired": "Please select a subject",
       "messageTooShort": "Message is too short",
       "messageTooLong": "Message is too long"
+    }
+  },
+  "notFound": {
+    "title": "Page not found",
+    "description": "Sorry, it looks like you've wandered off your path. This page isn't available—please return to continue your journey.",
+    "homeCta": "Back to home",
+    "guideCta": "Pilgrim guide",
+    "helpCenter": "Help & support center"
+  },
+  "faq": {
+    "titlePrefix": "Frequently",
+    "titleHighlight": "Asked Questions",
+    "description": "We're here to answer all your questions about Hajj rituals and the services available to make your spiritual journey easier.",
+    "searchPlaceholder": "Search for your question...",
+    "searchAria": "Search for your question",
+    "searchButton": "Search",
+    "categories": {
+      "all": "All",
+      "rituals": "Ritual guidance",
+      "qurbani": "Hadi & udhiyah",
+      "health": "Health & safety",
+      "services": "General services"
+    },
+    "items": {
+      "pillars": {
+        "question": "What are the four pillars of Hajj?",
+        "intro": "Hajj has four pillars without which it is not valid:",
+        "ihram": "Ihram: the intention to enter the state of ritual.",
+        "arafah": "Standing at Arafah: the most important pillar of Hajj.",
+        "tawaf": "Tawaf al-Ifadah: performed after descending from Arafah and Muzdalifah.",
+        "sai": "Sa'i between Safa and Marwah: seven rounds starting from Safa."
+      },
+      "qurbaniBooking": {
+        "question": "How can I book hadi and udhiyah online?",
+        "answer": "You can book hadi and udhiyah through the official Adahi platform or approved apps such as Nusuk. Payment is made electronically and you receive a confirmation when slaughter is completed at the prescribed time."
+      },
+      "medical": {
+        "question": "What medical services are available for pilgrims in the holy sites?",
+        "answer": "Comprehensive hospitals and health centers are available in Mina, Arafah, and Muzdalifah, along with mobile ambulance teams and field clinics operating around the clock to provide immediate, free medical care for all pilgrims."
+      },
+      "jamarat": {
+        "question": "When does the stoning of the Jamarat begin during the days of Tashreeq?",
+        "answer": "The time for stoning the Jamarat during the days of Tashreeq (11th, 12th, and 13th of Dhul Hijjah) begins at noon and continues until the end of the night. It is advisable to follow your group's assigned schedule to avoid crowding."
+      }
+    },
+    "cta": {
+      "title": "Didn't find your answer?",
+      "description": "Our technical and guidance support team is available around the clock to answer your questions and ensure a smooth Hajj journey, God willing.",
+      "contact": "Contact us",
+      "call": "Call us"
+    }
+  },
+  "permits": {
+    "hero": {
+      "badge": "Hajj & Umrah gateway",
+      "title": "Permit services",
+      "description": "We're here to make your spiritual journey easier. We provide reliable Hajj and Umrah permit issuance with simplified procedures so you can focus on worship with peace of mind.",
+      "imageAlt": "Abstract Islamic geometric pattern background"
+    },
+    "about": {
+      "title": "Your trusted partner for a lifetime journey",
+      "body": "The Hajj and Umrah journey requires precision in procedures and compliance with changing regulations. We handle the complex administrative side—from submitting your application to receiving the final permit—while ensuring full compliance with Ministry of Hajj and Umrah requirements. Our goal is a smooth journey free of administrative obstacles."
+    },
+    "types": {
+      "title": "Available permit types",
+      "subtitle": "Choose the service that fits your needs",
+      "cards": {
+        "hajj": {
+          "title": "Hajj permit",
+          "description": "Comprehensive Hajj permit issuance for citizens and residents, including electronic pathway registration and approval follow-up."
+        },
+        "umrah": {
+          "title": "Umrah permit",
+          "description": "Instant Umrah and Rawdah visit permits through approved apps, with solutions for groups and individuals."
+        },
+        "seasonal": {
+          "title": "Seasonal permits",
+          "description": "Dedicated services for trip organizers and seasonal staff to ensure lawful entry to the holy sites."
+        }
+      }
+    },
+    "documents": {
+      "eyebrow": "Requirements",
+      "title": "Required documents",
+      "description": "To ensure fast processing and avoid delays, please prepare the following documents before starting your application. We help review your documents before uploading them.",
+      "imageAlt": "Close-up of hands holding a Quran in soft lighting",
+      "badgeTitle": "Instant review",
+      "badgeBody": "We review your documents before ministry submission",
+      "items": {
+        "id": "National ID / residency photo",
+        "vaccination": "Vaccination record (COVID-19 and meningitis)",
+        "photo": "Recent personal photo (white background)",
+        "passport": "Passport (for visitors from abroad)",
+        "visa": "Valid entry visa",
+        "mahram": "Proof of relationship (for mahram)"
+      }
+    },
+    "steps": {
+      "title": "Steps to obtain a permit",
+      "subtitle": "A simplified journey from application to arrival",
+      "items": {
+        "submit": {
+          "title": "Submit application",
+          "description": "Fill out the online form and upload initial documents."
+        },
+        "review": {
+          "title": "Review & verification",
+          "description": "Our team verifies the accuracy of data and attachments."
+        },
+        "approval": {
+          "title": "Official approval",
+          "description": "The request is sent to relevant authorities for approval."
+        },
+        "receive": {
+          "title": "Receive permit",
+          "description": "Your permit arrives via the app or email."
+        }
+      }
+    },
+    "notice": {
+      "title": "Important notes for applicants",
+      "body": "Permit issuance is subject to capacity at the Two Holy Mosques and regulations issued by the Ministry of Hajj and Umrah. Processing times may change during peak seasons (Ramadan and Hajj). We recommend applying well before your planned date.",
+      "policyLink": "Read service policy, terms & conditions"
+    },
+    "cta": {
+      "title": "Ready to start your spiritual journey?",
+      "description": "Don't let procedures distract you from worship. Start your request now and our specialist team will guide you step by step.",
+      "request": "Request permit service",
+      "support": "Contact support"
+    },
+    "modal": {
+      "title": "Hajj & Umrah permit service request",
+      "description": "Complete your details to obtain the official permit",
+      "steps": {
+        "type": "Permit type",
+        "details": "Details & documents",
+        "payment": "Payment",
+        "review": "Review request"
+      },
+      "step1": {
+        "title": "Choose the required permit type",
+        "hajjTitle": "Hajj permit",
+        "hajjDesc": "Issue a permit to perform Hajj for citizens and residents.",
+        "umrahTitle": "Umrah permit",
+        "umrahDesc": "Issue a permit to perform Umrah and visit the Rawdah.",
+        "notesLabel": "Additional notes (optional)",
+        "notesPlaceholder": "Any details that help us complete your request"
+      },
+      "step2": {
+        "personalInfo": "Personal information",
+        "fullNameLabel": "Full name (as on ID)",
+        "fullNamePlaceholder": "Enter your full name",
+        "phoneLabel": "Mobile number (with country code)",
+        "phoneFormat": "Will be saved as: {dial}",
+        "countryLabel": "Country",
+        "countryPlaceholder": "Select a country",
+        "emailLabel": "Email (optional)",
+        "idLabel": "ID / passport number",
+        "birthDateLabel": "Date of birth",
+        "nationalityLabel": "Nationality",
+        "nationalityPlaceholder": "Select nationality",
+        "attachments": "Attachments & documents",
+        "idPhoto": "ID photo",
+        "idPhotoHint": "JPG, PNG, PDF up to 10MB",
+        "personalPhoto": "Personal photo",
+        "personalPhotoHint": "Must have a white background",
+        "docsRequired": "Please upload ID photo and personal photo"
+      },
+      "step3": {
+        "title": "Payment",
+        "card": "Card",
+        "bank": "Bank transfer",
+        "uploadReceipt": "Upload transfer receipt",
+        "fileChosen": "Selected: {name}"
+      },
+      "step4": {
+        "title": "Order summary",
+        "permitType": "Permit type",
+        "fullName": "Full name",
+        "idNumber": "ID number",
+        "phone": "Mobile number",
+        "country": "Country",
+        "email": "Email",
+        "nationality": "Nationality",
+        "documents": "Documents",
+        "documentsComplete": "Complete",
+        "disclaimer": "By clicking \"Submit request\", you confirm the accuracy of all entered data and agree to the Ministry of Hajj and Umrah terms and conditions."
+      },
+      "permitLabels": {
+        "hajj": "Hajj permit",
+        "umrah": "Umrah permit"
+      },
+      "nationalities": {
+        "sa": "Saudi Arabia",
+        "eg": "Egypt",
+        "ae": "United Arab Emirates",
+        "kw": "Kuwait",
+        "jo": "Jordan",
+        "other": "Other"
+      },
+      "actions": {
+        "cancel": "Cancel",
+        "back": "Back",
+        "next": "Next",
+        "submit": "Submit request"
+      },
+      "validation": {
+        "permitTypeRequired": "Permit type is required",
+        "idNumberInvalid": "ID / passport number is invalid",
+        "nationalityRequired": "Nationality is required"
+      }
+    }
+  },
+  "badal": {
+    "hero": {
+      "badge": "Sharia and legally verified service",
+      "titleLine1": "Hajj & Umrah",
+      "titleHighlight": "on behalf of others",
+      "description": "We perform Hajj and Umrah on behalf of your incapacitated or deceased loved ones with trust and sincerity, through qualified and trusted students of knowledge, with full documentation of all rituals.",
+      "primaryCta": "Start request now",
+      "videoCta": "Watch intro video",
+      "imageAlt": "Holy Kaaba in Mecca with pilgrims circumambulating",
+      "caption": "Trustworthy performance with audio and video documentation",
+      "verified": "Verified",
+      "statsValue": "5,000+ rituals",
+      "statsLabel": "Successfully performed this year"
+    },
+    "about": {
+      "title": "Who is this service for?",
+      "description": "Islam permits Hajj and Umrah on behalf of others in specific cases as mercy for worshippers. We make it easier for you to perform this ritual on behalf of your parents or relatives who meet the sharia conditions.",
+      "shariaTitle": "Sharia supervision",
+      "shariaBody": "We ensure the performer's eligibility and knowledge of the rituals.",
+      "deceasedTitle": "On behalf of the deceased",
+      "deceasedBody": "Performing Hajj or Umrah for the deceased with sincere intention.",
+      "conditions": {
+        "deceased": {
+          "title": "The deceased",
+          "description": "Proxy Hajj and Umrah is permitted for the deceased who did not perform the obligation, or when family wish to perform voluntary worship on their behalf."
+        },
+        "incapacitated": {
+          "title": "Permanently incapacitated",
+          "description": "A patient with no hope of recovery, or an elderly person unable to travel and endure the journey."
+        },
+        "financial": {
+          "title": "Financial ability",
+          "description": "The person appointing the proxy must be able to bear the proxy's expenses and authorize them."
+        }
+      }
+    },
+    "trust": {
+      "title": "Absolute trust & transparency",
+      "description": "We commit to the highest standards of credibility for your peace of mind.",
+      "performers": "Trusted performers",
+      "video": "Video documentation",
+      "certificate": "Completion certificate",
+      "support": "Ongoing support"
+    },
+    "process": {
+      "eyebrow": "How we work",
+      "title": "Service journey step by step",
+      "steps": {
+        "submit": {
+          "title": "Submit request",
+          "description": "Fill in beneficiary details and ritual type (Hajj or Umrah)."
+        },
+        "payment": {
+          "title": "Verification & payment",
+          "description": "Review the request and confirm payment securely online."
+        },
+        "assign": {
+          "title": "Assign performer",
+          "description": "Select a qualified student of knowledge to perform the ritual."
+        },
+        "perform": {
+          "title": "Perform rituals",
+          "description": "Begin rituals with live documentation including supplication."
+        },
+        "document": {
+          "title": "Documentation",
+          "description": "Receive completion certificate and video clips."
+        }
+      }
+    },
+    "pricing": {
+      "title": "Choose the right package",
+      "subtitle": "Transparent, all-inclusive pricing",
+      "mostPopular": "Most popular",
+      "umrahFeatures": {
+        "intention": "Intention and talbiyah in the name",
+        "rituals": "Tawaf, Sa'i, and shaving/trimming",
+        "video": "Supplication video at the Kaaba",
+        "completion": "Completed within 48 hours"
+      },
+      "hajjFeatures": {
+        "type": "Hajj tamattu' or ifrad",
+        "arafah": "Standing at Arafah and staying in Mina",
+        "hadi": "Hadi (sacrifice)",
+        "documentation": "Full documentation of all sites",
+        "certificate": "Certified Hajj certificate"
+      },
+      "umrahCta": "Request Umrah badal",
+      "hajjCta": "Request Hajj badal"
+    },
+    "faq": {
+      "title": "Frequently asked questions",
+      "items": {
+        "legality": {
+          "question": "Is this service permissible in sharia?",
+          "answer": "Yes, proxy Hajj and Umrah for the deceased and permanently incapacitated is permitted by scholarly consensus, supported by authentic hadiths."
+        },
+        "verification": {
+          "question": "How can I verify the ritual was performed?",
+          "answer": "We provide video documentation of the performer stating the intention in the requester's name, plus clips of tawaf, sa'i, and supplication."
+        },
+        "performers": {
+          "question": "Who performs the Umrah and Hajj?",
+          "answer": "We work with students of knowledge and Quran memorizers residing in Makkah, known for righteousness and trustworthiness, who have already performed the obligation for themselves."
+        }
+      }
+    },
+    "modal": {
+      "stepOf": "Step {step} of {total}",
+      "beneficiaryData": "Beneficiary details",
+      "payment": "Payment",
+      "fullName": "Full name",
+      "phoneLabel": "Mobile number (with country code)",
+      "phoneFormat": "Will be saved as: {dial}",
+      "countryLabel": "Country",
+      "countryPlaceholder": "Select a country",
+      "emailOptional": "Email (optional)",
+      "birthDateLabel": "Age – date of birth",
+      "performedBefore": "Have you performed Hajj or Umrah before?",
+      "yes": "Yes",
+      "no": "No",
+      "cancel": "Cancel",
+      "next": "Next",
+      "saving": "Saving request...",
+      "back": "Back",
+      "submitting": "Submitting request...",
+      "confirmUmrah": "Confirm Umrah badal request",
+      "confirmHajj": "Confirm Hajj badal request",
+      "description": "Complete your details then proceed to payment",
+      "requestUmrah": "Request Umrah badal",
+      "requestHajj": "Request Hajj badal"
     }
   }
 }

@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useSyncExternalStore } from "react";
+import { useTranslations } from "next-intl";
 import { toast } from "@/app/components/ui/toast";
 import {
   getCart,
@@ -50,6 +51,7 @@ function computeCount(cart: CartItem[]) {
 }
 
 export function useCart() {
+  const tCommon = useTranslations("common");
   const cart = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
 
   const handleAdd = useCallback(
@@ -58,12 +60,10 @@ export function useCart() {
       emitChange(updated);
 
       if (typeof document !== "undefined") {
-        const lang = document.documentElement.lang;
-        const message = lang === "ar" ? "تمت الإضافة إلى السلة بنجاح" : "Added to cart";
-        toast.success(message);
+        toast.success(tCommon("addedToCart"));
       }
     },
-    [],
+    [tCommon],
   );
 
   const handleRemove = useCallback((id: number) => {

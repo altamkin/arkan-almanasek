@@ -1,335 +1,341 @@
 {
   "common": {
-    "home": "Home",
-    "language": "Language",
-    "error": "An error occurred",
-    "try_again": "Try again"
+    "home": "මුල් පිටුව",
+    "language": "භාෂාව",
+    "error": "දෝෂයක් සිදු විය",
+    "try_again": "නැවත උත්සාහ කරන්න",
+    "addedToCart": "කරත්තයට සාර්ථකව එකතු කරන ලදී",
+    "closeModal": "වසන්න",
+    "pagination": "පිටු සංචාලනය",
+    "sar": "SAR",
+    "unexpectedError": "අනපේක්ෂිත දෝෂයක් සිදු විය"
   },
   "languages": {
-    "ar": "Arabic",
-    "en": "English",
-    "id": "Indonesian",
-    "tr": "Turkish",
-    "si": "Sinhala",
-    "ms": "Malay"
+    "ar": "අරාබි",
+    "en": "ඉංග්රීසි",
+    "id": "ඉන්දුනීසියානු",
+    "tr": "තුර්කි",
+    "si": "සිංහල",
+    "ms": "මැලේ"
   },
   "header": {
     "nav": {
-      "home": "Home",
-      "services": "Services",
-      "products": "Products",
-      "about": "About Us"
+      "home": "මුල් පිටුව",
+      "services": "සේවා",
+      "products": "නිෂ්පාදන",
+      "about": "අපි ගැන"
     },
     "services": {
-      "menuAria": "Services menu",
+      "menuAria": "සේවා මෙනුව",
       "items": {
         "appName": "Arkan Al-Manasik",
-        "hadiAndUdhiyah": "Hadi and udhiyah",
-        "badal": "Badal",
-        "consultations": "Consultations",
-        "manasik": "Manasik",
-        "permits": "Permits"
+        "hadiAndUdhiyah": "හදී සහ උධියා",
+        "badal": "බඩල්",
+        "consultations": "උපදේශන",
+        "manasik": "මනසික්",
+        "permits": "බලපත්ර"
       }
     },
     "actions": {
-      "cart": "Cart"
+      "cart": "කරත්තය"
     },
-    "soon": "Soon",
+    "soon": "ඉක්මනින්",
     "mobile": {
-      "navigation": "Navigation",
-      "menu": "Menu",
-      "closeMenu": "Close menu",
-      "close": "Close"
+      "navigation": "සංචලනය",
+      "menu": "මෙනුව",
+      "closeMenu": "මෙනුව වසන්න",
+      "close": "වසන්න"
     }
   },
   "footer": {
-    "description": "We strive to deliver the best advanced solutions and services to our clients.",
+    "description": "අපගේ ගනුදෙනුකරුවන්ට හොඳම උසස් විසඳුම් සහ සේවාවන් ලබා දීමට අපි උත්සාහ කරමු.",
     "social": {
       "x": "X",
       "linkedin": "LinkedIn",
-      "facebook": "Facebook"
+      "facebook": "ෆේස්බුක්"
     },
     "quickLinks": {
-      "title": "روابط سريعة",
-      "about": "عن الشركة",
-      "products": "المنتجات"
+      "title": "ඉක්මන් සබැඳිය",
+      "about": "අපි ගැන",
+      "products": "නිෂ්පාදනය"
     },
     "support": {
-      "title": "الدعم والمساعدة",
-      "faq": "الأسئلة الشائعة",
-      "contact": "اتصل بنا"
+      "title": "සහාය සහ සහාය",
+      "faq": "නිතර අසන පැන",
+      "contact": "අපව අමතන්න"
     },
     "newsletter": {
-      "title": "اشترك في النشرة",
-      "description": "احصل على آخر العروض والنصائح لرحلتك.",
-      "emailPlaceholder": "بريدك الإلكتروني",
-      "submitAria": "إرسال"
+      "title": "පුවත් පත්‍රිකාවට දායක වන්න",
+      "description": "ඔබගේ සංචාරය සඳහා නවතම දීමනා සහ ඉඟි ලබා ගන්න.",
+      "emailPlaceholder": "ඔයාගේ ඊතැපැල් ලිපිනය",
+      "submitAria": "යවන්න"
     },
-    "copyright": "© MACS {year} | All Rights Reserved"
+    "copyright": "© {year} Arkan Al-මනාසික. ප්‍රකාශන හිමිකම් ආරක්ෂා කර ඇත."
   },
   "store": {
     "brand": {
-      "title": "Arkan Al-Manasik",
-      "subtitle": "The best products for your spiritual journey at competitive prices"
+      "title": "Arkan Al-මනාසික",
+      "subtitle": "තරඟකාරී මිල ගණන් යටතේ ඔබගේ අධ්‍යාත්මික ගමන සඳහා හොඳම නිෂ්පාදන"
     },
     "breadcrumb": {
-      "ariaLabel": "Breadcrumb",
-      "store": "Store"
+      "ariaLabel": "සංචාලන මංපෙත",
+      "store": "වෙළඳසැල"
     },
     "search": {
-      "mobilePlaceholder": "Search for a product...",
-      "desktopPlaceholder": "Search for Ihram, Qurans..."
+      "mobilePlaceholder": "නිෂ්පාදනයක් සොයන්න...",
+      "desktopPlaceholder": "ඉහ්රාම්, කුරාන සොයන්න..."
     },
     "filters": {
-      "categories": "Categories",
-      "price": "Price",
-      "minPrice": "Minimum price",
-      "maxPrice": "Maximum price",
-      "inStockOnly": "In stock only"
+      "categories": "වර්ග",
+      "price": "මිල",
+      "minPrice": "අවම මිල",
+      "maxPrice": "උපරිම මිල",
+      "inStockOnly": "තොගයේ පමණි",
+      "tags": "ටැග්"
     },
     "categories": {
-      "all": "All"
+      "all": "සියල්ල"
     },
     "sort": {
-      "label": "Sort by:",
+      "label": "අනුව තෝරන්න:",
       "options": {
-        "bestSelling": "Best selling",
-        "priceLowToHigh": "Price: low to high",
-        "priceHighToLow": "Price: high to low",
-        "newest": "Newest"
+        "bestSelling": "හොඳම විකුණුම්",
+        "priceLowToHigh": "මිල: අඩු සිට ඉහළ දක්වා",
+        "priceHighToLow": "මිල: ඉහළ සිට පහළ දක්වා",
+        "newest": "අලුත්ම"
       }
     },
     "actions": {
-      "addToCartShort": "Add to cart"
+      "addToCartShort": "ගැලට එක් කරන්න"
     },
     "pagination": {
-      "previous": "Previous page",
-      "next": "Next page"
+      "previous": "පෙර පිටුව",
+      "next": "ඊළඟ පිටුව"
     },
     "products": {
       "items": {
         "details": {
-          "title": "عنوان المنتج"
+          "title": "නිෂ්පාදන මාතෘකාව"
         }
       }
     },
     "product": {
       "actions": {
-        "addToCart": "Add to cart",
-        "share": "Share product"
+        "addToCart": "කරත්තයට එක් කරන්න",
+        "share": "නිෂ්පාදනය බෙදාගන්න"
       },
       "share": {
-        "text": "View product details"
+        "text": "නිෂ්පාදන විස්තර බලන්න"
       },
       "stock": {
-        "inStock": "In stock",
-        "outOfStock": "Out of stock"
+        "inStock": "ගබඩාවේ ඇත",
+        "outOfStock": "තොග නැති"
       },
       "price": {
-        "vatIncluded": "VAT included"
+        "vatIncluded": "වැට් බදු ඇතුළත්"
       },
       "quantity": {
-        "label": "Quantity",
-        "increase": "Increase quantity",
-        "decrease": "Decrease quantity",
-        "inputAria": "Quantity"
+        "label": "ප්රමාණය",
+        "increase": "ප්‍රමාණය වැඩි කරන්න",
+        "decrease": "ප්‍රමාණය අඩු කරන්න",
+        "inputAria": "ප්රමාණය"
       },
       "tabs": {
-        "description": "Description",
-        "specs": "Specifications"
+        "description": "විස්තරය",
+        "specs": "පිරිවිතර"
       },
       "description": {
-        "title": "Full kit details",
-        "paragraph1": "This premium kit is thoughtfully designed to support modern pilgrims and worshippers with comfort and practicality.",
-        "paragraph2": "It also includes essentials that help you stay organized and prepared throughout your journey."
+        "title": "සම්පූර්ණ පැකේජ විස්තර",
+        "paragraph1": "මෙම වාරික පැකේජය නවීන වන්දනාකරුවන්ට සුවපහසුව සහ ප්‍රායෝගිකව සහාය වීම සඳහා ප්‍රවේශමෙන් නිර්මාණය කර ඇත. ඉහ්රාම් සෑදී ඇත්තේ ප්‍රශස්ත අවශෝෂණය සහ වාතාශ්‍රය සඳහා 100% ඊජිප්තු කපු වලින් වන අතර, සුන්නාට ගැලපීම සඳහා මැහුම් නොමැත.",
+        "paragraph2": "පැකේජයට ඉහ්රාම් කාලය තුළ වඩාත් සුදුසු සුවඳ සහ හරාම් රහිත පුද්ගලික සත්කාර අයිතම ද ඇතුළත් වේ. බෑගය සැහැල්ලු, ජල ආරක්ෂිත වන අතර ඔබේ පුද්ගලික අයිතම සංවිධානය කිරීමට සාක්කු ඕනෑ තරම් තිබේ."
       },
       "reviews": {
-        "title": "Customer reviews",
-        "placeholder": "You can list all reviews here or connect real data later."
+        "title": "පාරිභෝගික සමාලෝචන",
+        "placeholder": "ඔබට මෙහි සියලුම සමාලෝචන සංදර්ශන කිරීමට හෝ සැබෑ දත්ත පසුව සම්බන්ධ කිරීමට හැකිය."
       },
       "specs": {
-        "title": "Specifications"
+        "title": "පිරිවිතර"
       }
     }
   },
   "cart": {
     "itemCard": {
-      "removeItemAria": "Remove {item}",
-      "decreaseQtyAria": "Decrease quantity of {item}",
-      "increaseQtyAria": "Increase quantity of {item}"
+      "removeItemAria": "{item} ඉවත් කරන්න",
+      "decreaseQtyAria": "{item} ප්‍රමාණය අඩු කරන්න",
+      "increaseQtyAria": "{item} ප්‍රමාණය වැඩි කරන්න"
     },
     "step1": {
-      "title": "Cart contents",
-      "emptyMessage": "Your cart is currently empty."
+      "title": "කරත්තයේ අන්තර්ගතය",
+      "emptyMessage": "ඔබේ කරත්තය දැනට හිස්ය."
     },
     "checkout": {
-      "title": "Checkout",
-      "subtitle": "Complete the booking steps to finish your blessed journey",
+      "title": "ගෙවීම",
+      "subtitle": "ඔබගේ ආශීර්වාද ලත් ගමන අවසන් කිරීමට වෙන්කරවා ගැනීමේ පියවර සම්පූර්ණ කරන්න",
       "stepper": {
-        "step1": "Cart review",
-        "step2": "Customer information",
-        "step3": "Payment method"
+        "step1": "කරත්ත සමාලෝචනය",
+        "step2": "පාරිභෝගික තොරතුරු",
+        "step3": "ගෙවීම් ක්රමය"
       },
       "progress": {
-        "stepOf": "Step {step} of {total}",
-        "completePercent": "{percent}% complete"
+        "stepOf": "පියවර {step} න් {total}",
+        "completePercent": "{percent}% සම්පූර්ණයි"
       },
       "summary": {
-        "title": "Order summary",
-        "subtotal": "Subtotal",
-        "vat": "VAT ({rate}%)",
-        "serviceFee": "Service fee",
-        "total": "Total"
+        "title": "ඇණවුම් සාරාංශය",
+        "subtotal": "උප එකතුව",
+        "vat": "වැට් ({rate}%)",
+        "serviceFee": "සේවා ගාස්තුව",
+        "total": "මුළු"
       },
       "discount": {
-        "placeholder": "Discount code",
-        "apply": "Apply"
+        "placeholder": "වට්ටම් කේතය",
+        "apply": "අයදුම් කරන්න"
       },
       "actions": {
-        "continueToCustomerInfo": "Continue to customer info",
-        "continueToPayment": "Continue to payment",
-        "confirmPayment": "Confirm payment"
+        "continueToCustomerInfo": "පාරිභෝගික තොරතුරු වෙත ඉදිරියට යන්න",
+        "continueToPayment": "ගෙවීම දිගටම කරගෙන යන්න",
+        "confirmPayment": "ගෙවීම තහවුරු කරන්න"
       },
-      "securityHint": "100% secure, encrypted payments",
+      "securityHint": "100% ආරක්ෂිත, සංකේතාත්මක ගෙවීම්",
       "help": {
-        "title": "Need help?",
-        "description": "Our team is available 24/7 to help you complete your booking",
-        "contact": "Contact us"
+        "title": "උදව් අවශ්‍යද?",
+        "description": "ඔබේ වෙන් කිරීම සම්පූර්ණ කිරීමට ඔබට උදවු කිරීමට අපගේ කණ්ඩායම 24/7 ලබා ගත හැක",
+        "contact": "අපව අමතන්න"
       }
     },
     "step2": {
-      "title": "بيانات العميل",
+      "title": "පාරිභෝගික තොරතුරු",
       "fields": {
-        "fullNameLabel": "Polno ime",
-        "fullNamePlaceholder": "Mohammed Ahmed",
-        "phoneLabel": "Mobilna številka",
+        "fullNameLabel": "සම්පූර්ණ නම",
+        "fullNamePlaceholder": "මොහම්මද් අහ්මද්",
+        "phoneLabel": "ජංගම දුරකථන අංකය",
         "phonePlaceholder": "55 000 0000",
-        "emailLabel": "E-pošta",
+        "emailLabel": "ඊමේල්",
         "emailPlaceholder": "example@mail.com",
-        "countryLabel": "Država",
-        "countryPlaceholder": "Izberite državo",
-        "birthDateLabel": "Datum rojstva",
+        "countryLabel": "රට",
+        "countryPlaceholder": "රට තෝරන්න",
+        "birthDateLabel": "උපන් දිනය",
         "birthDatePlaceholder": "dd/mm/yyyy",
-        "performedHajjOrUmrahBeforeLabel": "Ali ste že opravili hadž ali umro?"
+        "performedHajjOrUmrahBeforeLabel": "කලින් හජ් හෝ උම්රා කළාද?"
       },
       "options": {
         "countries": {
-          "id": "Indonezija",
-          "ms": "Malezija",
-          "tr": "Turčija",
-          "lk": "Šrilanka"
+          "id": "ඉන්දුනීසියාව",
+          "ms": "මැලේසියාව",
+          "tr": "තුර්කිය",
+          "lk": "ශ්‍රී ලංකාව"
         },
         "phoneCountries": {
-          "sa": "Savdska Arabija"
+          "sa": "සවුදි අරාබිය"
         },
         "yesNo": {
-          "yes": "Da",
-          "no": "Ne"
+          "yes": "ඔව්",
+          "no": "නැත"
         }
       },
       "actions": {
-        "back": "Nazaj",
-        "next": "Naprej"
+        "back": "ආපසු",
+        "next": "ඉදිරියට"
       },
       "validation": {
-        "fullNameRequired": "Polno ime je obvezno",
-        "phoneCountryRequired": "Klicna koda države je obvezna",
-        "phoneRequired": "Mobilna številka je obvezna",
-        "phoneInvalid": "Mobilna številka ni veljavna",
-        "emailRequired": "E-pošta je obvezna",
-        "emailInvalid": "E-pošta ni veljavna",
-        "countryRequired": "Država je obvezna",
-        "birthDateRequired": "Datum rojstva je obvezen",
-        "birthDateInvalid": "Datum rojstva mora biti v obliki dd/mm/yyyy",
-        "performedHajjOrUmrahBeforeRequired": "To polje je obvezno"
+        "fullNameRequired": "සම්පූර්ණ නම අවශ්‍යයි",
+        "phoneCountryRequired": "රටේ කේතය අවශ්‍යයි",
+        "phoneRequired": "ජංගම දුරකථන අංකය අවශ්‍යයි",
+        "phoneInvalid": "ජංගම දුරකථන අංකය වලංගු නොවේ",
+        "emailRequired": "ඊමේල් අවශ්‍යයි",
+        "emailInvalid": "ඊමේල් වලංගු නොවේ",
+        "countryRequired": "රට අවශ්‍යයි",
+        "birthDateRequired": "උපන් දිනය අවශ්‍යයි",
+        "birthDateInvalid": "උපන් දිනය dd/mm/yyyy ආකෘතියෙන් තිබිය යුතුය",
+        "performedHajjOrUmrahBeforeRequired": "මෙම ක්ෂේත්‍රය අවශ්‍යයි"
       }
     },
     "step3": {
-      "title": "Payment method",
+      "title": "ගෙවීම් ක්‍රමය",
       "methods": {
         "card": {
-          "title": "Credit / debit card",
-          "description": "Pay securely using your bank card"
+          "title": "ක්‍රෙඩිට් / ඩෙබිට් කාඩ්",
+          "description": "ඔබේ බැංකු කාඩ්පත භාවිතයෙන් ආරක්ෂිතව ගෙවන්න"
         },
         "bank": {
-          "title": "Bank transfer",
-          "description": "Upload the transfer receipt"
+          "title": "බැංකු මාරුව",
+          "description": "මාරුවේ රිසිට්පත උඩුගත කරන්න"
         }
       },
       "card": {
-        "title": "Card details",
-        "secureHint": "Encrypted & secure",
-        "note": "This information will be used for payment purposes only.",
+        "title": "කාඩ් විස්තර",
+        "secureHint": "සංකේතාත්මක සහ ආරක්ෂිත",
+        "note": "මෙම තොරතුරු ගෙවීම් අරමුණු සඳහා පමණක් භාවිතා වේ.",
         "fields": {
           "cardholder": {
-            "label": "Cardholder name",
-            "placeholder": "Name as shown on the card"
+            "label": "කාඩ් හිමිකරුගේ නම",
+            "placeholder": "කාඩ්පතේ පෙනෙන පරිදි නම"
           },
           "cardNumber": {
-            "label": "Card number",
+            "label": "කාඩ් අංකය",
             "placeholder": "1234 5678 9012 3456"
           },
           "expiry": {
-            "label": "Expiry date",
+            "label": "කල් ඉකුත් වන දිනය",
             "placeholder": "MM/YY"
           },
           "cvc": {
-            "label": "Security code",
+            "label": "ආරක්ෂක කේතය",
             "placeholder": "CVC"
           }
         }
       },
       "bank": {
-        "title": "Bank transfer details",
-        "description": "Transfer to the account below, then upload the receipt to complete your order.",
+        "title": "බැංකු මාරු විස්තර",
+        "description": "පහත ගිණුමට මාරු කර, රිසිට්පත උඩුගත කර ඇණවුම සම්පූර්ණ කරන්න.",
         "details": {
-          "bankNameLabel": "Bank name",
-          "bankNameValue": "Test bank (edit later)",
-          "beneficiaryNameLabel": "Beneficiary name",
-          "beneficiaryNameValue": "Test company",
-          "ibanLabel": "Account / IBAN",
+          "bankNameLabel": "බැංකුවේ නම",
+          "bankNameValue": "පරීක්ෂණ බැංකුව (පසුව සංස්කරණය කරන්න)",
+          "beneficiaryNameLabel": "ලාභග්‍රාහකයාගේ නම",
+          "beneficiaryNameValue": "අත්හදා බැලීමේ සමාගම",
+          "ibanLabel": "ගිණුම / IBAN",
           "ibanValue": "SA00 0000 0000 0000 0000 0000"
         },
         "receipt": {
-          "title": "Upload transfer receipt",
-          "formats": "PDF or image (JPG/PNG)",
-          "upload": "Click to upload receipt",
-          "chosen": "File selected",
-          "chooseFromDevice": "Choose a file from your device",
-          "wrongFileHint": "If you uploaded the wrong file, remove it and upload another.",
-          "removeFile": "Remove file"
+          "title": "මාරු රිසිට්පත උඩුගත කරන්න",
+          "formats": "PDF හෝ රූපය (JPG/PNG)",
+          "upload": "රිසිට්පත උඩුගත කිරීමට ක්ලික් කරන්න",
+          "chosen": "ගොනුව තෝරා ඇත",
+          "chooseFromDevice": "ඔබේ උපාංගයෙන් ගොනුවක් තෝරන්න",
+          "wrongFileHint": "වැරදි ගොනුවක් උඩුගත කළහොත්, එය ඉවත් කර වෙනත් ගොනුවක් උඩුගත කරන්න.",
+          "removeFile": "ගොනුව ඉවත් කරන්න"
         }
       },
       "actions": {
-        "back": "Back",
-        "confirm": "Confirm payment"
+        "back": "ආපසු",
+        "confirm": "ගෙවීම තහවුරු කරන්න"
       },
       "validation": {
-        "methodRequired": "Please choose a payment method.",
-        "cardholderRequired": "Please enter the cardholder name.",
-        "cardNumberRequired": "Please enter the card number.",
-        "cardNumberInvalid": "Card number is invalid.",
-        "cardNumberLuhnInvalid": "Card number is not valid.",
-        "expiryRequired": "Please enter the expiry date.",
-        "expiryInvalid": "Expiry date is invalid.",
-        "cvcRequired": "Please enter the security code.",
-        "cvcInvalid": "Security code is invalid.",
-        "receiptRequired": "Please upload the transfer receipt.",
-        "receiptTypeInvalid": "Unsupported file type. Upload a PDF or an image.",
-        "receiptSizeTooLarge": "File is too large. Maximum size is 5MB."
+        "methodRequired": "කරුණාකර ගෙවීම් ක්‍රමයක් තෝරන්න.",
+        "cardholderRequired": "කරුණාකර කාඩ් හිමිකරුගේ නම ඇතුළත් කරන්න.",
+        "cardNumberRequired": "කරුණාකර කාඩ් අංකය ඇතුළත් කරන්න.",
+        "cardNumberInvalid": "කාඩ් අංකය වලංගු නොවේ.",
+        "cardNumberLuhnInvalid": "කාඩ් අංකය වලංගු නොවේ.",
+        "expiryRequired": "කරුණාකර කල් ඉකුත් වන දිනය ඇතුළත් කරන්න.",
+        "expiryInvalid": "කල් ඉකුත් වන දිනය වලංගු නොවේ.",
+        "cvcRequired": "කරුණාකර ආරක්ෂක කේතය ඇතුළත් කරන්න.",
+        "cvcInvalid": "ආරක්ෂක කේතය වලංගු නොවේ.",
+        "receiptRequired": "කරුණාකර මාරු රිසිට්පත උඩුගත කරන්න.",
+        "receiptTypeInvalid": "සහාය නොදක්වන ගොනු වර්ගයකි. PDF හෝ රූපයක් උඩුගත කරන්න.",
+        "receiptSizeTooLarge": "ගොනුව ඉතා විශාලයි. උපරිම ප්‍රමාණය 5MB."
       }
     }
   },
   "qurbani": {
     "breadcrumbs": {
-      "ariaLabel": "Breadcrumb",
-      "home": "Home",
-      "current": "Hadi and udhiyah"
+      "ariaLabel": "සංචාලන මංපෙත",
+      "home": "මුල් පිටුව",
+      "current": "හැඩි සහ පූජාව"
     },
     "hero": {
-      "titlePrefix": "Buy",
-      "titleHighlight": "Ritual",
-      "description": "Slaughtering and distribution services for udhiyah, hadi, and fidya according to sharia, with ease and reliability."
+      "titlePrefix": "මිලදී ගන්න",
+      "titleHighlight": "නමස්කාරය",
+      "description": "ඉස්ලාමීය නීතියට අනුව, පහසුවෙන් සහ විශ්වාසදායක ලෙස පූජා, හදී සහ ෆිද්යා ඝාතනය කිරීම සහ බෙදා හැරීම සඳහා සේවාවන්."
     },
     "listSeparator": ", ",
     "badges": {
@@ -351,276 +357,620 @@
     },
     "steps": {
       "selectType": {
-        "title": "Select ritual type",
-        "desc": "Choose the option that suits you"
+        "title": "නමස්කාරයේ වර්ගය තෝරන්න",
+        "desc": "ඔබට ගැලපෙන විකල්පය තෝරන්න"
       },
       "securePayment": {
-        "title": "Secure payment",
-        "desc": "Trusted payment gateways"
+        "title": "ආරක්ෂිත ගෙවීම",
+        "desc": "විශ්වාසනීය ගෙවීම් දොරටුව"
       },
       "sharia": {
-        "title": "Sharia compliant",
-        "desc": "Slaughter under expert supervision"
+        "title": "ෂරියා ක්‍රියාත්මක කිරීම",
+        "desc": "විශේෂඥ අධීක්ෂණය යටතේ ඝාතනය"
       },
       "confirmation": {
-        "title": "Completion confirmation",
-        "desc": "Report via SMS"
+        "title": "සම්පූර්ණ කිරීම තහවුරු කරන්න",
+        "desc": "SMS මගින් වාර්තා කරන්න"
       }
     },
     "notice": {
-      "title": "Sharia notice",
-      "body": "All slaughtered animals undergo strict veterinary and sharia checks and are distributed to those in need at the prescribed times."
+      "title": "ෂරියා නිවේදනය",
+      "body": "සියලුම පූජා කරන සතුන් දැඩි පශු වෛද්‍ය සහ ෂරියා පරීක්‍ෂණවලට භාජනය වන අතර පසුව අවශ්‍යතා ඇති අයට නියමිත වේලාවට බෙදා හරිනු ලැබේ."
     },
     "cart": {
-      "title": "Order details",
+      "title": "ඇණවුම් විස්තර",
       "empty": "Niste dodali nobenih izdelkov.",
-      "quantityLabel": "Qty:",
+      "quantityLabel": "ප්‍රමාණය:",
       "clear": "Počisti",
       "continue": "Nadaljuj",
-      "checkout": "Checkout",
+      "checkout": "ගෙවීම",
       "outOfSync": "Pred nadaljevanjem posodobite naslednje razdelke: {sections}"
     },
     "checkout": {
       "reviewTitle": "Preglej podatke in zaključi plačilo"
     },
     "summary": {
-      "subtotal": "Subtotal",
-      "tax": "Tax ({rate}%)",
-      "total": "Total"
+      "subtotal": "උප එකතුව",
+      "tax": "බදු ({rate}%)",
+      "total": "මුළු"
     }
   },
   "home": {
     "hero": {
-      "backgroundAlt": "Cinematic view of the Kaaba",
-      "seasonBadge": "Hajj season 1445 AH",
-      "titleTop": "Journey of a lifetime",
-      "titleHighlight": "Begins with a touch of excellence",
-      "description": "We accompany you every step of your spiritual journey to ensure peace of mind and ease in performing your rituals with the highest service standards.",
-      "primaryCta": "Start your journey",
-      "secondaryCta": "Contact us",
+      "backgroundAlt": "කාබා හි සිනමා දර්ශනය",
+      "seasonBadge": "හජ් වාරය 1445 එච්",
+      "titleTop": "ජීවිත ගමනක්",
+      "titleHighlight": "විශිෂ්ටත්වයේ ස්පර්ශයකින් ආරම්භ වේ",
+      "description": "ඔබගේ ආධ්‍යාත්මික ගමනේ සෑම පියවරකදීම අපි ඔබ සමඟ එක්ව සිටින්නේ, ඉහළම සේවා ප්‍රමිතීන් සමඟින් ඔබගේ නමස්කාරය ඉටු කිරීමේදී සාමය සහ පහසුව සහතික කිරීම මෙන්ම හජ් සහ උම්රා බඩල් සැපයීමයි.",
+      "primaryCta": "ඔබේ ගමන ආරම්භ කරන්න",
+      "secondaryCta": "අපව අමතන්න",
       "stats": {
         "pilgrimsValue": "50k+",
-        "pilgrimsLabel": "Pilgrims served"
+        "pilgrimsLabel": "සභාවට සේවය කරනවා"
       },
       "support": {
-        "title": "Always-on support",
-        "subtitle": "24/7 throughout the journey",
-        "body": "A dedicated team to serve you and answer your questions at any time."
+        "title": "අඛණ්ඩ සහාය",
+        "subtitle": "24/7 පුරාම",
+        "body": "ඔබේ ප්‍රශ්නවලට ඕනෑම වේලාවක සේවය කිරීමට සහ පිළිතුරු දීමට කැපවූ කණ්ඩායමක් සූදානම්."
       }
     },
     "video": {
-      "eyebrow": "Get to know us",
-      "heading": "Integrated services for pilgrims",
-      "description": "We build a digital experience that reflects the spirit of the journey: clear, reassuring, and respectful of the sacred rituals—from planning to completion.",
-      "iframeTitle": "Intro video",
-      "html5Fallback": "Your browser does not support the video tag."
+      "eyebrow": "අපව දැන හඳුනා ගන්න",
+      "heading": "වන්දනාකරුවන් සඳහා ඒකාබද්ධ සේවා",
+      "description": "අපි සංචාරයේ ආත්මය පිළිබිඹු කරන ඩිජිටල් අත්දැකීම් නිර්මාණය කරමු: පැහැදිලි, සන්සුන්, සහ නමස්කාරයේ පරිශුද්ධත්වයට ගරු කිරීම-සැලසුම් කිරීමේ සිට සම්පූර්ණ කිරීම දක්වා.",
+      "iframeTitle": "හඳුන්වාදීමේ වීඩියෝව",
+      "html5Fallback": "ඔබගේ බ්‍රවුසරය වීඩියෝ නැවත ධාවනයට සහය නොදක්වයි."
     },
     "products": {
-      "sectionTitle": "Featured products",
-      "viewAll": "View all",
-      "addToCartAria": "Add {title} to cart",
-      "emptyMessage": "No products available right now."
+      "sectionTitle": "තෝරාගත් නිෂ්පාදන",
+      "viewAll": "සියල්ල බලන්න",
+      "addToCartAria": "කරත්තයට {title} එක් කරන්න",
+      "emptyMessage": "මෙම අවස්ථාවේදී ලබා ගත හැකි නිෂ්පාදන නොමැත."
     },
     "services": {
-      "sectionTitle": "Our featured services",
-      "sectionDescription": "A complete suite of sharia-compliant and logistical services to make your Hajj and Umrah journey easier.",
+      "sectionTitle": "අපගේ උසස් සේවාව",
+      "sectionDescription": "ඔබගේ හජ් සහ උම්රා ගමන පහසු කිරීම සඳහා ඒකාබද්ධ ෂරියා සහ සැපයුම් සේවා මාලාවක්.",
       "items": {
         "hadiAndUdhiyah": {
-          "title": "Hadi and udhiyah",
-          "description": "A trusted service for slaughtering and distributing hadi and udhiyah to the poor in the Haram, supervised end-to-end with integrity."
+          "title": "හැඩි සහ පූජාව",
+          "description": "ටනාහ් හරාම් හි දුප්පතුන්ට හඩි සහ පූජාවන් ඝාතනය කිරීම සහ බෙදා හැරීම සඳහා විශ්වාසනීය සේවාව, පූර්ණ විශ්වාසයකින් යුතුව අධීක්ෂණය කරනු ලැබේ."
         },
         "pilgrimageGuide": {
-          "title": "Rituals guide",
-          "description": "A comprehensive, visual, and interactive guide to perform Hajj/Umrah correctly according to the Sunnah."
+          "title": "මනසික් මාර්ගෝපදේශකය",
+          "description": "සුන්නාට අනුව හජ්/උම්රා නිවැරදිව ඉටු කිරීම සඳහා සම්පූර්ණ, දෘශ්‍ය සහ අන්තර්ක්‍රියාකාරී මාර්ගෝපදේශයකි."
         },
         "permits": {
-          "title": "Hajj & Umrah permits",
-          "description": "We help you obtain all official permits through approved channels quickly and easily."
+          "title": "හජ් සහ උම්රා බලපත්‍රය",
+          "description": "නිල මාර්ග හරහා ඉක්මනින් සහ පහසුවෙන් සියලුම නිල බලපත්‍ර ලබා ගැනීමට අපි ඔබට උදවු කරමු."
         },
         "shariaConsultations": {
-          "title": "Sharia consultations",
-          "description": "Direct access to scholars and preachers to answer your jurisprudence questions during the rituals."
+          "title": "ෂරියා උපදේශනය",
+          "description": "නමස්කාරයේදී ෆික් ප්‍රශ්නවලට පිළිතුරු දීමට උලමා සහ දේශකයන් වෙත සෘජු ප්‍රවේශය."
         },
         "hajjAndUmrahOnBehalf": {
-          "title": "Hajj/Umrah on behalf",
-          "description": "We perform rituals on behalf of the incapacitated or deceased, with full documentation of every stage."
+          "title": "බඩල් හජ්/උම්රා",
+          "description": "සෑම අදියරකදීම සම්පූර්ණ ලියකියවිලි සහිතව ආබාධිත හෝ මියගිය අය වෙනුවෙන් අපි නමස්කාරය සිදු කරන්නෙමු."
         }
       }
     },
     "cta": {
-      "limitedBadge": "Limited spots this season",
-      "titleLine1": "Your journey starts with",
-      "titleLine2": "one step of preparation",
-      "description": "Let us accompany you from preparation to performing the rituals with ease and peace of mind. Join thousands of pilgrims who trusted us.",
-      "primaryCta": "Book now",
-      "secondaryCta": "Download the guide",
+      "limitedBadge": "මෙම කන්නයේ පංගු සීමිතයි",
+      "titleLine1": "ඔබේ ගමන ආරම්භ වන්නේ",
+      "titleLine2": "එක් සූදානම් කිරීමේ පියවරක්",
+      "description": "සූදානම් වීමේ සිට ඔබේ නමස්කාරය පහසුවෙන් සහ මනසේ සාමයෙන් ඉටු කිරීමට අපි ඔබ සමඟ යමු. අපව විශ්වාස කරන දහස් ගණන් බැතිමතුන් හා එක්වන්න.",
+      "primaryCta": "දැන්ම ඇනවුම් කරන්න",
+      "secondaryCta": "බාගත කිරීමේ මාර්ගෝපදේශය",
       "trustBadge": "+2k",
       "trustValue": "2,000+",
-      "trustLabel": "Pilgrims who trusted us",
-      "appTagline": "Your smart rituals guide",
-      "liveLabel": "Live"
+      "trustLabel": "සභාව අපිව විශ්වාස කරනවා",
+      "appTagline": "ඔබේ ස්මාර්ට් මනසික් මාර්ගෝපදේශකය",
+      "liveLabel": "සෘජු"
     }
   },
   "about": {
     "hero": {
-      "titleTop": "We accompany you on the purest",
-      "titleHighlight": "journey of a lifetime",
-      "description": "Your trusted partner for serving pilgrims—combining heritage of service with modern technology to make your rituals easier."
+      "titleTop": "අපි ඔබ සමඟ ඇතුලට",
+      "titleHighlight": "ජීවිතයේ වඩාත්ම පූජනීය ගමන",
+      "description": "ඔබේ සභාවට සේවය කිරීම සඳහා ඔබේ විශ්වාසවන්ත සහකරු-ඔබේ නමස්කාරය පහසු කිරීම සඳහා නවීන තාක්ෂණය සමඟ සේවා උරුමයක් ඒකාබද්ධ කිරීම."
     },
     "values": {
-      "title": "Our values and services",
-      "subtitle": "An integrated system designed for your comfort and peace"
+      "title": "අපගේ වටිනාකම් සහ සේවාවන්",
+      "subtitle": "ඔබේ සුවපහසුව සහ මනසේ සාමය සඳහා නිර්මාණය කර ඇති ඒකාබද්ධ පද්ධතියකි"
     },
     "vision": {
-      "title": "Our vision",
-      "body": "To be the world’s leading digital platform in facilitating Hajj and Umrah—delivering innovative solutions that unite spirituality and technology with transparency and integrity."
+      "title": "අපේ දැක්ම",
+      "body": "විනිවිදභාවය සහ විශ්වාසය සමඟ අධ්‍යාත්මිකත්වය සහ තාක්‍ෂණය ඒකාබද්ධ කරන නව්‍ය විසඳුම් ඉදිරිපත් කරමින් හජ් සහ උම්රා සඳහා පහසුකම් සැලසීමේ ලොව ප්‍රමුඛතම ඩිජිටල් වේදිකාව බවට පත්වීම."
     },
     "mission": {
-      "title": "Our mission",
-      "body": "We empower pilgrims to perform their rituals with ease and reassurance by providing trusted, transparent, sharia-compliant services at the highest quality standards."
+      "title": "අපේ මෙහෙවර",
+      "body": "ඉහළම ගුණාත්මක ප්‍රමිතීන් සමඟ විශ්වාසදායක, විනිවිදභාවයෙන් යුත් සහ ෂරියා-අනුකූල සේවාවන් හරහා ඔවුන්ගේ නමස්කාරය පහසුවෙන් සහ මනසේ සාමයෙන් සිදු කිරීමට අපි වන්දනාකරුවන්ට බලය ලබා දෙන්නෙමු."
     },
     "cards": {
       "badal": {
-        "title": "Badal Hajj",
-        "body": "Performing rituals on behalf of those unable or deceased by trustworthy students of knowledge."
+        "title": "හජ් බඩල්",
+        "body": "විශ්වාසවන්ත දැනුමැති සිසුන් විසින් ආබාධිත හෝ මියගිය අය වෙනුවෙන් නමස්කාර කිරීම."
       },
       "trust": {
-        "title": "Integrity & credibility",
-        "body": "The foundation of how we serve pilgrims"
+        "title": "අඛණ්ඩතාව සහ විශ්වසනීයත්වය",
+        "body": "අපි සභාවට සේවය කරන ආකාරය පිළිබඳ පදනම"
       },
       "guidance": {
-        "title": "Ritual guidance",
-        "body": "A comprehensive guide and certified guides to support you step by step."
+        "title": "හැඩි සහ පූජාව",
+        "body": "පියවරෙන් පියවර ඔබ සමඟ යාමට සම්පූර්ණ මග පෙන්වීම සහ සහතික කළ උපදේශකයින්."
       },
       "permits": {
-        "title": "Permits",
-        "body": "Fast, simplified official procedures to ensure compliant pilgrimage."
+        "title": "අවසරය",
+        "body": "නීතිරීතිවලට අනුව නමස්කාරය සහතික කිරීම සඳහා වේගවත් හා සරල නිල ක්රියා පටිපාටි."
       }
     },
     "why": {
-      "title": "Why us?",
+      "title": "ඇයි අපි?",
       "bullets": {
-        "sharia": "Full commitment to sharia guidelines",
-        "support": "24/7 technical and advisory support",
-        "ease": "Easy-to-use across digital platforms"
+        "sharia": "ෂරියා මාර්ගෝපදේශ සඳහා පූර්ණ කැපවීම",
+        "support": "24/7 තාක්ෂණික සහාය සහ උපදේශනය",
+        "ease": "සියලුම ඩිජිටල් වේදිකාවල භාවිතා කිරීමට පහසුය"
       },
-      "imageAlt": "Pilgrims"
+      "imageAlt": "සභාව"
     },
     "stats": {
       "experienceValue": "15+",
-      "experienceLabel": "Years of experience",
+      "experienceLabel": "වසර ගණනාවක අත්දැකීම්",
       "pilgrimsValue": "50k+",
-      "pilgrimsLabel": "Pilgrims served",
+      "pilgrimsLabel": "සභාවට සේවය කරනවා",
       "satisfactionValue": "99%",
-      "satisfactionLabel": "Satisfaction rate"
+      "satisfactionLabel": "තෘප්තිමත් මට්ටම"
     },
     "cta": {
-      "title": "Ready to start your spiritual journey?",
-      "description": "Join thousands of pilgrims who trusted us for a memorable journey and accepted rituals, God willing.",
-      "primaryCta": "Start now",
-      "secondaryCta": "Talk to an advisor"
+      "title": "ඔබේ අධ්‍යාත්මික ගමන ආරම්භ කිරීමට සූදානම්ද?",
+      "description": "දෙවියන් කැමති, අමතක නොවන සංචාර සහ පිළිගත හැකි නමස්කාරය සඳහා අපව විශ්වාස කරන දහස් ගණන් වන්දනාකරුවන් සමඟ එක්වන්න.",
+      "primaryCta": "දැන් පටන්",
+      "secondaryCta": "උපදේශකයෙකු සමඟ කතා කරන්න"
     }
   },
   "contact": {
     "hero": {
-      "title": "Contact us",
-      "description": "We’re here to serve you and answer your questions to ensure an easier and safer spiritual journey."
+      "title": "අපව අමතන්න",
+      "description": "පහසු සහ ආරක්ෂිත අධ්‍යාත්මික ගමනක් සහතික කිරීම සඳහා ඔබගේ ප්‍රශ්න වලට පිළිතුරු සැපයීමට අපි සූදානම්."
     },
     "form": {
-      "title": "Send us a message",
+      "title": "අපට පණිවිඩයක් එවන්න",
       "fullName": {
-        "label": "Full name",
-        "placeholder": "Enter your name"
+        "label": "සම්පූර්ණ නම",
+        "placeholder": "ඔබගේ නම ඇතුලත් කරන්න"
       },
       "email": {
-        "label": "Email",
+        "label": "ඊමේල්",
         "placeholder": "example@email.com"
       },
       "phone": {
-        "label": "Phone number",
+        "label": "දුරකථන අංකය",
         "placeholder": "+9xxxxxxxxx"
       },
       "subject": {
-        "label": "Subject",
-        "placeholder": "Select a subject",
+        "label": "විෂය",
+        "placeholder": "විෂයයක් තෝරන්න",
         "options": {
-          "haj": "Hajj services",
-          "umrah": "Umrah services",
-          "support": "Technical support",
-          "other": "Other"
+          "haj": "හජ් සේවා",
+          "umrah": "උම්රා සේවා",
+          "support": "තාක්ෂණික සහාය",
+          "other": "වෙනත්"
         }
       },
       "message": {
-        "label": "Message",
-        "placeholder": "Write your message here..."
+        "label": "පණිවිඩය",
+        "placeholder": "ඔබේ පණිවිඩය මෙහි ලියන්න..."
       },
-      "submit": "Send message"
+      "submit": "පණිවිඩයක් යවන්න"
     },
     "info": {
       "phone": {
-        "title": "Phone",
-        "description": "Contact us directly by phone",
+        "title": "දුරකථන",
+        "description": "දුරකථනයෙන් කෙලින්ම අප හා සම්බන්ධ වන්න",
         "value": "+966 50 000 0000"
       },
       "email": {
-        "title": "Email",
-        "description": "For official inquiries and complaints",
+        "title": "ඊමේල්",
+        "description": "නිල විමසීම් සහ පැමිණිලි සඳහා",
         "value": "info@manasik.sa"
       },
       "hours": {
-        "title": "Working hours",
-        "description": "We’re available to support you",
-        "value": "Sat–Thu: 9am–5pm"
+        "title": "වැඩ කරන වේලාවන්",
+        "description": "අපි ඔබට උදව් කිරීමට සූදානම්",
+        "value": "සෙන-බ්‍රහස්පතින්දා: 09.00-17.00"
       },
       "location": {
-        "title": "Location",
-        "description": "Visit our headquarters",
-        "value": "Makkah, Al Aziziyah, Saudi Arabia"
+        "title": "ස්ථානය",
+        "description": "අපගේ ප්‍රධාන කාර්යාලයට පිවිසෙන්න",
+        "value": "මක්කම, අල් අසිසියා, සෞදි අරාබිය"
       }
     },
     "social": {
       "xSymbol": "𝕏",
-      "xAria": "Our X account",
-      "whatsAppAria": "Contact via WhatsApp",
-      "instagramAria": "Our Instagram"
+      "xAria": "අපේ X ගිණුම",
+      "whatsAppAria": "WhatsApp හරහා සම්බන්ධ වන්න",
+      "instagramAria": "අපගේ Instagram ගිණුම"
     },
     "helpCenter": {
-      "title": "Help center",
-      "subtitle": "Quick answers and direct services to make your journey easier",
+      "title": "උපකාරක මධ්යස්ථානය",
+      "subtitle": "ඔබගේ ගමන පහසු කිරීමට ඉක්මන් පිළිතුරු සහ ක්ෂණික සේවාව",
       "cards": {
         "faq": {
-          "title": "FAQs",
-          "description": "Search our knowledge base for answers",
-          "action": "Browse FAQs"
+          "title": "නිතර අසන පැන",
+          "description": "පිළිතුරු සඳහා අපගේ දැනුම පදනම සොයන්න",
+          "action": "නිතර අසන පැන ගවේෂණය කරන්න"
         },
         "consultations": {
-          "title": "Hajj consultations",
-          "description": "Book a private consultation with one of our experts",
-          "action": "Book a consultation"
+          "title": "හජ් උපදේශනය",
+          "description": "අපගේ ප්‍රවීණයන්ගෙන් කෙනෙකු සමඟ පුද්ගලික උපදේශනයක් වෙන්කරවා ගන්න",
+          "action": "උපදේශනයක් වෙන්කරවා ගන්න"
         },
         "services": {
-          "title": "Services guide",
-          "description": "Learn about available services and packages",
-          "action": "View services"
+          "title": "සේවා මාර්ගෝපදේශය",
+          "description": "පවතින සේවා සහ පැකේජ ගැන ඉගෙන ගන්න",
+          "action": "සේවා බලන්න"
         }
       }
     },
     "finalCta": {
-      "title": "Ready to start your spiritual journey?",
-      "description": "We’re here to accompany you every step—from planning to performing the rituals—for an unforgettable experience.",
-      "primaryCta": "Request a free consultation",
-      "secondaryCta": "Contact us on WhatsApp"
+      "title": "ඔබේ අධ්‍යාත්මික ගමන ආරම්භ කිරීමට සූදානම්ද?",
+      "description": "අමතක නොවන අත්දැකීමක් සඳහා - ක්‍රියාත්මක කිරීම වන්දනා කිරීමට සැලසුම් කිරීමේ සිට සෑම පියවරකදීම අපි ඔබ සමඟ යමු.",
+      "primaryCta": "නොමිලේ උපදේශනයක් ඉල්ලන්න",
+      "secondaryCta": "WhatsApp හරහා අප හා සම්බන්ධ වන්න"
     },
     "validation": {
-      "fullNameRequired": "Full name is required",
-      "fullNameTooLong": "Full name is too long",
-      "emailRequired": "Email is required",
-      "emailInvalid": "Email is invalid",
-      "phoneRequired": "Phone number is required",
-      "phoneInvalid": "Phone number is invalid",
-      "subjectRequired": "Please select a subject",
-      "messageTooShort": "Message is too short",
-      "messageTooLong": "Message is too long"
+      "fullNameRequired": "සම්පූර්ණ නම අනිවාර්ය වේ",
+      "fullNameTooLong": "නම දිග වැඩියි",
+      "emailRequired": "විද්‍යුත් තැපෑල අවශ්‍යයි",
+      "emailInvalid": "වලංගු නොවන ඊමේල්",
+      "phoneRequired": "දුරකථන අංකය අනිවාර්ය වේ",
+      "phoneInvalid": "වලංගු නොවන දුරකථන අංකයක්",
+      "subjectRequired": "ප්රශ්නයේ විෂය තෝරන්න",
+      "messageTooShort": "පණිවිඩය කෙටි වැඩියි",
+      "messageTooLong": "පණිවිඩය දිග වැඩියි"
+    }
+  },
+  "notFound": {
+    "title": "පිටුව හමු නොවීය",
+    "description": "සමාවන්න, ඔබ මග වැරදී ගියා වගේ පෙනෙනවා. මෙම පිටුව ලබා ගත නොහැක—කරුණාකර ඔබේ ගමන දිගටම කරගෙන යාමට ආපසු එන්න.",
+    "homeCta": "මුල් පිටුවට ආපසු",
+    "guideCta": "යාත්‍රික මාර්ගෝපදේශය",
+    "helpCenter": "උදව් සහ සහාය මධ්‍යස්ථානය"
+  },
+  "faq": {
+    "titlePrefix": "නිතර",
+    "titleHighlight": "අසන ප්‍රශ්න",
+    "description": "හජ් චාරිත්‍ර වාරිත්‍ර සහ ඔබගේ අධ්‍යාත්මික ගමනට පහසුකම් සැලසීම සඳහා පවතින සේවාවන් පිළිබඳ ඔබගේ සියලු ප්‍රශ්න වලට පිළිතුරු දීමට අපි සූදානම්.",
+    "searchPlaceholder": "ඔබේ ප්‍රශ්නය මෙහි සොයන්න...",
+    "searchAria": "ඔබේ ප්‍රශ්නය මෙතැනින් සොයා ගන්න",
+    "searchButton": "සොයන්න",
+    "categories": {
+      "all": "සියල්ල",
+      "rituals": "මනසික් මාර්ගෝපදේශකය",
+      "qurbani": "Hadi & udhiyah",
+      "health": "සෞඛ්‍යය සහ ආරක්ෂාව",
+      "services": "සාමාන්ය සේවය"
+    },
+    "items": {
+      "pillars": {
+        "question": "හජ් වන්දනාවේ කුළුණු හතර කුමක්ද?",
+        "intro": "හජ් වන්දනාවට අනිවාර්ය කුළුණු හතරක් ඇත, එනම්:",
+        "ihram": "ඉහ්රාම්: නමස්කාරයට ඇතුල් වීමේ අදහස.",
+        "arafah": "අරෆා මත වුකුෆ්: හජ්ජියේ වැදගත්ම කුළුණ.",
+        "tawaf": "තවාෆ් ඉෆාදා: අරෆා සහ මුස්දලිෆා වලින් බැසීමෙන් පසු සිදු කරනු ලැබේ.",
+        "sai": "ෂාෆා සහ මර්වා අතර සායි: ෂාෆා සිට හත් වරක්."
+      },
+      "qurbaniBooking": {
+        "question": "මම හදි සහ කුර්බානි මාර්ගගතව ඇණවුම් කරන්නේ කෙසේද?",
+        "answer": "ඔබට නිල Adahi වේදිකාව හෝ Nusuk වැනි නිල යෙදුම් හරහා Hadi සහ qurbani ඇණවුම් කළ හැකිය. ගෙවීම් ඉලෙක්ට්‍රොනික ක්‍රමයට සිදු කර ඇති අතර නියමිත වේලාවට ඝාතනය අවසන් වූ විට ඔබට තහවුරු කිරීමක් ලැබෙනු ඇත."
+      },
+      "medical": {
+        "question": "ශුද්ධ භූමියේ වන්දනාකරුවන්ට ලබා ගත හැකි වෛද්‍ය සේවාවන් මොනවාද?",
+        "answer": "සියලුම වන්දනාකරුවන් සඳහා නොමිලේ වෛද්‍ය ප්‍රතිකාර සඳහා පැය 24 පුරා ක්‍රියාත්මක ගිලන් රථ කණ්ඩායම් සහ ක්ෂේත්‍ර සායන සමඟින් අංග සම්පූර්ණ රෝහල් සහ සෞඛ්‍ය මධ්‍යස්ථාන මිනා, අරෆා සහ මුස්දලිෆාහි ඇත."
+      },
+      "jamarat": {
+        "question": "තසිරික් දිනයේ ජමරාත් විසි කිරීමේ කාලය ආරම්භ වන්නේ කවදාද?",
+        "answer": "තසිරික් දිනවල (11, 12, සහ 13 දුල්හිජ්ජා) ජමරාත් විසි කිරීමේ කාලය zuhur පසු රාත්‍රිය අවසන් වන තෙක් ආරම්භ වේ. ජනාකීර්ණ වීම වළක්වා ගැනීම සඳහා කණ්ඩායමේ කාලසටහන අනුගමනය කිරීම රෙකමදාරු කරනු ලැබේ."
+      }
+    },
+    "cta": {
+      "title": "ඔබේ පිළිතුර සොයාගත නොහැකිද?",
+      "description": "අපගේ තාක්ෂණික සහාය සහ මාර්ගෝපදේශක කණ්ඩායම ඔබගේ ප්‍රශ්න වලට පිළිතුරු දීමට සහ දෙවියන් කැමති පරිදි සුමට හජ් ගමනක් සහතික කිරීමට පැය 24 පුරාම පවතී.",
+      "contact": "අපව අමතන්න",
+      "call": "අමතන්න"
+    }
+  },
+  "permits": {
+    "hero": {
+      "badge": "හජ් සහ උම්රා දොරටුව",
+      "title": "අවසර සේවා",
+      "description": "ඔබගේ අධ්‍යාත්මික ගමන පහසු කිරීමට අපි මෙහි සිටිමු. අපි සරල ක්‍රියා පටිපාටි සමඟ විශ්වාසදායක හජ් සහ උම්රා බලපත්‍ර නිකුත් කිරීම සපයන අතර ඔබට මනසේ සාමයෙන් ඔබේ නමස්කාරය කෙරෙහි අවධානය යොමු කළ හැකිය.",
+      "imageAlt": "ඉස්ලාමීය ජ්යාමිතික රටා පසුබිම"
+    },
+    "about": {
+      "title": "ජීවිත ගමන සඳහා විශ්වාසවන්ත සහකරු",
+      "body": "හජ් සහ උම්රා සංචාරය සඳහා සම්පූර්ණ ක්‍රියා පටිපාටි සහ වෙනස් වන රෙගුලාසිවලට අනුකූල වීම අවශ්‍ය වේ. හජ් සහ උම්රා අමාත්‍යාංශයේ අවශ්‍යතා සම්පූර්ණයෙන් අනුකූල වීම සහතික කිරීම සඳහා අයදුම් කිරීමේ සිට අවසන් බලපත්‍ර ලබා ගැනීම දක්වා සංකීර්ණ පරිපාලන අංශය අපි හසුරුවමු."
+    },
+    "types": {
+      "title": "ලබා ගත හැකි අවසර වර්ග",
+      "subtitle": "ඔබගේ අවශ්‍යතාවයට ගැලපෙන සේවාව තෝරන්න",
+      "cards": {
+        "hajj": {
+          "title": "හජ් බලපත්රය",
+          "description": "විද්‍යුත් මාර්ග ලියාපදිංචිය සහ අනුමැතිය පසු විපරම් කිරීම ඇතුළුව පුරවැසියන් සහ පදිංචිකරුවන් සඳහා සම්පූර්ණ හජ් බලපත්‍ර නිකුත් කිරීමේ සේවාව."
+        },
+        "umrah": {
+          "title": "උම්රා බලපත්‍රය",
+          "description": "පුද්ගලයන් සහ කණ්ඩායම් සඳහා නිල අයදුම්පත්‍රය හරහා ක්ෂණික උම්රා බලපත්‍ර සහ රවුඩා පැමිණීම්."
+        },
+        "seasonal": {
+          "title": "සෘතුමය අවසරය",
+          "description": "සංචාරක සංවිධායකයින් සහ සෘතුමය කාර්ය මණ්ඩලය සඳහා නීත්‍යානුකූලව ශුද්ධ භූමියට ඇතුළු වීමට විශේෂ සේවාවන්."
+        }
+      }
+    },
+    "documents": {
+      "eyebrow": "තත්ත්වය",
+      "title": "අවශ්ය ලියකියවිලි",
+      "description": "සැකසීම වේගවත් කිරීම සඳහා, ඉදිරිපත් කිරීමට පෙර පහත ලේඛන සකස් කරන්න. ලේඛන උඩුගත කිරීමට පෙර ඒවා සමාලෝචනය කිරීමට අපි උදවු කරමු.",
+      "imageAlt": "අල් කුර්ආනය අල්ලාගෙන සිටින අත්වල සමීප රූපය",
+      "badgeTitle": "ක්ෂණික සමාලෝචනය",
+      "badgeBody": "අමාත්යාංශයට ඉදිරිපත් කිරීමට පෙර අපි ලේඛන සමාලෝචනය කරමු",
+      "items": {
+        "id": "KTP / පදිංචි බලපත්‍රයේ ඡායාරූපය",
+        "vaccination": "එන්නත් වාර්තා (COVID-19 සහ මෙනින්ජයිටිස්)",
+        "photo": "මෑත පුද්ගලික ඡායාරූපය (සුදු පසුබිම)",
+        "passport": "විදේශ ගමන් බලපත්‍රය (විදෙස් සිට පැමිණෙන අමුත්තන් සඳහා)",
+        "visa": "වලංගු ඇතුල්වීමේ වීසා",
+        "mahram": "පවුල් සබඳතාවයේ සාක්ෂි (මහ්රම් සඳහා)"
+      }
+    },
+    "steps": {
+      "title": "අවසරය ලබා ගැනීමට පියවර",
+      "subtitle": "යෙදුමේ සිට පැමිණීම දක්වා සරල ගමනක්",
+      "items": {
+        "submit": {
+          "title": "අයදුම් කරන්න",
+          "description": "මාර්ගගත පෝරමය පුරවා මූලික ලේඛන උඩුගත කරන්න."
+        },
+        "review": {
+          "title": "සමාලෝචනය සහ සත්‍යාපනය",
+          "description": "අපගේ කණ්ඩායම දත්ත සහ ඇමුණුම් වල නිරවද්‍යතාවය තහවුරු කරයි."
+        },
+        "approval": {
+          "title": "නිල අනුමැතිය",
+          "description": "අයදුම්පත අනුමැතිය සඳහා අදාළ බලධාරීන් වෙත යවනු ලැබේ."
+        },
+        "receive": {
+          "title": "අවසරය ලබා ගන්න",
+          "description": "ඔබගේ අවසරය යෙදුම හෝ ඊමේල් හරහා යවනු ලැබේ."
+        }
+      }
+    },
+    "notice": {
+      "title": "අයදුම්කරුවන් සඳහා වැදගත් සටහනක්",
+      "body": "බලපත්‍ර නිකුත් කිරීම ශුද්ධ වූ මුස්ලිම් පල්ලි දෙකෙහි සහ හජ් සහ උම්රා අමාත්‍යාංශයේ ඇති හැකියාවට යටත් වේ. උපරිම කාලවලදී (රාමදාන් සහ හජ්) සැකසුම් කාලය වෙනස් විය හැක. ඔබගේ සැලසුම් දිනයට පෙර ගොනු කිරීම අපි නිර්දේශ කරමු.",
+      "policyLink": "සේවා ප්‍රතිපත්ති, නියම සහ කොන්දේසි කියවන්න"
+    },
+    "cta": {
+      "title": "ඔබේ අධ්‍යාත්මික ගමන ආරම්භ කිරීමට සූදානම්ද?",
+      "description": "නමස්කාරයෙන් ඔබේ අවධානය වෙනතකට යොමු කිරීමට ක්‍රියා පටිපාටිවලට ඉඩ නොදෙන්න. ඔබගේ අයදුම්පත දැන් ආරම්භ කරන්න, අපගේ කණ්ඩායම ඔබට පියවරෙන් පියවර මඟ පෙන්වනු ඇත.",
+      "request": "බලපත්‍ර සේවාව ඉල්ලන්න",
+      "support": "සහාය අමතන්න"
+    },
+    "modal": {
+      "title": "හජ් සහ උම්රා බලපත්‍ර සේවා සඳහා ඉල්ලුම් පත්‍රය",
+      "description": "නිල අවසරය ලබා ගැනීමට දත්ත සම්පූර්ණ කරන්න",
+      "steps": {
+        "type": "අවසර වර්ගය",
+        "details": "දත්ත සහ ලේඛන",
+        "payment": "ගෙවීම",
+        "review": "යෙදුම සමාලෝචනය කරන්න"
+      },
+      "step1": {
+        "title": "අවශ්ය අවසර වර්ගය තෝරන්න",
+        "hajjTitle": "හජ් බලපත්රය",
+        "hajjDesc": "පුරවැසියන්ට සහ පදිංචිකරුවන්ට හජ් ඉටු කිරීමට බලපත්‍ර නිකුත් කිරීම.",
+        "umrahTitle": "උම්රා බලපත්‍රය",
+        "umrahDesc": "උම්රා ඉටු කිරීමට සහ රවුඩා නැරඹීමට අවසරය නිකුත් කරන්න.",
+        "notesLabel": "අමතර සටහන් (විකල්ප)",
+        "notesPlaceholder": "ඔබගේ අයදුම්පත සම්පූර්ණ කිරීමට අපට උපකාර වන ඕනෑම විස්තරයක්"
+      },
+      "step2": {
+        "personalInfo": "පුද්ගලික තොරතුරු",
+        "fullNameLabel": "සම්පූර්ණ නම (KTP අනුව)",
+        "fullNamePlaceholder": "ඔබගේ සම්පූර්ණ නම ඇතුලත් කරන්න",
+        "phoneLabel": "ජංගම දුරකථන අංකය (රටේ කේතය සමඟ)",
+        "phoneFormat": "මෙසේ සුරැකෙනු ඇත: {dial}",
+        "countryLabel": "රට",
+        "countryPlaceholder": "රට තෝරන්න",
+        "emailLabel": "විද්‍යුත් තැපෑල (විකල්ප)",
+        "idLabel": "KTP / ගමන් බලපත්ර අංකය",
+        "birthDateLabel": "උපන් දිනය",
+        "nationalityLabel": "පුරවැසිභාවය",
+        "nationalityPlaceholder": "ජාතිකත්වය තෝරන්න",
+        "attachments": "ඇමුණුම් සහ ලේඛන",
+        "idPhoto": "ඡායාරූප හැඳුනුම්පත",
+        "idPhotoHint": "JPG, PNG, PDF up to 10MB",
+        "personalPhoto": "පුද්ගලික ඡායාරූපය",
+        "personalPhotoHint": "සුදු පසුබිමක් තිබිය යුතුය",
+        "docsRequired": "කරුණාකර ඔබගේ KTP සහ පුද්ගලික ඡායාරූපයේ ඡායාරූපයක් උඩුගත කරන්න"
+      },
+      "step3": {
+        "title": "ගෙවීම",
+        "card": "කාඩ්පත",
+        "bank": "බැංකු මාරු කිරීම",
+        "uploadReceipt": "මාරු කිරීමේ සාක්ෂි උඩුගත කරන්න",
+        "fileChosen": "තෝරාගත්: {name}"
+      },
+      "step4": {
+        "title": "යෙදුම් සාරාංශය",
+        "permitType": "අවසර වර්ගය",
+        "fullName": "සම්පූර්ණ නම",
+        "idNumber": "KTP අංකය",
+        "phone": "ජංගම දුරකථන අංකය",
+        "country": "රට",
+        "email": "ඊමේල්",
+        "nationality": "පුරවැසිභාවය",
+        "documents": "ලේඛනය",
+        "documentsComplete": "සම්පූර්ණයි",
+        "disclaimer": "\"අයදුම්පත ඉදිරිපත් කරන්න\" ක්ලික් කිරීමෙන්, ඔබ සියලු දත්තවල නිවැරදි බව ප්‍රකාශ කරන අතර හජ් සහ උම්රා අමාත්‍යාංශයේ කොන්දේසි වලට එකඟ වේ."
+      },
+      "permitLabels": {
+        "hajj": "හජ් බලපත්රය",
+        "umrah": "උම්රා බලපත්‍රය"
+      },
+      "nationalities": {
+        "sa": "සෞදි අරාබිය",
+        "eg": "ඊජිප්තුව",
+        "ae": "එක්සත් අරාබි එමීර් රාජ්‍යය",
+        "kw": "කුවේට්",
+        "jo": "ජෝර්දානය",
+        "other": "වෙනත්"
+      },
+      "actions": {
+        "cancel": "අවලංගු කළා",
+        "back": "ආපසු",
+        "next": "ඊළඟ",
+        "submit": "අයදුම්පතක් ඉදිරිපත් කරන්න"
+      },
+      "validation": {
+        "permitTypeRequired": "බලපත්ර වර්ගය අනිවාර්ය වේ",
+        "idNumberInvalid": "වලංගු නොවන KTP/ගමන් බලපත්‍ර අංකය",
+        "nationalityRequired": "පුරවැසිභාවය අනිවාර්ය වේ"
+      }
+    }
+  },
+  "badal": {
+    "hero": {
+      "badge": "ෂරියා සහ නීතිමය සත්‍යාපිත සේවා",
+      "titleLine1": "හජ් සහ උම්රා",
+      "titleHighlight": "අන් අය වෙනුවෙන්",
+      "description": "අපි හජ් සහ උම්රා ආබාධිත හෝ විශ්වාසයෙන් හා අවංකව මියගිය ආදරණීයයන් වෙනුවෙන්, සුදුසුකම් ලත් සහ විශ්වාසවන්ත දැනුමැති සිසුන් හරහා, සියලු චාරිත්‍ර පිළිබඳ සම්පූර්ණ ලියකියවිලි සමඟ සිදු කරන්නෙමු.",
+      "primaryCta": "දැන් ඉල්ලීම ආරම්භ කරන්න",
+      "videoCta": "හඳුන්වාදීමේ වීඩියෝව බලන්න",
+      "imageAlt": "තවාෆ් ඉටු කරන බැතිමතුන් සමඟ මක්කම ශුද්ධ වූ කබා",
+      "caption": "ශ්‍රව්‍ය සහ දෘශ්‍ය ප්‍රලේඛන සමඟ විධාන ක්‍රියාත්මක කිරීම",
+      "verified": "තහවුරු කර ඇත",
+      "statsValue": "5,000+ චාරිත්ර",
+      "statsLabel": "මේ වසරේ සාර්ථකව ක්‍රියාත්මක විය"
+    },
+    "about": {
+      "title": "මෙම සේවාව කා සඳහාද?",
+      "description": "ඉස්ලාම් හජ් සහ බඩල් උම්රා සමහර අවස්ථාවලදී සේවකයාට දයාව ලෙස ඉඩ දෙයි. ෂරියා අවශ්‍යතා සපුරාලන දෙමාපියන් හෝ ඥාතීන් වෙනුවෙන් මෙම නමස්කාරය සිදු කිරීමට අපි ඔබට පහසු කරමු.",
+      "shariaTitle": "ෂරියා අධීක්ෂණය",
+      "shariaBody": "අපි වෘත්තිකයාගේ යෝග්‍යතාවය සහ චාරිත්‍ර පිළිබඳ දැනුම සහතික කරමු.",
+      "deceasedTitle": "මියගිය අයගේ නමින් බඩල්",
+      "deceasedBody": "අවංක චේතනාවෙන් මියගිය අය වෙනුවෙන් හජ් හෝ උම්රා ඉටු කිරීම.",
+      "conditions": {
+        "deceased": {
+          "title": "ප්රමාදයි",
+          "description": "බඩල් හජ් සහ උම්රා තම වගකීම් ඉටු නොකර මිය යන අයට හෝ පවුලේ අය ඔවුන් වෙනුවෙන් සුන්නාට නමස්කාර කිරීමට කැමති විට අවසර දෙනු ලැබේ."
+        },
+        "incapacitated": {
+          "title": "සදාකාලික ආබාධිතයි",
+          "description": "සුවය ලැබීමේ බලාපොරොත්තුවක් නොමැති රෝගීන් හෝ සංචාරය කිරීමට සහ ගමන් කිරීමට නොහැකි වයෝවෘද්ධ පුද්ගලයින්."
+        },
+        "financial": {
+          "title": "මූල්ය හැකියාවන්",
+          "description": "ක්‍රියාත්මක කිරීමේ සහ අධිකාරිය ලබා දීමේ වියදම් දැරීමට විදුහල්පතිවරයාට හැකි විය යුතුය."
+        }
+      }
+    },
+    "trust": {
+      "title": "නිරපේක්ෂ විශ්වාසය සහ විනිවිදභාවය",
+      "description": "ඔබගේ මනසේ සාමය සඳහා විශ්වසනීයත්වයේ ඉහළම ප්‍රමිතීන්ට අපි කැපවී සිටිමු.",
+      "performers": "විශ්වාසදායක ක්‍රියාත්මක කරන්නා",
+      "video": "වීඩියෝ ලේඛන",
+      "certificate": "සම්පූර්ණ කිරීමේ සහතිකය",
+      "support": "අඛණ්ඩ සහාය"
+    },
+    "process": {
+      "eyebrow": "අපි වැඩ කරන විදිහ",
+      "title": "පියවරෙන් පියවර සේවා ගමන",
+      "steps": {
+        "submit": {
+          "title": "අයදුම් කරන්න",
+          "description": "ප්‍රතිලාභීන්ගේ දත්ත සහ නමස්කාරයේ වර්ගය (හජ් හෝ උම්රා) පුරවන්න."
+        },
+        "payment": {
+          "title": "සත්‍යාපනය සහ ගෙවීම",
+          "description": "අයදුම්පත් සමාලෝචනය කර අන්තර්ජාලය හරහා ආරක්ෂිතව ගෙවීම් තහවුරු කරන්න."
+        },
+        "assign": {
+          "title": "ක්රියාත්මක කරන්නා පවරන්න",
+          "description": "ඔබේ නමස්කාරය ඉටු කිරීමට අවශ්‍යතා සපුරාලන ශිෂ්‍යයෙකු තෝරන්න."
+        },
+        "perform": {
+          "title": "චාරිත්රය ඉටු කරන්න",
+          "description": "යාච්ඤාව ඇතුළු සෘජු ලියකියවිලි සමඟ චාරිත්රය ආරම්භ කරන්න."
+        },
+        "document": {
+          "title": "ලේඛනගත කිරීම",
+          "description": "සම්පූර්ණ කිරීමේ සහතිකයක් සහ වීඩියෝ දර්ශන ලබා ගන්න."
+        }
+      }
+    },
+    "pricing": {
+      "title": "සුදුසු පැකේජය තෝරන්න",
+      "subtitle": "විනිවිද පෙනෙන සහ සියල්ල ඇතුළත් මිලකරණය",
+      "mostPopular": "වඩාත්ම ජනප්රියයි",
+      "umrahFeatures": {
+        "intention": "නාමයෙන් චේතනා සහ තල්බියාව",
+        "rituals": "තවාෆ්, සායි, සහ රැවුල කැපීම/කොණ්ඩය කැපීම",
+        "video": "කාබාහි යාච්ඤාවේ වීඩියෝව",
+        "completion": "පැය 48 කින් නිම කරන ලදී"
+      },
+      "hajjFeatures": {
+        "type": "හජ් තමත්තු' හෝ ඉෆ්රාඩ්",
+        "arafah": "අරෆාහි වූකුෆ් සහ මිනාහි එක රැයකින්",
+        "hadi": "හාඩි (පූජාව)",
+        "documentation": "සියලුම ස්ථාන වල සම්පූර්ණ ලියකියවිලි",
+        "certificate": "නිල හජ් සහතිකය"
+      },
+      "umrahCta": "බඩල් උම්රා ඉල්ලන්න",
+      "hajjCta": "හජ් බඩල් සඳහා අයදුම් කරන්න"
+    },
+    "faq": {
+      "title": "නිතර අසන ප්‍රශ්න",
+      "items": {
+        "legality": {
+          "question": "ෂරියාට අනුව මෙම සේවාව අනුමත කළ හැකිද?",
+          "answer": "ඔව්, මියගිය අය සඳහා හජ් සහ උම්රා සහ සදාකාලික ආබාධිත අය සඳහා උලමාවරුන්ට අනුව අවසර දෙනු ලැබේ, සත්‍ය හදීස් මගින් සහාය දක්වයි."
+        },
+        "verification": {
+          "question": "නමස්කාරය සිදු කර ඇති බව සහතික කර ගන්නේ කෙසේද?",
+          "answer": "අපි අයදුම්කරු වෙනුවෙන් අභිප්‍රාය ප්‍රකාශ කරන ක්‍රියාත්මක කරන්නාගේ වීඩියෝ ලේඛන සහ tawaf, sa'i සහ යාච්ඤාවේ දර්ශන සපයන්නෙමු."
+        },
+        "performers": {
+          "question": "උම්රා සහ හජ් ඉටු කරන්නේ කවුද?",
+          "answer": "අපි මක්කාවේ සිටින කුර්ආනය පිළිබඳ දැනුම ඇති සිසුන් සහ කටපාඩම් කරන්නන් සමඟ කටයුතු කරන්නෙමු, ඔවුන් භක්තිවන්ත සහ විශ්වාසවන්ත, තමන්ටම තම යුතුකම් ඉටු කර ඇත."
+        }
+      }
+    },
+    "modal": {
+      "stepOf": "පියවර {step} න් {total}",
+      "beneficiaryData": "ප්‍රතිලාභි දත්ත",
+      "payment": "ගෙවීම",
+      "fullName": "සම්පූර්ණ නම",
+      "phoneLabel": "ජංගම දුරකථන අංකය (රටේ කේතය සමඟ)",
+      "phoneFormat": "මෙසේ සුරැකෙනු ඇත: {dial}",
+      "countryLabel": "රට",
+      "countryPlaceholder": "රට තෝරන්න",
+      "emailOptional": "විද්‍යුත් තැපෑල (විකල්ප)",
+      "birthDateLabel": "වයස - උපන් දිනය",
+      "performedBefore": "ඔබ මීට පෙර හජ් හෝ උම්රා ඉටු කර තිබේද?",
+      "yes": "ඔව්",
+      "no": "නැත",
+      "cancel": "අවලංගු කළා",
+      "next": "ඊළඟ",
+      "saving": "යෙදුම සුරකින්න...",
+      "back": "ආපසු",
+      "submitting": "අයදුම්පත යවන්න...",
+      "confirmUmrah": "උම්රා බඩල් අයදුම්පත තහවුරු කිරීම",
+      "confirmHajj": "හජ් බඩල් අයදුම්පත තහවුරු කිරීම",
+      "description": "ඔබගේ දත්ත සම්පුර්ණ කර පසුව ගෙවීමට යන්න",
+      "requestUmrah": "බඩල් උම්රා ඉල්ලන්න",
+      "requestHajj": "හජ් බඩල් සඳහා අයදුම් කරන්න"
     }
   }
 }

@@ -1,0 +1,32 @@
+services:
+  arkan-almanasek:
+    container_name: arkan-almanasek
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        # Baked into the client bundle — must be present at build time
+        NEXT_PUBLIC_API_BASE_URL: ${NEXT_PUBLIC_API_BASE_URL}
+    env_file:
+      - .env
+    environment:
+      NODE_ENV: production
+      PORT: 3000
+      HOSTNAME: 0.0.0.0
+      # Also available at runtime for server components / route handlers
+      NEXT_PUBLIC_API_BASE_URL: ${NEXT_PUBLIC_API_BASE_URL}
+    expose:
+      - "3000"
+    networks:
+      - proxy-network
+    restart: always
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://127.0.0.1:3000/ar"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 40s
+
+networks:
+  proxy-network:
+    external: true

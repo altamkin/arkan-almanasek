@@ -439,7 +439,7 @@ export default function StorePage({
             </div>
 
             <div className="mt-12 flex justify-center">
-              <nav aria-label="Pagination" className="flex gap-2">
+              <nav aria-label={tCommon("pagination")} className="flex gap-2">
                 <button
                   type="button"
                   className="w-10 h-10 flex items-center justify-center rounded-lg border border-gray-100 bg-white shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all text-gray-500 disabled:opacity-50 disabled:cursor-not-allowed"

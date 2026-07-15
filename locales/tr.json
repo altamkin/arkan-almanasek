@@ -3,7 +3,12 @@
     "home": "Ana Sayfa",
     "language": "Dil",
     "error": "Bir hata oluştu",
-    "try_again": "Tekrar dene"
+    "try_again": "Tekrar dene",
+    "addedToCart": "Sepete başarıyla eklendi",
+    "closeModal": "Kapat",
+    "pagination": "Sayfalama",
+    "sar": "SAR",
+    "unexpectedError": "Beklenmeyen bir hata oluştu"
   },
   "languages": {
     "ar": "Arapça",
@@ -25,9 +30,9 @@
       "items": {
         "appName": "Arkan Al-Manasik",
         "hadiAndUdhiyah": "Hedi & Udhiyah",
-        "badal": "Bedel",
+        "badal": "Badal",
         "consultations": "Danışmanlık",
-        "manasik": "Menâsik",
+        "manasik": "Menasik",
         "permits": "İzinler"
       }
     },
@@ -51,21 +56,21 @@
     },
     "quickLinks": {
       "title": "Hızlı bağlantılar",
-      "about": "Şirket hakkında",
+      "about": "Hakkımızda",
       "products": "Ürünler"
     },
     "support": {
-      "title": "Destek & yardım",
+      "title": "Destek ve yardım",
       "faq": "SSS",
-      "contact": "İletişim"
+      "contact": "Bize ulaşın"
     },
     "newsletter": {
-      "title": "Abone ol",
-      "description": "Yolculuğunuz için en yeni teklifler ve ipuçlarını alın.",
+      "title": "Bültene abone olun",
+      "description": "Seyahatiniz için en son teklifleri ve ipuçlarını alın.",
       "emailPlaceholder": "E-posta adresiniz",
       "submitAria": "Gönder"
     },
-    "copyright": "© MACS {year} | All Rights Reserved"
+    "copyright": "© {year} Arkan Al-Menasik. Telif hakkı korunmaktadır."
   },
   "store": {
     "brand": {
@@ -85,7 +90,8 @@
       "price": "Fiyat",
       "minPrice": "Minimum fiyat",
       "maxPrice": "Maksimum fiyat",
-      "inStockOnly": "Sadece stokta olanlar"
+      "inStockOnly": "Sadece stokta olanlar",
+      "tags": "Etiketler"
     },
     "categories": {
       "all": "Tümü"
@@ -109,7 +115,7 @@
     "products": {
       "items": {
         "details": {
-          "title": "Ürün adı"
+          "title": "Ürün başlığı"
         }
       }
     },
@@ -139,13 +145,13 @@
         "specs": "Özellikler"
       },
       "description": {
-        "title": "Full kit details",
-        "paragraph1": "This premium kit is thoughtfully designed to support modern pilgrims and worshippers with comfort and practicality.",
-        "paragraph2": "It also includes essentials that help you stay organized and prepared throughout your journey."
+        "title": "Paket ayrıntılarını tamamlayın",
+        "paragraph1": "Bu premium paket, modern hacıları konfor ve pratiklikle desteklemek için özenle tasarlanmıştır. İhram, optimum emilim ve havalandırma için %100 Mısır pamuğundan yapılmıştır ve sünnete uygun dikişsizdir.",
+        "paragraph2": "Pakette ayrıca ihramlı günler için ideal, kokusuz ve haramsız kişisel bakım ürünleri de yer alıyor. Çanta hafiftir, su geçirmezdir ve kişisel eşyalarınızı düzenlemek için çok sayıda cebe sahiptir."
       },
       "reviews": {
         "title": "Müşteri yorumları",
-        "placeholder": "You can list all reviews here or connect real data later."
+        "placeholder": "Tüm incelemeleri burada görüntüleyebilir veya gerçek verileri daha sonra bağlayabilirsiniz."
       },
       "specs": {
         "title": "Özellikler"
@@ -284,9 +290,9 @@
         "description": "Aşağıdaki hesaba havale yapın, ardından dekontu yükleyerek siparişinizi tamamlayın.",
         "details": {
           "bankNameLabel": "Banka adı",
-          "bankNameValue": "Test bank (edit later)",
+          "bankNameValue": "Test bankası (daha sonra düzenleyin)",
           "beneficiaryNameLabel": "Alıcı adı",
-          "beneficiaryNameValue": "Test company",
+          "beneficiaryNameValue": "Deneme şirketi",
           "ibanLabel": "Hesap / IBAN",
           "ibanValue": "SA00 0000 0000 0000 0000 0000"
         },
@@ -322,14 +328,14 @@
   },
   "qurbani": {
     "breadcrumbs": {
-      "ariaLabel": "Breadcrumb",
-      "home": "Home",
-      "current": "Hadi and udhiyah"
+      "ariaLabel": "Navigasyon izi",
+      "home": "Ana sayfa",
+      "current": "Hadi ve kurban"
     },
     "hero": {
-      "titlePrefix": "Buy",
-      "titleHighlight": "Ritual",
-      "description": "Slaughtering and distribution services for udhiyah, hadi, and fidya according to sharia, with ease and reliability."
+      "titlePrefix": "Satın almak",
+      "titleHighlight": "İbadet",
+      "description": "Kurban, hadi ve fidyenin İslam hukukuna göre kolay ve güvenilir bir şekilde kesilmesi ve dağıtılması hizmetleri."
     },
     "listSeparator": ", ",
     "badges": {
@@ -351,25 +357,25 @@
     },
     "steps": {
       "selectType": {
-        "title": "Select ritual type",
-        "desc": "Choose the option that suits you"
+        "title": "İbadet türünü seçin",
+        "desc": "Size uygun seçeneği seçin"
       },
       "securePayment": {
-        "title": "Secure payment",
-        "desc": "Trusted payment gateways"
+        "title": "Güvenli ödeme",
+        "desc": "Güvenilir ödeme ağ geçidi"
       },
       "sharia": {
-        "title": "Sharia compliant",
-        "desc": "Slaughter under expert supervision"
+        "title": "Şeriatın uygulanması",
+        "desc": "Uzman gözetiminde kesim"
       },
       "confirmation": {
-        "title": "Completion confirmation",
-        "desc": "Report via SMS"
+        "title": "Tamamlamayı onayla",
+        "desc": "SMS ile bildirme"
       }
     },
     "notice": {
-      "title": "Sharia notice",
-      "body": "All slaughtered animals undergo strict veterinary and sharia checks and are distributed to those in need at the prescribed times."
+      "title": "Şeriat bildirimi",
+      "body": "Kurbanlıkların tamamı veteriner ve şeriat denetimlerinden geçirildikten sonra belirlenen saatlerde ihtiyaç sahiplerine dağıtılıyor."
     },
     "cart": {
       "title": "Sipariş detayları",
@@ -391,236 +397,580 @@
   },
   "home": {
     "hero": {
-      "backgroundAlt": "Cinematic view of the Kaaba",
-      "seasonBadge": "Hajj season 1445 AH",
-      "titleTop": "Journey of a lifetime",
-      "titleHighlight": "Begins with a touch of excellence",
-      "description": "We accompany you every step of your spiritual journey to ensure peace of mind and ease in performing your rituals with the highest service standards.",
-      "primaryCta": "Start your journey",
-      "secondaryCta": "Contact us",
+      "backgroundAlt": "Kabe'nin sinematik görünümü",
+      "seasonBadge": "Hac Sezonu 1445 H",
+      "titleTop": "Bir ömür boyu yolculuk",
+      "titleHighlight": "Mükemmel bir dokunuşla başlamak",
+      "description": "Manevi yolculuğunuzun her adımında size eşlik ediyor, ibadetlerinizi en yüksek hizmet standartlarıyla gerçekleştirmenizde huzur ve kolaylık sağlıyor, Hac ve Umre Badalını sağlıyoruz.",
+      "primaryCta": "Yolculuğunuza başlayın",
+      "secondaryCta": "Bize ulaşın",
       "stats": {
         "pilgrimsValue": "50k+",
-        "pilgrimsLabel": "Pilgrims served"
+        "pilgrimsLabel": "Cemaate hizmet veriliyor"
       },
       "support": {
-        "title": "Always-on support",
-        "subtitle": "24/7 throughout the journey",
-        "body": "A dedicated team to serve you and answer your questions at any time."
+        "title": "Sürekli destek",
+        "subtitle": "7/24 tüm yol boyunca",
+        "body": "Özel bir ekip her an hizmet vermeye ve sorularınızı yanıtlamaya hazırdır."
       }
     },
     "video": {
-      "eyebrow": "Get to know us",
-      "heading": "Integrated services for pilgrims",
-      "description": "We build a digital experience that reflects the spirit of the journey: clear, reassuring, and respectful of the sacred rituals—from planning to completion.",
-      "iframeTitle": "Intro video",
-      "html5Fallback": "Your browser does not support the video tag."
+      "eyebrow": "Bizi tanıyın",
+      "heading": "Hacılar için entegre hizmetler",
+      "description": "Planlamadan tamamlamaya kadar seyahatin ruhunu yansıtan dijital deneyimler yaratıyoruz: net, sakinleştirici ve ibadetin kutsallığına saygılı.",
+      "iframeTitle": "Tanıtım videosu",
+      "html5Fallback": "Tarayıcınız video oynatmayı desteklemiyor."
     },
     "products": {
-      "sectionTitle": "Featured products",
-      "viewAll": "View all",
-      "addToCartAria": "Add {title} to cart",
-      "emptyMessage": "No products available right now."
+      "sectionTitle": "Seçilen ürünler",
+      "viewAll": "Tümünü gör",
+      "addToCartAria": "{title} öğesini sepete ekle",
+      "emptyMessage": "Şu anda mevcut ürün yok."
     },
     "services": {
-      "sectionTitle": "Our featured services",
-      "sectionDescription": "A complete suite of sharia-compliant and logistical services to make your Hajj and Umrah journey easier.",
+      "sectionTitle": "Üstün hizmetimiz",
+      "sectionDescription": "Hac ve Umre yolculuğunuzu kolaylaştıracak bir dizi entegre şeriat ve lojistik hizmetleri.",
       "items": {
         "hadiAndUdhiyah": {
-          "title": "Hadi and udhiyah",
-          "description": "A trusted service for slaughtering and distributing hadi and udhiyah to the poor in the Haram, supervised end-to-end with integrity."
+          "title": "Hadi ve kurban",
+          "description": "Mukaddes topraklarda hadi ve kurbanların kesilmesi ve fakirlere dağıtılmasına yönelik, baştan sona güvenilir şekilde denetlenen hizmet."
         },
         "pilgrimageGuide": {
-          "title": "Rituals guide",
-          "description": "A comprehensive, visual, and interactive guide to perform Hajj/Umrah correctly according to the Sunnah."
+          "title": "Menasik rehberi",
+          "description": "Hac/Umre'yi sünnete uygun şekilde gerçekleştirmek için eksiksiz, görsel ve etkileşimli bir rehber."
         },
         "permits": {
-          "title": "Hajj & Umrah permits",
-          "description": "We help you obtain all official permits through approved channels quickly and easily."
+          "title": "Hac ve Umre İzni",
+          "description": "Tüm resmi izinleri resmi kanallardan hızlı ve kolay bir şekilde almanıza yardımcı oluyoruz."
         },
         "shariaConsultations": {
-          "title": "Sharia consultations",
-          "description": "Direct access to scholars and preachers to answer your jurisprudence questions during the rituals."
+          "title": "Şeriat danışmanlığı",
+          "description": "İbadet sırasında fıkıh sorularını yanıtlamak için ulema ve vaizlere doğrudan erişim."
         },
         "hajjAndUmrahOnBehalf": {
-          "title": "Hajj/Umrah on behalf",
-          "description": "We perform rituals on behalf of the incapacitated or deceased, with full documentation of every stage."
+          "title": "Badal Hac/Umre",
+          "description": "İş göremez durumda olan veya vefat edenlerin ibadetlerini her aşamada eksiksiz belgeli olarak gerçekleştiriyoruz."
         }
       }
     },
     "cta": {
-      "limitedBadge": "Limited spots this season",
-      "titleLine1": "Your journey starts with",
-      "titleLine2": "one step of preparation",
-      "description": "Let us accompany you from preparation to performing the rituals with ease and peace of mind. Join thousands of pilgrims who trusted us.",
-      "primaryCta": "Book now",
-      "secondaryCta": "Download the guide",
+      "limitedBadge": "Bu sezon kontenjanlar sınırlıdır",
+      "titleLine1": "Yolculuğunuz şununla başlıyor:",
+      "titleLine2": "bir hazırlık adımı",
+      "description": "İbadetinizin hazırlık aşamasından, rahatlıkla ve gönül rahatlığıyla yapılmasına kadar size eşlik edelim. Bize güvenen binlerce ibadetçiye katılın.",
+      "primaryCta": "Şimdi sipariş ver",
+      "secondaryCta": "Kılavuzu indirin",
       "trustBadge": "+2k",
       "trustValue": "2,000+",
-      "trustLabel": "Pilgrims who trusted us",
-      "appTagline": "Your smart rituals guide",
-      "liveLabel": "Live"
+      "trustLabel": "Cemaat bize güveniyor",
+      "appTagline": "Akıllı Menasik rehberiniz",
+      "liveLabel": "Doğrudan"
     }
   },
   "about": {
     "hero": {
-      "titleTop": "We accompany you on the purest",
-      "titleHighlight": "journey of a lifetime",
-      "description": "Your trusted partner for serving pilgrims—combining heritage of service with modern technology to make your rituals easier."
+      "titleTop": "Size eşlik ediyoruz",
+      "titleHighlight": "bir ömrün en kutsal yolculuğu",
+      "description": "Cemaatinize hizmet etmek için güvenilir ortağınız; ibadetinizi kolaylaştırmak için eski bir hizmet hizmetini modern teknolojiyle birleştiriyor."
     },
     "values": {
-      "title": "Our values and services",
-      "subtitle": "An integrated system designed for your comfort and peace"
+      "title": "Değerlerimiz ve hizmetlerimiz",
+      "subtitle": "Konforunuz ve huzurunuz için tasarlanmış entegre bir sistem"
     },
     "vision": {
-      "title": "Our vision",
-      "body": "To be the world’s leading digital platform in facilitating Hajj and Umrah—delivering innovative solutions that unite spirituality and technology with transparency and integrity."
+      "title": "Vizyonumuz",
+      "body": "Maneviyat ve teknolojiyi şeffaflık ve güvenle birleştiren yenilikçi çözümler sunan, Hac ve Umre'yi kolaylaştırmada dünyanın önde gelen dijital platformu olmak."
     },
     "mission": {
-      "title": "Our mission",
-      "body": "We empower pilgrims to perform their rituals with ease and reassurance by providing trusted, transparent, sharia-compliant services at the highest quality standards."
+      "title": "Misyonumuz",
+      "body": "Güvenilir, şeffaf ve şeriata uygun, en yüksek kalite standartlarında hizmetlerle hacıların ibadetlerini kolaylıkla ve gönül rahatlığıyla yapmalarına olanak sağlıyoruz."
     },
     "cards": {
       "badal": {
-        "title": "Badal Hajj",
-        "body": "Performing rituals on behalf of those unable or deceased by trustworthy students of knowledge."
+        "title": "Hac Badal",
+        "body": "Güvenilir ilim talebeleri tarafından aciz veya vefat etmiş olanlar adına ibadet yapmak."
       },
       "trust": {
-        "title": "Integrity & credibility",
-        "body": "The foundation of how we serve pilgrims"
+        "title": "Dürüstlük ve güvenilirlik",
+        "body": "Cemaate nasıl hizmet ettiğimizin temeli"
       },
       "guidance": {
-        "title": "Ritual guidance",
-        "body": "A comprehensive guide and certified guides to support you step by step."
+        "title": "Hadi ve kurban",
+        "body": "Size adım adım eşlik edecek eksiksiz rehberlik ve sertifikalı mentorlar."
       },
       "permits": {
-        "title": "Permits",
-        "body": "Fast, simplified official procedures to ensure compliant pilgrimage."
+        "title": "İzin",
+        "body": "İbadetlerin kurallara uygun yapılmasını sağlamak için hızlı ve basitleştirilmiş resmi prosedürler."
       }
     },
     "why": {
-      "title": "Why us?",
+      "title": "Neden biz?",
       "bullets": {
-        "sharia": "Full commitment to sharia guidelines",
-        "support": "24/7 technical and advisory support",
-        "ease": "Easy-to-use across digital platforms"
+        "sharia": "Şeriat kurallarına tam bağlılık",
+        "support": "7/24 teknik destek ve danışmanlık",
+        "ease": "Tüm dijital platformlarda kullanımı kolay"
       },
-      "imageAlt": "Pilgrims"
+      "imageAlt": "Cemaat"
     },
     "stats": {
       "experienceValue": "15+",
-      "experienceLabel": "Years of experience",
+      "experienceLabel": "Yılların deneyimi",
       "pilgrimsValue": "50k+",
-      "pilgrimsLabel": "Pilgrims served",
+      "pilgrimsLabel": "Cemaate hizmet veriliyor",
       "satisfactionValue": "99%",
-      "satisfactionLabel": "Satisfaction rate"
+      "satisfactionLabel": "Memnuniyet düzeyi"
     },
     "cta": {
-      "title": "Ready to start your spiritual journey?",
-      "description": "Join thousands of pilgrims who trusted us for a memorable journey and accepted rituals, God willing.",
-      "primaryCta": "Start now",
-      "secondaryCta": "Talk to an advisor"
+      "title": "Ruhsal yolculuğunuza başlamaya hazır mısınız?",
+      "description": "Allah'ın izniyle, unutulmaz yolculuklar ve makbul ibadetler için bize güvenen binlerce hacıya katılın.",
+      "primaryCta": "Bundan sonra",
+      "secondaryCta": "Bir danışmanla konuşun"
     }
   },
   "contact": {
     "hero": {
-      "title": "Contact us",
-      "description": "We’re here to serve you and answer your questions to ensure an easier and safer spiritual journey."
+      "title": "Bize ulaşın",
+      "description": "Daha kolay ve daha güvenli bir manevi yolculuk için hizmet vermeye ve sorularınızı yanıtlamaya hazırız."
     },
     "form": {
-      "title": "Send us a message",
+      "title": "Bize bir mesaj gönderin",
       "fullName": {
-        "label": "Full name",
-        "placeholder": "Enter your name"
+        "label": "Ad Soyad",
+        "placeholder": "Adınızı girin"
       },
       "email": {
-        "label": "Email",
+        "label": "E-posta",
         "placeholder": "example@email.com"
       },
       "phone": {
-        "label": "Phone number",
+        "label": "Telefon numarası",
         "placeholder": "+9xxxxxxxxx"
       },
       "subject": {
-        "label": "Subject",
-        "placeholder": "Select a subject",
+        "label": "Ders",
+        "placeholder": "Bir konu seçin",
         "options": {
-          "haj": "Hajj services",
-          "umrah": "Umrah services",
-          "support": "Technical support",
-          "other": "Other"
+          "haj": "Hac Hizmetleri",
+          "umrah": "Umre Hizmetleri",
+          "support": "Teknik destek",
+          "other": "Diğer"
         }
       },
       "message": {
-        "label": "Message",
-        "placeholder": "Write your message here..."
+        "label": "Mesaj",
+        "placeholder": "Mesajınızı buraya yazın..."
       },
-      "submit": "Send message"
+      "submit": "mesaj gönder"
     },
     "info": {
       "phone": {
-        "title": "Phone",
-        "description": "Contact us directly by phone",
+        "title": "Telefon",
+        "description": "Bize doğrudan telefonla ulaşın",
         "value": "+966 50 000 0000"
       },
       "email": {
-        "title": "Email",
-        "description": "For official inquiries and complaints",
+        "title": "E-posta",
+        "description": "Resmi soru ve şikayetleriniz için",
         "value": "info@manasik.sa"
       },
       "hours": {
-        "title": "Working hours",
-        "description": "We’re available to support you",
-        "value": "Sat–Thu: 9am–5pm"
+        "title": "Çalışma saatleri",
+        "description": "Size yardım etmeye hazırız",
+        "value": "Cumartesi-Per: 09.00–17.00"
       },
       "location": {
-        "title": "Location",
-        "description": "Visit our headquarters",
-        "value": "Makkah, Al Aziziyah, Saudi Arabia"
+        "title": "Konum",
+        "description": "Merkez ofisimizi ziyaret edin",
+        "value": "Mekke, Al Aziziyah, Suudi Arabistan"
       }
     },
     "social": {
       "xSymbol": "𝕏",
-      "xAria": "Our X account",
-      "whatsAppAria": "Contact via WhatsApp",
-      "instagramAria": "Our Instagram"
+      "xAria": "X hesabımız",
+      "whatsAppAria": "WhatsApp aracılığıyla iletişim kurun",
+      "instagramAria": "Instagram hesabımız"
     },
     "helpCenter": {
-      "title": "Help center",
-      "subtitle": "Quick answers and direct services to make your journey easier",
+      "title": "Yardım merkezi",
+      "subtitle": "Yolculuğunuzu kolaylaştırmak için hızlı yanıtlar ve anında servis",
       "cards": {
         "faq": {
-          "title": "FAQs",
-          "description": "Search our knowledge base for answers",
-          "action": "Browse FAQs"
+          "title": "SSS",
+          "description": "Cevaplar için bilgi tabanımızda arama yapın",
+          "action": "SSS'leri keşfedin"
         },
         "consultations": {
-          "title": "Hajj consultations",
-          "description": "Book a private consultation with one of our experts",
-          "action": "Book a consultation"
+          "title": "Hac Danışmanlığı",
+          "description": "Uzmanlarımızdan biriyle kişisel danışmanlık randevusu alın",
+          "action": "Danışmanlık randevusu alın"
         },
         "services": {
-          "title": "Services guide",
-          "description": "Learn about available services and packages",
-          "action": "View services"
+          "title": "Servis kılavuzu",
+          "description": "Mevcut hizmetler ve paketler hakkında bilgi edinin",
+          "action": "Hizmetleri görüntüle"
         }
       }
     },
     "finalCta": {
-      "title": "Ready to start your spiritual journey?",
-      "description": "We’re here to accompany you every step—from planning to performing the rituals—for an unforgettable experience.",
-      "primaryCta": "Request a free consultation",
-      "secondaryCta": "Contact us on WhatsApp"
+      "title": "Ruhsal yolculuğunuza başlamaya hazır mısınız?",
+      "description": "Unutulmaz bir deneyim için planlamadan ibadetin gerçekleştirilmesine kadar her adımda size eşlik ediyoruz.",
+      "primaryCta": "Ücretsiz danışmanlık talep edin",
+      "secondaryCta": "WhatsApp aracılığıyla bize ulaşın"
     },
     "validation": {
-      "fullNameRequired": "Full name is required",
-      "fullNameTooLong": "Full name is too long",
-      "emailRequired": "Email is required",
-      "emailInvalid": "Email is invalid",
-      "phoneRequired": "Phone number is required",
-      "phoneInvalid": "Phone number is invalid",
-      "subjectRequired": "Please select a subject",
-      "messageTooShort": "Message is too short",
-      "messageTooLong": "Message is too long"
+      "fullNameRequired": "Tam ad zorunludur",
+      "fullNameTooLong": "Ad çok uzun",
+      "emailRequired": "E-posta gerekli",
+      "emailInvalid": "Geçersiz e-posta",
+      "phoneRequired": "Telefon numarası zorunludur",
+      "phoneInvalid": "Geçersiz telefon numarası",
+      "subjectRequired": "Sorunun konusunu seçin",
+      "messageTooShort": "Mesaj çok kısa",
+      "messageTooLong": "Mesaj çok uzun"
+    }
+  },
+  "notFound": {
+    "title": "Sayfa bulunamadı",
+    "description": "Üzgünüz, yolunuzdan sapmış görünüyorsunuz. Bu sayfa mevcut değil—lütfen yolculuğunuza devam etmek için geri dönün.",
+    "homeCta": "Ana sayfaya dön",
+    "guideCta": "Hacı rehberi",
+    "helpCenter": "Yardım ve destek merkezi"
+  },
+  "faq": {
+    "titlePrefix": "Sıkça",
+    "titleHighlight": "Sorulan Sorular",
+    "description": "Hac ritüelleri ve manevi yolculuğunuzu kolaylaştıracak hizmetler hakkında tüm sorularınızı yanıtlamaya hazırız.",
+    "searchPlaceholder": "Sorunuzu burada arayın...",
+    "searchAria": "Sorunuzu burada bulun",
+    "searchButton": "Ara",
+    "categories": {
+      "all": "Tümü",
+      "rituals": "Menasik rehberi",
+      "qurbani": "Hedi ve kurban",
+      "health": "Sağlık ve güvenlik",
+      "services": "Genel hizmet"
+    },
+    "items": {
+      "pillars": {
+        "question": "Hacın dört şartı nelerdir?",
+        "intro": "Hacın dört farzı vardır:",
+        "ihram": "İhram: İbadete girme niyeti.",
+        "arafah": "Arefe'de Wukuf: Haccın en önemli şartı.",
+        "tawaf": "İfade tavafı: Arafat ve Müzdelife'den indikten sonra yapılır.",
+        "sai": "Şafa ile Merve arasında sa'i: Şafa'dan başlayarak yedi defa."
+      },
+      "qurbaniBooking": {
+        "question": "Hadi ve kurbanı online olarak nasıl sipariş edebilirim?",
+        "answer": "Hadi ve kurbanı resmi Adahi platformu veya Nusuk gibi resmi uygulamalar aracılığıyla sipariş edebilirsiniz. Ödeme elektronik olarak yapılır ve kesim belirtilen zamanda tamamlandığında onay alırsınız."
+      },
+      "medical": {
+        "question": "Kutsal topraklarda hacılara hangi tıbbi hizmetler sunulmaktadır?",
+        "answer": "Mina, Arafat ve Müzdelife'de tam donanımlı hastaneler ve sağlık merkezlerinin yanı sıra tüm hacılar için 24 saat ücretsiz tıbbi bakım sağlayan ambulans ekipleri ve sahra klinikleri bulunmaktadır."
+      },
+      "jamarat": {
+        "question": "Tasrik gününde cemre atma vakti ne zaman başlar?",
+        "answer": "Tesrik günlerinde (11, 12 ve 13 Zilhicce) cemre atma vakti öğle namazından sonra başlayıp gecenin sonuna kadar devam eder. Kalabalıktan kaçınmak için grubun programına uyulması tavsiye edilir."
+      }
+    },
+    "cta": {
+      "title": "Cevabınızı bulamadınız mı?",
+      "description": "Teknik destek ve rehberlik ekibimiz sorularınızı yanıtlamak ve Allah'ın izniyle Hac yolculuğunuzun sorunsuz geçmesini sağlamak için 24 saat hizmetinizdedir.",
+      "contact": "Bize ulaşın",
+      "call": "Bizi arayın"
+    }
+  },
+  "permits": {
+    "hero": {
+      "badge": "Hac ve Umre kapısı",
+      "title": "İzin hizmetleri",
+      "description": "Manevi yolculuğunuzu kolaylaştırmak için buradayız. İbadetlerinize gönül rahatlığıyla odaklanabilmeniz için basit prosedürlerle güvenilir Hac ve Umre izni verilmesini sağlıyoruz.",
+      "imageAlt": "İslami geometrik desen arka planı"
+    },
+    "about": {
+      "title": "Bir ömür boyu yolculuk için güvenilir ortak",
+      "body": "Hac ve Umre seyahati kapsamlı prosedürleri ve değişen düzenlemelere uyumu gerektirir. Hac ve Umre Bakanlığı gerekliliklerine tam uyum sağlayarak, başvurudan nihai izinlerin alınmasına kadar karmaşık idari aşamayı biz ele alıyoruz."
+    },
+    "types": {
+      "title": "Kullanılabilir izin türleri",
+      "subtitle": "İhtiyaçlarınıza uygun hizmeti seçin",
+      "cards": {
+        "hajj": {
+          "title": "Hac İzni",
+          "description": "Elektronik rota kaydı ve onay takibi de dahil olmak üzere vatandaşlar ve bölge sakinleri için eksiksiz Hac izni verme hizmeti."
+        },
+        "umrah": {
+          "title": "Umre İzni",
+          "description": "Bireyler ve gruplar için resmi başvuru yoluyla anlık Umre izinleri ve Raudhah ziyaretleri."
+        },
+        "seasonal": {
+          "title": "Sezonluk izin",
+          "description": "Seyahat organizatörleri ve mevsimlik personelin kutsal topraklara yasal olarak girmesi için özel hizmetler."
+        }
+      }
+    },
+    "documents": {
+      "eyebrow": "Durum",
+      "title": "Gerekli belgeler",
+      "description": "İşlemi hızlandırmak için göndermeden önce aşağıdaki belgeleri hazırlayın. Belgelerin yüklenmeden önce incelenmesine yardımcı oluyoruz.",
+      "imageAlt": "Kuran'ı tutan ellerin yakın çekimi",
+      "badgeTitle": "Anında inceleme",
+      "badgeBody": "Belgeleri bakanlığa sunmadan önce inceliyoruz",
+      "items": {
+        "id": "KTP fotoğrafı / oturma izni",
+        "vaccination": "Aşı kayıtları (COVID-19 ve menenjit)",
+        "photo": "En son kişisel fotoğraf (beyaz arka plan)",
+        "passport": "Pasaport (Yurtdışından gelen ziyaretçiler için)",
+        "visa": "Geçerli giriş vizesi",
+        "mahram": "Aile ilişkisinin kanıtı (mahrem için)"
+      }
+    },
+    "steps": {
+      "title": "İzin alma adımları",
+      "subtitle": "Başvurudan varışa kadar basit yolculuk",
+      "items": {
+        "submit": {
+          "title": "Uygula",
+          "description": "Çevrimiçi formu doldurun ve ilk belgeleri yükleyin."
+        },
+        "review": {
+          "title": "İnceleme ve doğrulama",
+          "description": "Ekibimiz verilerin ve eklerin doğruluğunu doğrular."
+        },
+        "approval": {
+          "title": "Resmi onay",
+          "description": "Başvuru onaylanmak üzere ilgili makamlara gönderilir."
+        },
+        "receive": {
+          "title": "İzin al",
+          "description": "İzniniz uygulama veya e-posta yoluyla gönderilir."
+        }
+      }
+    },
+    "notice": {
+      "title": "Adaylara önemli not",
+      "body": "İzinlerin verilmesi İki Kutsal Cami ve Hac ve Umre Bakanlığı yönetmeliklerindeki kapasiteye bağlıdır. Yoğun sezonlarda (Ramazan ve Hac) işlem süreleri değişebilir. Plan tarihinizden çok önce başvuru yapmanızı öneririz.",
+      "policyLink": "Hizmet politikalarını, şartlar ve koşulları okuyun"
+    },
+    "cta": {
+      "title": "Ruhsal yolculuğunuza başlamaya hazır mısınız?",
+      "description": "Prosedürlerin sizi ibadetten alıkoymasına izin vermeyin. Başvurunuzu hemen başlatın, ekibimiz size adım adım rehberlik edecektir.",
+      "request": "İzin hizmeti talep et",
+      "support": "Destekle iletişim"
+    },
+    "modal": {
+      "title": "Hac ve Umre izin hizmetleri için başvuru",
+      "description": "Resmi izin almak için verileri tamamlayın",
+      "steps": {
+        "type": "İzin türü",
+        "details": "Veri ve belgeler",
+        "payment": "Ödeme",
+        "review": "Başvuruyu inceleyin"
+      },
+      "step1": {
+        "title": "Gerekli izin türünü seçin",
+        "hajjTitle": "Hac İzni",
+        "hajjDesc": "Vatandaşlara ve bölge sakinlerine Hac yapma izni verin.",
+        "umrahTitle": "Umre İzni",
+        "umrahDesc": "Umre yapmak ve Raudhah'ı ziyaret etmek için izin verin.",
+        "notesLabel": "Ek notlar (isteğe bağlı)",
+        "notesPlaceholder": "Başvurunuzu tamamlamamıza yardımcı olacak her türlü ayrıntı"
+      },
+      "step2": {
+        "personalInfo": "Kişisel bilgiler",
+        "fullNameLabel": "Tam adı (KTP'ye göre)",
+        "fullNamePlaceholder": "Tam adınızı girin",
+        "phoneLabel": "Cep telefonu numarası (ülke koduyla birlikte)",
+        "phoneFormat": "Şu şekilde kaydedilecek: {dial}",
+        "countryLabel": "Ülke",
+        "countryPlaceholder": "Ülke seçin",
+        "emailLabel": "E-posta (isteğe bağlı)",
+        "idLabel": "KTP / pasaport numarası",
+        "birthDateLabel": "Doğum tarihi",
+        "nationalityLabel": "Vatandaşlık",
+        "nationalityPlaceholder": "Uyruğu seçin",
+        "attachments": "Ekler ve belgeler",
+        "idPhoto": "Fotoğraflı kimlik kartı",
+        "idPhotoHint": "JPG, PNG, PDF up to 10MB",
+        "personalPhoto": "Kişisel fotoğraf",
+        "personalPhotoHint": "Beyaz bir arka plana sahip olmalı",
+        "docsRequired": "Lütfen KTP'nizin bir fotoğrafını ve kişisel fotoğrafınızı yükleyin"
+      },
+      "step3": {
+        "title": "Ödeme",
+        "card": "Kart",
+        "bank": "Banka havalesi",
+        "uploadReceipt": "Aktarım kanıtını yükleyin",
+        "fileChosen": "Seçilen: {name}"
+      },
+      "step4": {
+        "title": "Başvuru özeti",
+        "permitType": "İzin türü",
+        "fullName": "Ad Soyad",
+        "idNumber": "KTP numarası",
+        "phone": "Cep telefonu numarası",
+        "country": "Ülke",
+        "email": "E-posta",
+        "nationality": "Vatandaşlık",
+        "documents": "Belge",
+        "documentsComplete": "Tamamlamak",
+        "disclaimer": "\"Başvuruyu gönder\" butonuna tıklayarak tüm bilgilerin doğruluğunu beyan etmiş ve Hac ve Umre Bakanlığı'nın şartlarını kabul etmiş olursunuz."
+      },
+      "permitLabels": {
+        "hajj": "Hac İzni",
+        "umrah": "Umre İzni"
+      },
+      "nationalities": {
+        "sa": "Suudi Arabistan",
+        "eg": "Mısır",
+        "ae": "Birleşik Arap Emirlikleri",
+        "kw": "Kuveyt",
+        "jo": "Ürdün",
+        "other": "Diğer"
+      },
+      "actions": {
+        "cancel": "İptal edildi",
+        "back": "Geri dönmek",
+        "next": "Sonraki",
+        "submit": "Bir başvuru gönderin"
+      },
+      "validation": {
+        "permitTypeRequired": "İzin türü zorunludur",
+        "idNumberInvalid": "Geçersiz KTP/pasaport numarası",
+        "nationalityRequired": "Vatandaşlık zorunludur"
+      }
+    }
+  },
+  "badal": {
+    "hero": {
+      "badge": "Şeriat ve yasal olarak onaylanmış hizmetler",
+      "titleLine1": "Hac ve Umre",
+      "titleHighlight": "başkası adına",
+      "description": "Hac ve Umre'yi, ehliyetsiz ve vefat eden yakınlarımız adına, güven ve samimiyetle, nitelikli ve güvenilir ilim öğrencileri aracılığıyla, tüm ritüelleri eksiksiz belgeleyerek gerçekleştiriyoruz.",
+      "primaryCta": "Talebi başlat",
+      "videoCta": "Tanıtım videosunu izleyin",
+      "imageAlt": "Tavaf yapan hacıların bulunduğu Mekke'deki kutsal Kabe",
+      "caption": "Talimatların sesli ve görüntülü belgelerle uygulanması",
+      "verified": "Doğrulandı",
+      "statsValue": "5.000'den fazla ritüel",
+      "statsLabel": "Bu yıl başarıyla uygulandı"
+    },
+    "about": {
+      "title": "Bu hizmet kimlere yöneliktir?",
+      "description": "İslam, kuluna bir rahmet olarak belirli durumlarda badal Hac ve Umre'ye izin vermiştir. Şeriat şartlarını karşılayan anne-babanız veya akrabanız adına bu ibadeti gerçekleştirmenizi kolaylaştırıyoruz.",
+      "shariaTitle": "Şeriat denetimi",
+      "shariaBody": "Uygulayıcının ritüellere uygunluğunu ve bilgi sahibi olmasını sağlıyoruz.",
+      "deceasedTitle": "Merhum adına Badal",
+      "deceasedBody": "Samimi niyetle ölenlerin hac veya umrelerini yapmak.",
+      "conditions": {
+        "deceased": {
+          "title": "Geç",
+          "description": "Badal hac ve umre, farzını yerine getirmeden vefat edenlere veya ailesinin onlar adına nafile ibadet etmek istediği durumlarda caizdir."
+        },
+        "incapacitated": {
+          "title": "Kalıcı olarak iş göremezlik",
+          "description": "İyileşme umudu olmayan hastalar veya seyahat edip seyahat edemeyen yaşlılar."
+        },
+        "financial": {
+          "title": "Finansal yetenekler",
+          "description": "Müdür, yetkinin uygulanması ve verilmesi masraflarını karşılayabilmelidir."
+        }
+      }
+    },
+    "trust": {
+      "title": "Mutlak güven ve şeffaflık",
+      "description": "İçinizin rahat olması için en yüksek güvenilirlik standartlarına bağlıyız.",
+      "performers": "Güvenilir uygulayıcı",
+      "video": "Video belgeleri",
+      "certificate": "Tamamlama sertifikası",
+      "support": "Sürekli destek"
+    },
+    "process": {
+      "eyebrow": "Çalışma şeklimiz",
+      "title": "Adım adım servis yolculuğu",
+      "steps": {
+        "submit": {
+          "title": "Uygula",
+          "description": "Yararlanıcı verilerini ve ibadet türünü (Hac veya Umre) doldurun."
+        },
+        "payment": {
+          "title": "Doğrulama ve ödeme",
+          "description": "Başvuruları inceleyin ve ödemeleri çevrimiçi olarak güvenli bir şekilde onaylayın."
+        },
+        "assign": {
+          "title": "Yönetici ata",
+          "description": "İbadetinizi gerçekleştirmek için şartları taşıyan bir öğrenci seçin."
+        },
+        "perform": {
+          "title": "Ritüeli gerçekleştirin",
+          "description": "Ritüele duayı da içeren doğrudan belgelerle başlayın."
+        },
+        "document": {
+          "title": "Dokümantasyon",
+          "description": "Bitirme sertifikası ve video görüntüleri alın."
+        }
+      }
+    },
+    "pricing": {
+      "title": "Uygun paketi seçin",
+      "subtitle": "Şeffaf ve her şey dahil fiyatlandırma",
+      "mostPopular": "En popüler",
+      "umrahFeatures": {
+        "intention": "Adındaki niyetler ve telbiye",
+        "rituals": "Tavaf, sa'i ve saç tıraşı/kesimi",
+        "video": "Kabe'de namaz kılma videosu",
+        "completion": "48 saatte tamamlandı"
+      },
+      "hajjFeatures": {
+        "type": "Hac temattu' veya ifrad",
+        "arafah": "Arafat'ta abdest ve Mina'da geceleme",
+        "hadi": "Hadi (kurban)",
+        "documentation": "Tüm konumların eksiksiz dokümantasyonu",
+        "certificate": "Resmi Hac Sertifikası"
+      },
+      "umrahCta": "Badal Umre talebinde bulunun",
+      "hajjCta": "Hac Badalına başvurun"
+    },
+    "faq": {
+      "title": "Sıkça sorulan sorular",
+      "items": {
+        "legality": {
+          "question": "Bu hizmet şeriata göre caiz midir?",
+          "answer": "Evet, sahih hadislerle desteklenen ulemaya göre, ölenler ve sürekli iş göremez olanlar için hac ve umre yapılmasına izin verilmiştir."
+        },
+        "verification": {
+          "question": "İbadetin yerine getirildiğinden nasıl emin olunur?",
+          "answer": "Başvuru sahibi adına niyetini belirten uygulayıcının video belgelerini ve ayrıca tavaf, sa'i ve dua görüntülerini sağlıyoruz."
+        },
+        "performers": {
+          "question": "Umre ve Hac'ı kim yapar?",
+          "answer": "Mekke'de dindar ve güvenilir olarak tanınan, kendine karşı yükümlülüklerini yerine getirmiş ilim talebeleri ve Kur'an hafızlarıyla çalışıyoruz."
+        }
+      }
+    },
+    "modal": {
+      "stepOf": "{step} / {total} Adımı",
+      "beneficiaryData": "Yararlanıcı verileri",
+      "payment": "Ödeme",
+      "fullName": "Ad Soyad",
+      "phoneLabel": "Cep telefonu numarası (ülke koduyla birlikte)",
+      "phoneFormat": "Şu şekilde kaydedilecek: {dial}",
+      "countryLabel": "Ülke",
+      "countryPlaceholder": "Ülke seçin",
+      "emailOptional": "E-posta (isteğe bağlı)",
+      "birthDateLabel": "Yaş – doğum tarihi",
+      "performedBefore": "Daha önce hiç Hac veya Umre yaptınız mı?",
+      "yes": "Evet",
+      "no": "HAYIR",
+      "cancel": "İptal edildi",
+      "next": "Sonraki",
+      "saving": "Uygulamayı kaydet...",
+      "back": "Geri dönmek",
+      "submitting": "Başvuruyu gönder...",
+      "confirmUmrah": "Umre Badal başvurusunun onaylanması",
+      "confirmHajj": "Hac Badal başvurusunun onaylanması",
+      "description": "Verilerinizi tamamlayın ve ödemeye devam edin",
+      "requestUmrah": "Badal Umre talebinde bulunun",
+      "requestHajj": "Hac Badalına başvurun"
     }
   }
 }
