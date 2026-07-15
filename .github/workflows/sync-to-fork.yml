@@ -1,0 +1,22 @@
+name: Sync to Fork
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Push changes to fork
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git remote add fork https://x-access-token:${{ secrets.FORK_TOKEN }}@github.com/altamkin/arkan-almanasek.git
+          git push fork main:main
