@@ -28,7 +28,7 @@ export default async function HomeHero() {
 
       <div className="relative z-10 block h-full w-full max-w-7xl items-center px-4 mt-[25vh] supports-[height:100svh]:mt-[25svh] sm:flex sm:mt-0 sm:px-6 lg:mx-auto lg:px-8">
         <div className="grid w-full grid-cols-1 items-center gap-8 lg:grid-cols-12">
-          <div className="flex flex-col gap-8 pt-20 text-right lg:col-span-7 lg:pt-0">
+          <div className="flex flex-col gap-8 pt-20 text-start lg:col-span-7 lg:pt-0 md:pt-0">
             <div
               className="animate-fade-up inline-flex w-fit items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 backdrop-blur-md"
               style={{ animationDelay: "0.1s" }}
@@ -40,17 +40,17 @@ export default async function HomeHero() {
             </div>
 
             <h1
-              className="animate-fade-up font-primary font-bold leading-[1.1] text-white drop-shadow-lg md:text-7xl lg:text-8xl"
+              className="animate-fade-up font-primary font-bold leading-[1.1] text-start text-white drop-shadow-lg md:text-6xl lg:text-8xl"
               style={{ animationDelay: "0.3s" }}
             >
               {t("titleTop")} <br />
-              <span className="text-shadow-gold bg-gradient-to-l from-primary via-[#fceabb] to-primary bg-clip-text text-transparent">
+              <span className="text-start text-shadow-gold bg-gradient-to-l from-primary via-[#fceabb] to-primary bg-clip-text text-transparent">
                 {t("titleHighlight")}
               </span>
             </h1>
 
             <p
-              className="animate-fade-up max-w-2xl text-xl font-light leading-relaxed text-gray-200 md:text-2xl"
+              className="text-start animate-fade-up max-w-2xl text-xl font-light leading-relaxed text-gray-200 md:text-2xl"
               style={{ animationDelay: "0.5s" }}
             >
               {t("description")}

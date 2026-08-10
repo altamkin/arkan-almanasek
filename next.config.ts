@@ -16,6 +16,8 @@ const withNextIntl = createNextIntlPlugin();
 const nextConfig: NextConfig = {
   // Required for small production Docker images (copies traced deps into .next/standalone)
   output: "standalone",
+  // undici is Node-only; used by instrumentation.ts for longer fetch connect timeouts in dev
+  serverExternalPackages: ["undici"],
   images: {
     // Allow optimized loading of remote ActiveStorage blob redirects
     remotePatterns: [

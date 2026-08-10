@@ -20,8 +20,18 @@ export default function ProductMainSection({ product }: { product: ProductT }) {
   const [activeImageIndex, setActiveImageIndex] = useState(0);
   const [quantity, setQuantity] = useState(1);
 
+  // API may return only `image` (list endpoints) while `images` is empty on detail.
+  const galleryImages =
+    product.images?.length > 0
+      ? product.images
+      : product.image
+        ? [product.image]
+        : [];
+
   const mainImage =
-    product?.images[Math.min(activeImageIndex, product.images.length - 1)];
+    galleryImages[
+      Math.min(activeImageIndex, Math.max(galleryImages.length - 1, 0))
+    ] ?? product.image;
 
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
@@ -58,7 +68,7 @@ export default function ProductMainSection({ product }: { product: ProductT }) {
 
         {/* Thumbnails */}
         <div className="flex gap-4 overflow-x-auto pb-2 scrollbar-hide">
-          {product?.images.map((img, idx) => {
+          {galleryImages.map((img, idx) => {
             const selected = idx === activeImageIndex;
             return (
               <button
