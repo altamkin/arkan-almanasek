@@ -15,16 +15,17 @@ type Locale = "ar" | "en" | "id" | "tr" | "si" | "ms";
 type Option = {
   locale: Locale;
   shortLabel: string;
+  label: string;
   country: "sa" | "us" | "id" | "tr" | "si" | "my";
 };
 
 const OPTIONS: Option[] = [
-  { locale: "ar", shortLabel: "AR", country: "sa" },
-  { locale: "en", shortLabel: "EN", country: "us" },
-  { locale: "id", shortLabel: "ID", country: "id" },
-  { locale: "tr", shortLabel: "TR", country: "tr" },
-  { locale: "si", shortLabel: "SI", country: "si" },
-  { locale: "ms", shortLabel: "MS", country: "my" },
+  { locale: "ar", shortLabel: "AR", label: "العربية", country: "sa" },
+  { locale: "en", shortLabel: "EN", label: "English", country: "us" },
+  { locale: "id", shortLabel: "ID", label: "Bahasa Indonesia", country: "id" },
+  { locale: "tr", shortLabel: "TR", label: "Türkçe", country: "tr" },
+  { locale: "si", shortLabel: "SI", label: "සිංහල", country: "si" },
+  { locale: "ms", shortLabel: "MS", label: "Bahasa Melayu", country: "my" },
 ];
 
 function Flag({ country }: { country: Option["country"] }) {
@@ -53,7 +54,6 @@ function toLocalePath(pathname: string, nextLocale: Locale) {
 
 export default function LanguageSwitcher() {
   const tCommon = useTranslations("common");
-  const tLanguages = useTranslations("languages");
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
@@ -135,7 +135,7 @@ export default function LanguageSwitcher() {
                   <span className="flex flex-col leading-tight">
                     {/* <span className="font-semibold">{opt.shortLabel}</span> */}
                     <span className="text-xs text-gray-500 dark:text-gray-400">
-                      {tLanguages(opt.locale)}
+                      {opt.label}
                     </span>
                   </span>
                 </span>
