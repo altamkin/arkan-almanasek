@@ -48,29 +48,29 @@
     }
   },
   "footer": {
-    "description": "Hac ve Umre hizmetleri için ilk platformunuz. Dünyanın dört bir yanından gelen misafirlere eksiksiz ve kolay bir manevi deneyim sunmayı hedefliyoruz.",
+    "description": "Hac ve Umre hizmetlerinde güvenilir çözüm ortağınız. Dünyanın dört bir yanından gelen hacı ve umrecilere, manevi yolculuklarını kolaylaştıran kapsamlı ve güvenilir hizmetler sunuyoruz.",
     "social": {
       "x": "X",
       "linkedin": "LinkedIn",
       "facebook": "Facebook"
     },
     "quickLinks": {
-      "title": "Hızlı bağlantılar",
-      "about": "Hakkımızda",
+      "title": "Hızlı Erişim",
+      "about": "Kurumsal",
       "products": "Ürünler"
     },
     "support": {
-      "title": "Destek ve yardım",
-      "faq": "SSS",
-      "contact": "Bize ulaşın"
+      "title": "Destek ve Yardım",
+      "faq": "Sıkça Sorulan Sorular",
+      "contact": "Bize Ulaşın"
     },
     "newsletter": {
-      "title": "Bültene abone olun",
-      "description": "Seyahatiniz için en son teklifleri ve ipuçlarını alın.",
-      "emailPlaceholder": "E-posta adresiniz",
+      "title": "Bültenimize Abone Olun",
+      "description": "En güncel kampanya, duyuru ve seyahat önerilerinden haberdar olun.",
+      "emailPlaceholder": "E-posta Adresiniz",
       "submitAria": "Gönder"
     },
-    "copyright": "© {year} Arkan Al-Menasik. Telif hakkı korunmaktadır."
+    "copyright": "© {year} Arkan Al-Menasik. Tüm Hakları Saklıdır."
   },
   "store": {
     "brand": {
@@ -398,38 +398,38 @@
   "home": {
     "hero": {
       "backgroundAlt": "Kabe'nin sinematik görünümü",
-      "seasonBadge": "Hac Sezonu 1445 H",
-      "titleTop": "Bir ömür boyu yolculuk",
-      "titleHighlight": "Mükemmel bir dokunuşla başlamak",
-      "description": "Manevi yolculuğunuzun her adımında size eşlik ediyor, ibadetlerinizi en yüksek hizmet standartlarıyla gerçekleştirmenizde huzur ve kolaylık sağlıyor, Hac ve Umre Badalını sağlıyoruz.",
-      "primaryCta": "Yolculuğunuza başlayın",
-      "secondaryCta": "Bize ulaşın",
+      "seasonBadge": "1445 Hac Sezonu",
+      "titleTop": "Hayatınızın En Anlamlı Yolculuğu,",
+      "titleHighlight": "Mükemmelliğin Dokunuşuyla Başlar.",
+      "description": "Manevi yolculuğunuzun her adımında yanınızdayız. İbadetlerinizi huzur ve kolaylık içinde, en yüksek hizmet standartlarıyla yerine getirmenizi sağlıyor; ayrıca başkası adına hac ve umre organizasyonu hizmeti de sunuyoruz.",
+      "primaryCta": "Yolculuğunuza Başlayın",
+      "secondaryCta": "Bize Ulaşın",
       "stats": {
         "pilgrimsValue": "50k+",
-        "pilgrimsLabel": "Cemaate hizmet veriliyor"
+        "pilgrimsLabel": "50+ den fazla hacıya hizmet verildi"
       },
       "support": {
         "title": "Sürekli destek",
-        "subtitle": "7/24 tüm yol boyunca",
-        "body": "Özel bir ekip her an hizmet vermeye ve sorularınızı yanıtlamaya hazırdır."
+        "subtitle": "Yolculuğunuz boyunca 7/24 kesintisiz destek",
+        "body": "Uzman ekibimiz, size hizmet sunmak ve sorularınızı her zaman yanıtlamak için hazırdır."
       }
     },
     "video": {
-      "eyebrow": "Bizi tanıyın",
-      "heading": "Hacılar için entegre hizmetler",
-      "description": "Planlamadan tamamlamaya kadar seyahatin ruhunu yansıtan dijital deneyimler yaratıyoruz: net, sakinleştirici ve ibadetin kutsallığına saygılı.",
+      "eyebrow": "Bizi Tanıyın",
+      "heading": "Rahman'ın Konuklarına Tümleşik Hizmetler",
+      "description": "Yolculuğun manevi iklimine uygun dijital bir deneyim tasarlıyoruz; şeffaf, güvenilir ve kutsal ibadetlere hürmetkar. Planlama anından nusuk tamamlanıncaya dek sizinle beraberiz.",
       "iframeTitle": "Tanıtım videosu",
       "html5Fallback": "Tarayıcınız video oynatmayı desteklemiyor."
     },
     "products": {
-      "sectionTitle": "Seçilen ürünler",
-      "viewAll": "Tümünü gör",
+      "sectionTitle": "Öne Çıkan Ürünler",
+      "viewAll": "Tümünü Gör",
       "addToCartAria": "{title} öğesini sepete ekle",
       "emptyMessage": "Şu anda mevcut ürün yok."
     },
     "services": {
-      "sectionTitle": "Üstün hizmetimiz",
-      "sectionDescription": "Hac ve Umre yolculuğunuzu kolaylaştıracak bir dizi entegre şeriat ve lojistik hizmetleri.",
+      "sectionTitle": "Ayrıcalıklı Hizmetlerimiz",
+      "sectionDescription": "Hac ve umre yolculuğunuzu kolaylaştırmak için dini rehberlik ve lojistik destekten oluşan kapsamlı hizmetler sunuyoruz.",
       "items": {
         "hadiAndUdhiyah": {
           "title": "Hadi ve kurban",
@@ -454,15 +454,15 @@
       }
     },
     "cta": {
-      "limitedBadge": "Bu sezon kontenjanlar sınırlıdır",
-      "titleLine1": "Yolculuğunuz şununla başlıyor:",
-      "titleLine2": "bir hazırlık adımı",
-      "description": "İbadetinizin hazırlık aşamasından, rahatlıkla ve gönül rahatlığıyla yapılmasına kadar size eşlik edelim. Bize güvenen binlerce ibadetçiye katılın.",
-      "primaryCta": "Şimdi sipariş ver",
-      "secondaryCta": "Kılavuzu indirin",
+      "limitedBadge": "Bu Yılın Hac Sezonu İçin Kontenjanlar Sınırlıdır",
+      "titleLine1": "Hac Yolculuğunuz",
+      "titleLine2": "İlk Adımla Başlar",
+      "description": "Hazırlık sürecinden ibadetlerinizi tamamlayacağınız ana kadar her adımda yanınızdayız. Hac ve umre ibadetinizi huzur ve güven içinde gerçekleştirmeniz için profesyonel destek sunuyoruz. Bize güvenen binlerce hacı ve umreci arasına siz de katılın.",
+      "primaryCta": "Hemen Rezervasyon Yapın",
+      "secondaryCta": "Rehberi İndir",
       "trustBadge": "+2k",
-      "trustValue": "2,000+",
-      "trustLabel": "Cemaat bize güveniyor",
+      "trustValue": "2000",
+      "trustLabel": "den Fazla Hacı ve Umreci Bize Güveniyor",
       "appTagline": "Akıllı Menasik rehberiniz",
       "liveLabel": "Doğrudan"
     }
