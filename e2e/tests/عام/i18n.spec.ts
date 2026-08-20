@@ -22,7 +22,7 @@ test.describe("تعدد اللغات", () => {
     await gotoLocalized(page, ROUTES.home);
     await openLanguageMenu(page);
 
-    await page.getByRole("menuitem", { name: ar.languages.en }).click();
+    await page.getByRole("menuitem", { name: "English" }).click();
 
     await expect(page).toHaveURL(/\/en$/);
     await expect(page.locator("html")).toHaveAttribute("dir", "ltr");
@@ -34,7 +34,7 @@ test.describe("تعدد اللغات", () => {
     await gotoLocalized(page, ROUTES.about);
     await openLanguageMenu(page);
 
-    await page.getByRole("menuitem", { name: ar.languages.en }).click();
+    await page.getByRole("menuitem", { name: "English" }).click();
 
     await expect(page).toHaveURL(/\/en\/about-us/);
     await expect(

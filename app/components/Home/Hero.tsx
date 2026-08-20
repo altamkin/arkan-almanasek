@@ -40,7 +40,7 @@ export default async function HomeHero() {
             </div>
 
             <h1
-              className="animate-fade-up font-primary font-bold leading-[1.1] text-start text-white drop-shadow-lg md:text-6xl lg:text-8xl"
+              className="animate-fade-up font-primary text-4xl font-bold leading-[1.1] text-start text-white drop-shadow-lg sm:text-5xl md:text-6xl lg:text-7xl rtl:lg:text-8xl"
               style={{ animationDelay: "0.3s" }}
             >
               {t("titleTop")} <br />

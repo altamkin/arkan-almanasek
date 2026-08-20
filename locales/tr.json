@@ -398,15 +398,15 @@
   "home": {
     "hero": {
       "backgroundAlt": "Kabe'nin sinematik görünümü",
-      "seasonBadge": "1445 Hac Sezonu",
+      "seasonBadge": "Hac Sezonu 1445",
       "titleTop": "Hayatınızın En Anlamlı Yolculuğu,",
-      "titleHighlight": "Mükemmelliğin Dokunuşuyla Başlar.",
+      "titleHighlight": "Mükemmelliğin Dokunuşuyla Başlar",
       "description": "Manevi yolculuğunuzun her adımında yanınızdayız. İbadetlerinizi huzur ve kolaylık içinde, en yüksek hizmet standartlarıyla yerine getirmenizi sağlıyor; ayrıca başkası adına hac ve umre organizasyonu hizmeti de sunuyoruz.",
       "primaryCta": "Yolculuğunuza Başlayın",
       "secondaryCta": "Bize Ulaşın",
       "stats": {
         "pilgrimsValue": "50k+",
-        "pilgrimsLabel": "50+ den fazla hacıya hizmet verildi"
+        "pilgrimsLabel": "50+ binden fazla hacıya hizmet verildi"
       },
       "support": {
         "title": "Sürekli destek",
@@ -461,7 +461,7 @@
       "primaryCta": "Hemen Rezervasyon Yapın",
       "secondaryCta": "Rehberi İndir",
       "trustBadge": "+2k",
-      "trustValue": "2000",
+      "trustValue": "2000'",
       "trustLabel": "den Fazla Hacı ve Umreci Bize Güveniyor",
       "appTagline": "Akıllı Menasik rehberiniz",
       "liveLabel": "Doğrudan"

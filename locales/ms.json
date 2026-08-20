@@ -1,6 +1,6 @@
 {
   "common": {
-    "home": "Utama",
+    "home": "Laman Utama",
     "language": "Bahasa",
     "error": "Ralat telah berlaku",
     "try_again": "Cuba lagi",
@@ -20,7 +20,7 @@
   },
   "header": {
     "nav": {
-      "home": "Utama",
+      "home": "Laman Utama",
       "services": "Perkhidmatan",
       "products": "Produk",
       "about": "Tentang Kami"
@@ -48,29 +48,29 @@
     }
   },
   "footer": {
-    "description": "Platform utama anda untuk perkhidmatan Haji dan Umrah. Kami berusaha menyediakan pengalaman rohani yang lengkap dan mudah untuk jemaah dari seluruh dunia.",
+    "description": "Platform pilihan pertama anda untuk perkhidmatan haji dan umrah. Kami berusaha menyediakan pengalaman kerohanian yang lengkap dan mudah untuk tetamu Allah dari seluruh dunia.",
     "social": {
       "x": "X",
       "linkedin": "LinkedIn",
       "facebook": "Facebook"
     },
     "quickLinks": {
-      "title": "Pautan pantas",
-      "about": "Tentang Kami",
+      "title": "Pautan Pantas",
+      "about": "Tentang Syarikat",
       "products": "Produk"
     },
     "support": {
-      "title": "Sokongan & bantuan",
+      "title": "Sokongan dan Bantuan",
       "faq": "Soalan Lazim",
       "contact": "Hubungi kami"
     },
     "newsletter": {
-      "title": "Langgan surat berita",
-      "description": "Dapatkan tawaran dan petua terkini untuk perjalanan anda.",
-      "emailPlaceholder": "alamat e-mel anda",
+      "title": "Langgan Buletin Kami",
+      "description": "Dapatkan tawaran terkini, pengumuman dan tip perjalanan anda.",
+      "emailPlaceholder": "Alamat E-mel Anda",
       "submitAria": "Hantar"
     },
-    "copyright": "© {year} Arkan Al-manasik. Hak cipta dilindungi."
+    "copyright": "© {year} Arkan Al-manasik. Hak Cipta Terpelihara."
   },
   "store": {
     "brand": {
@@ -398,38 +398,38 @@
   "home": {
     "hero": {
       "backgroundAlt": "Pandangan sinematik Kaabah",
-      "seasonBadge": "Musim Haji 1445 H",
-      "titleTop": "Perjalanan seumur hidup",
-      "titleHighlight": "Bermula dengan sentuhan kecemerlangan",
-      "description": "Kami menemani anda dalam setiap langkah perjalanan rohani anda, memastikan ketenangan dan kemudahan dalam menjalankan ibadah dengan standard perkhidmatan tertinggi, serta menyediakan Badal haji dan Umrah.",
+      "seasonBadge": "Musim Haji 1445",
+      "titleTop": "Perjalanan paling bermakna dalam hidup anda",
+      "titleHighlight": "bermula dengan sentuhan kecemerlangan",
+      "description": "Kami bersama anda pada setiap langkah perjalanan ibadah anda, memastikan anda dapat melaksanakan manasik dengan tenang dan mudah mengikut standard perkhidmatan tertinggi; kami juga menyediakan perkhidmatan haji dan umrah bagi pihak orang lain.",
       "primaryCta": "Mulakan perjalanan anda",
       "secondaryCta": "Hubungi kami",
       "stats": {
         "pilgrimsValue": "50k+",
-        "pilgrimsLabel": "Jemaah dihidangkan"
+        "pilgrimsLabel": "50,000+ jemaah haji telah dilayan"
       },
       "support": {
         "title": "Sokongan berterusan",
-        "subtitle": "24/7 sepanjang perjalanan",
-        "body": "Pasukan yang berdedikasi bersedia untuk berkhidmat dan menjawab soalan anda pada bila-bila masa."
+        "subtitle": "24/7 sepanjang perjalanan anda",
+        "body": "Pasukan pakar kami sentiasa bersedia membantu anda dan menjawab pertanyaan anda pada bila-bila masa."
       }
     },
     "video": {
-      "eyebrow": "Kenali kami",
-      "heading": "Perkhidmatan bersepadu untuk jemaah haji",
-      "description": "Kami mencipta pengalaman digital yang mencerminkan semangat perjalanan: jelas, menenangkan dan menghormati kesucian ibadat—daripada perancangan hingga selesai.",
+      "eyebrow": "Kenali Kami",
+      "heading": "Perkhidmatan Bersepadu untuk Tetamu Allah",
+      "description": "Kami membina pengalaman digital yang selaras dengan semangat perjalanan ini; jelas, meyakinkan dan menghormati kesucian ibadah, untuk menemani anda dari perancangan sehingga selesai melaksanakan manasik.",
       "iframeTitle": "Video pengenalan",
       "html5Fallback": "Penyemak imbas anda tidak menyokong main balik video."
     },
     "products": {
-      "sectionTitle": "Produk terpilih",
-      "viewAll": "Lihat semua",
+      "sectionTitle": "Produk Pilihan",
+      "viewAll": "Lihat Semua",
       "addToCartAria": "Tambahkan {title} pada troli",
       "emptyMessage": "Tiada produk yang tersedia pada masa ini."
     },
     "services": {
-      "sectionTitle": "Perkhidmatan unggul kami",
-      "sectionDescription": "Satu siri perkhidmatan syariah dan logistik bersepadu untuk memudahkan perjalanan Haji dan Umrah anda.",
+      "sectionTitle": "Perkhidmatan Istimewa Kami",
+      "sectionDescription": "Kami menawarkan rangkaian lengkap perkhidmatan bimbingan agama dan logistik untuk memudahkan perjalanan haji dan umrah anda.",
       "items": {
         "hadiAndUdhiyah": {
           "title": "Hadi dan pengorbanan",
@@ -454,15 +454,15 @@
       }
     },
     "cta": {
-      "limitedBadge": "Kuota adalah terhad musim ini",
-      "titleLine1": "Perjalanan anda bermula dengan",
+      "limitedBadge": "Tempat adalah terhad untuk musim haji tahun ini",
+      "titleLine1": "Perjalanan haji anda bermula dengan",
       "titleLine2": "satu langkah persediaan",
-      "description": "Izinkan kami menemani anda dari persiapan hinggalah menunaikan ibadah dengan tenang dan tenteram. Sertai ribuan penyembah yang mempercayai kami.",
-      "primaryCta": "Pesan sekarang",
-      "secondaryCta": "Muat turun panduan",
+      "description": "Biarkan kami menemani anda pada setiap langkah, daripada persediaan sehingga selesai melaksanakan manasik dengan mudah dan tenang. Sertai ribuan jemaah haji dan umrah yang telah mempercayai kami.",
+      "primaryCta": "Tempah Sekarang",
+      "secondaryCta": "Muat Turun Panduan",
       "trustBadge": "+2k",
-      "trustValue": "2,000+",
-      "trustLabel": "Jemaah mempercayai kita",
+      "trustValue": "Lebih 2,000",
+      "trustLabel": "jemaah haji dan umrah mempercayai kami",
       "appTagline": "Panduan manasik bijak anda",
       "liveLabel": "Langsung"
     }
